@@ -1,13 +1,15 @@
 .sidebar {
     width: 240px;
-    height: 100vh;
+    height: calc(100vh - 56px);
     position: fixed;
     margin-top: 56px;
     transition: width 0.3s ease-in-out;
     overflow-y: hidden;
+    overflow-x: hidden;
 
     &:hover {
         overflow-y: scroll;
+        scrollbar-width: thin;
     }
 
     a {
@@ -49,7 +51,9 @@
     > div:nth-child(3) {
         padding: 16px 32px;
 
-        p {
+        > p {
+            width: 176px;
+            height: auto;
             font-size: 14px;
         }
 
@@ -73,10 +77,14 @@
     }
 
     > div:last-child {
+        padding: 0;
+
         div {
             border-bottom: none;
         }
-        > div:first-child {
+
+        > div:first-child,
+        > div:nth-child(2) {
             padding: 16px 24px 0px 24px;
 
             a {
@@ -85,28 +93,21 @@
                 height: 18px;
                 padding: 0;
                 color: #606060;
-                margin-right: 8px;
+                margin-right: 5px;
                 font-size: 13px;
                 font-weight: 500;
                 line-height: 18px;
             }
+        }
+
+        > div:first-child {
+            // width: 192px;
         }
 
         > div:nth-child(2) {
             padding: 12px 24px 0px 24px;
-
-            a {
-                display: inline-block;
-                width: auto;
-                height: 18px;
-                padding: 0;
-                color: #606060;
-                margin-right: 8px;
-                font-size: 13px;
-                font-weight: 500;
-                line-height: 18px;
-            }
         }
+
         > div:last-child {
             padding: 6px 24px 32px 12px;
 
