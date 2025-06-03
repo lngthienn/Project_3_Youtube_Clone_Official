@@ -1,6 +1,68 @@
 .popularmusic {
     display: flex;
+    justify-content: space-between;
     width: 100%;
     height: auto;
     padding-top: 24px;
+
+    div {
+        display: flex;
+        flex-direction: column;
+        width: 400.25px;
+        height: 332px;
+
+        > a {
+            border-radius: 12px;
+            cursor: pointer;
+
+            img {
+                width: 400.25px;
+                height: 225px;
+                border-radius: 12px;
+            }
+        }
+
+        > div:last-child {
+            display: flex;
+            flex-direction: row;
+            width: 400.25px;
+            height: 100px;
+            cursor: pointer;
+
+            > div:first-child {
+                width: 48px;
+                height: 100%;
+
+                span {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    background-color: rgba(0, 0, 0, 0.09);
+                    margin: 12px 12px 0 0;
+                }
+            }
+
+            > div:nth-child(2) {
+                width: 352.25px;
+                height: 100%;
+                margin-right: 24px;
+
+                h3 {
+                    font-size: 16px;
+                    color: #0f0f0f;
+                    font-weight: 500;
+                    line-height: 22px;
+                    padding: 12px 0 4px 0;
+                }
+            }
+
+            > div:last-child {
+                width: 30px;
+                padding-top: 12px;
+            }
+        }
+    }
 }
