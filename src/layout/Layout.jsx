@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Header from './Header.jsx';
 import Sidebar from './Sidebar.jsx';
+import styles from '../style/layout/Layout.module.scss';
 
 function Layout({ children }) {
     const [isSidebarOpen, setIsSidebarOpen] = useState(true);
@@ -12,16 +13,10 @@ function Layout({ children }) {
     return (
         <>
             <Header toggleSidebar={toggleSidebar} />
-            <section className="layout">
-                <Sidebar isSidebarOpen={isSidebarOpen} />
-                <main
-                    className={`content${
-                        isSidebarOpen ? 'sidebaropen' : 'sidebarclosed'
-                    }`}
-                >
-                    {children}
-                </main>
-            </section>
+            <Sidebar isSidebarOpen={isSidebarOpen} />
+            <main className={`${styles.content} ${isSidebarOpen ? styles.sidebaropen : styles.sidebarclosed}`}>
+                {children}
+            </main>
         </>
     );
 }

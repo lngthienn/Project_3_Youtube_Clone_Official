@@ -1,4 +1,4 @@
-// import styles from '../style/pages/VideoPlayer.module.scss';
+import styles from '../../style/pages//VideoPlayer/VideoPlayer.module.scss';
 
 function VideoPlayer() {
     return (

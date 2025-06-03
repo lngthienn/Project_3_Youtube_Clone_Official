@@ -1,0 +1,21 @@
+.content {
+    display: flex;
+    width: calc(100% - 240px);
+    height: auto;
+    border: 1px solid red;
+    margin: 56px 0 0 240px;
+}
+
+.sidebaropen {
+    width: calc(100% - 240px);
+    height: auto;
+    border: 1px solid red;
+    margin: 56px 0 0 240px;
+}
+
+.sidebarclosed {
+    width: calc(100% - 72px);
+    height: auto;
+    border: 1px solid red;
+    margin: 56px 0 0 72px;
+}

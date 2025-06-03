@@ -2,7 +2,7 @@
     width: 240px;
     height: calc(100vh - 56px);
     position: fixed;
-    margin-top: 56px;
+    left: 0;
     transition: width 0.3s ease-in-out;
     overflow-y: hidden;
     overflow-x: hidden;
@@ -124,7 +124,7 @@
     width: 72px;
     height: auto;
     padding: 0 4px;
-    transition: 0.5s ease-out;
+    transition: 0.3s ease-in-out;
 
     &:hover {
         overflow: hidden;

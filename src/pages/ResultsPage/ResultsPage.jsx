@@ -1,4 +1,4 @@
-// import styles from '../style/pages/ResultsPage.module.scss';
+// import styles from '../../style/pages/ResultsPage/ResultsPage.module.scss';
 
 function ResultsPage() {
     return (
