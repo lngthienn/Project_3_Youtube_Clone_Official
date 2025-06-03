@@ -8,6 +8,7 @@
     padding: 0px 16px;
     background: #fff;
     overflow-y: scroll;
+    overflow-x: hidden;
 
     > div:first-child {
         display: flex;

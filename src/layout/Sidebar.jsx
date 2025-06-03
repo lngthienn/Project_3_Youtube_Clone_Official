@@ -16,7 +16,7 @@ import { RiFlagLine } from 'react-icons/ri';
 
 function Sidebar({ isSidebarOpen }) {
     return (
-        <aside className={`${styles.sidebar} ${isSidebarOpen ? '' : styles.closed}`}>
+        <aside className={`${styles.sidebar} ${isSidebarOpen ? styles.sidebar : styles.closed}`}>
             <div>
                 <a href="">
                     <IoMdHome className={styles.icon} />
