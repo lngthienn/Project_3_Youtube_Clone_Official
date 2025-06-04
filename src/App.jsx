@@ -7,32 +7,13 @@ import Layout from './layout/Layout';
 function App() {
     return (
         <Router>
-            <Routes>
-                <Route
-                    path="/"
-                    element={
-                        <Layout>
-                            <Home />
-                        </Layout>
-                    }
-                />
-                <Route
-                    path="/results"
-                    element={
-                        <Layout>
-                            <ResultsPage />
-                        </Layout>
-                    }
-                />
-                <Route
-                    path="/results/video"
-                    element={
-                        <Layout>
-                            <VideoPlayer />
-                        </Layout>
-                    }
-                />
-            </Routes>
+            <Layout>
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/results" element={<ResultsPage />} />
+                    <Route path="/results/video/:videoId" element={<VideoPlayer />} />
+                </Routes>
+            </Layout>
         </Router>
     );
 }

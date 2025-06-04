@@ -1,11 +1,21 @@
 import styles from '../../style/pages//VideoPlayer/VideoPlayer.module.scss';
+import { useParams } from 'react-router-dom';
 
-function VideoPlayer() {
+const VideoPlayer = () => {
+    const { videoId } = useParams();
+
     return (
-        <section>
-            <h1>VideoPlayer Page</h1>
-        </section>
+        <div>
+            <h2>Đang phát video</h2>
+            <iframe
+                width="560"
+                height="315"
+                src={`https://www.youtube.com/embed/${videoId}`}
+                title="YouTube video player"
+                allowFullScreen
+            ></iframe>
+        </div>
     );
-}
+};
 
 export default VideoPlayer;
