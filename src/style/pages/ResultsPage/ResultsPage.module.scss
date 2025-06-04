@@ -1,0 +1,40 @@
+.resultspage {
+    width: 100%;
+    height: auto;
+    padding: 10px 0 0 25px;
+
+    section {
+        display: flex;
+        align-items: center;
+    }
+
+    h2 {
+        font-size: 12px;
+        font-weight: 400;
+        margin-top: 18px;
+
+        i {
+            font-size: 14px;
+            font-weight: 500;
+            color: #0f0f0f;
+        }
+    }
+
+    ul {
+        li {
+            display: flex;
+            margin-bottom: 20px;
+
+            img {
+                width: 500px;
+                height: 281px;
+                object-fit: cover;
+                border-radius: 12px;
+
+                &:hover {
+                    border-radius: 0;
+                }
+            }
+        }
+    }
+}

@@ -19,7 +19,7 @@ function PopularMusic() {
                         part: 'snippet, contentDetails, statistics',
                         chart: 'mostPopular',
                         videoCategoryId: 10,
-                        regionCode: 'US',
+                        regionCode: 'VN',
                         maxResults: 3,
                         key: API_KEY,
                     },

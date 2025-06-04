@@ -3,25 +3,31 @@ import { useNavigate, useSearchParams } from 'react-router-dom';
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { fetchVideos } from '../../redux/searchSlice';
+import he from 'he';
+import PopularTypes from '../Home/PopularTypes';
+import styles from '../../style/pages/ResultsPage/ResultsPage.module.scss';
 
 const ResultsPage = () => {
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
     const [searchParams] = useSearchParams();
     const query = searchParams.get('query');
-    const navigate = useNavigate();
     const { videos, status } = useSelector((state) => state.search);
-    const dispatch = useDispatch();
 
     useEffect(() => {
-        dispatch(fetchVideos(query)); // Luôn cập nhật dữ liệu mới
-    }, [query]);
+        dispatch(fetchVideos(query));
+    }, [dispatch, query]);
 
     if (status === 'loading') return <p>🔄 Đang tải...</p>;
-    if (status === 'failed') return <p>❌ Có lỗi xảy ra! Vui lòng thử lại.</p>;
+    if (status === 'failed') return <p>❌ Có lỗi xảy ra! Vui lòng thử lại vào ngày mai...</p>;
     if (status === 'succeeded' && videos.length === 0) return <p>😕 Không tìm thấy kết quả nào!</p>;
 
     return (
-        <div>
-            <h2>Kết quả tìm kiếm cho: "{query}"</h2>
+        <section className={styles.resultspage}>
+            <PopularTypes />
+            <h2>
+                Ý bạn là: <i>{query}</i>
+            </h2>
             <ul>
                 {videos.map((video) => (
                     <li
@@ -29,12 +35,13 @@ const ResultsPage = () => {
                         onClick={() => navigate(`/results/video/${video.id.videoId}`)}
                         style={{ cursor: 'pointer' }}
                     >
-                        <img src={video.snippet.thumbnails.high.url} alt={video.snippet.title} width={200} />
-                        <p>{video.snippet.title}</p>
+                        <img src={video.snippet.thumbnails.high.url} alt={video.snippet.title} />
+
+                        <p>{videos ? he.decode(video.snippet.title) : 'Loading'}</p>
                     </li>
                 ))}
             </ul>
-        </div>
+        </section>
     );
 };
 
