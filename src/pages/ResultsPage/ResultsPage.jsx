@@ -5,6 +5,9 @@ import { useDispatch } from 'react-redux';
 import { fetchVideos } from '../../redux/searchSlice';
 import he from 'he';
 import PopularTypes from '../Home/PopularTypes';
+import { IoMdMusicalNote } from 'react-icons/io';
+import { GoDotFill } from 'react-icons/go';
+import { FaRegUserCircle } from 'react-icons/fa';
 import styles from '../../style/pages/ResultsPage/ResultsPage.module.scss';
 
 const ResultsPage = () => {
@@ -13,6 +16,11 @@ const ResultsPage = () => {
     const [searchParams] = useSearchParams();
     const query = searchParams.get('query');
     const { videos, status } = useSelector((state) => state.search);
+
+    const formatYearAgo = (publishedDate) => {
+        const yearsAgo = Math.round((Date.now() - new Date(publishedDate).getTime()) / (1000 * 60 * 60 * 24 * 365));
+        return `${yearsAgo} năm trước`;
+    };
 
     useEffect(() => {
         dispatch(fetchVideos(query));
@@ -30,14 +38,36 @@ const ResultsPage = () => {
             </h2>
             <ul>
                 {videos.map((video) => (
-                    <li
-                        key={video?.id?.videoId}
-                        onClick={() => navigate(`/results/video/${video.id.videoId}`)}
-                        style={{ cursor: 'pointer' }}
-                    >
-                        <img src={video.snippet.thumbnails.high.url} alt={video.snippet.title} />
-
-                        <p>{videos ? he.decode(video.snippet.title) : 'Loading'}</p>
+                    <li key={video?.id?.videoId}>
+                        <div>
+                            <img
+                                src={video.snippet.thumbnails.high.url}
+                                onClick={() => navigate(`/results/video/${video.id.videoId}`)}
+                                alt={video.snippet.title}
+                            />
+                        </div>
+                        <div>
+                            <div>
+                                <p>{videos ? he.decode(video.snippet.title) : 'Loading'}</p>
+                            </div>
+                            <div>
+                                <GoDotFill style={{ fontSize: '5' }} />
+                                <p>
+                                    {video.snippet.publishedAt
+                                        ? formatYearAgo(video.snippet.publishedAt)
+                                        : 'Đang tải...'}
+                                </p>
+                            </div>
+                            <div>
+                                <div>
+                                    <FaRegUserCircle />
+                                </div>
+                                <p>{video.snippet.channelTitle}</p>
+                                <div>
+                                    <IoMdMusicalNote style={{ fontSize: '9', color: '#fff' }} />
+                                </div>
+                            </div>
+                        </div>
                     </li>
                 ))}
             </ul>
