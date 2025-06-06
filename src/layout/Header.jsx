@@ -4,7 +4,8 @@ import { ImKeyboard } from 'react-icons/im';
 import { CiSearch } from 'react-icons/ci';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import { setQuery, fetchVideos, clearVideos } from '../redux/searchSlice';
+import { setQuery, clearVideos } from '../redux/slices/searchSlice';
+import fetchVideos from '../redux/thunks/fetchVideos';
 
 function Header({ toggleSidebar }) {
     const dispatch = useDispatch();

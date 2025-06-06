@@ -1,8 +1,7 @@
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import { useEffect } from 'react';
-import { useDispatch } from 'react-redux';
-import { fetchVideos } from '../../redux/searchSlice';
+import fetchVideos from '../../redux/thunks/fetchVideos';
 import he from 'he';
 import PopularTypes from '../Home/PopularTypes';
 import { IoMdMusicalNote } from 'react-icons/io';
@@ -12,10 +11,10 @@ import styles from '../../style/pages/ResultsPage/ResultsPage.module.scss';
 
 const ResultsPage = () => {
     const dispatch = useDispatch();
+    const { videos, status } = useSelector((state) => state.search);
     const navigate = useNavigate();
     const [searchParams] = useSearchParams();
     const query = searchParams.get('query');
-    const { videos, status } = useSelector((state) => state.search);
 
     const formatYearAgo = (publishedDate) => {
         const yearsAgo = Math.round((Date.now() - new Date(publishedDate).getTime()) / (1000 * 60 * 60 * 24 * 365));
@@ -23,7 +22,9 @@ const ResultsPage = () => {
     };
 
     useEffect(() => {
-        dispatch(fetchVideos(query));
+        if (query) {
+            dispatch(fetchVideos(query));
+        }
     }, [dispatch, query]);
 
     if (status === 'loading') return <p>🔄 Đang tải...</p>;

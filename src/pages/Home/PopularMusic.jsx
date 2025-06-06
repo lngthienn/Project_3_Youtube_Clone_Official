@@ -2,11 +2,13 @@ import { useEffect, useState } from 'react';
 import styles from '../../style/pages//Home/PopularMusic.module.scss';
 import axios from 'axios';
 import { BsThreeDotsVertical } from 'react-icons/bs';
+import { useNavigate } from 'react-router-dom';
 
 const API_KEY = import.meta.env.VITE_YOUTUBE_API_KEY;
 
 function PopularMusic() {
     const [music, setMusic] = useState([]);
+    const navigate = useNavigate();
 
     useEffect(() => {
         const cachedData = localStorage.getItem('popularMusic');
@@ -37,7 +39,11 @@ function PopularMusic() {
             {music.map((track) => (
                 <div key={track.id}>
                     <a>
-                        <img src={track.snippet.thumbnails.maxres.url} alt={track.snippet.title} />
+                        <img
+                            src={track.snippet.thumbnails.maxres.url}
+                            alt={track.snippet.title}
+                            onClick={() => navigate(`/results/video/${track.id.videoId}`)}
+                        />
                     </a>
                     <div>
                         <div>
