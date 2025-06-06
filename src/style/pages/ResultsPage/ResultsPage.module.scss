@@ -24,17 +24,19 @@
     ul {
         li {
             display: flex;
-            margin-bottom: 20px;
+            width: 100%;
+            padding: 0 24px 16px 24px;
 
             > div:first-child {
                 padding-top: 10px;
+                min-width: 500px;
+                margin-right: 15px;
 
                 img {
                     width: 500px;
                     height: 281px;
                     object-fit: cover;
                     border-radius: 12px;
-                    margin-right: 15px;
                     cursor: pointer;
 
                     &:hover {
@@ -44,10 +46,18 @@
             }
 
             > div:last-child {
+                width: 100%;
+
                 > div:first-child {
+                    display: flex;
+                    width: 100%;
+                    justify-content: space-between;
                     padding-top: 10px;
 
                     p {
+                        max-width: 668.8px;
+                        height: auto;
+                        line-height: 28px;
                         font-size: 18px;
                         color: #0f0f0f;
                         cursor: pointer;
@@ -56,28 +66,13 @@
 
                 > div:nth-child(2) {
                     display: flex;
-                    align-items: center;
-                    margin-top: 5px;
-                    padding-left: 80px;
-
-                    p {
-                        margin-left: 5px;
-                        font-size: 12px;
-                        color: #606060;
-                    }
-                }
-
-                > div:nth-child(3) {
-                    display: flex;
-                    padding: 0 12px 0 30px;
+                    padding: 12px 0;
                     margin-top: 20px;
 
-                    > div:first-child {
-                    }
-
                     p {
                         font-size: 12px;
                         color: #606060;
+                        margin-left: 5px;
                         cursor: pointer;
 
                         &:hover {
@@ -95,6 +90,12 @@
                         background-color: #606060;
                         border-radius: 50%;
                     }
+                }
+
+                > div:last-child {
+                    font-size: 12px;
+                    line-height: 18px;
+                    color: #606060;
                 }
             }
         }

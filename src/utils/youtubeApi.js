@@ -2,7 +2,7 @@ export const YOUTUBE_API_KEY = import.meta.env.VITE_YOUTUBE_API_KEY;
 
 export const COMMON_PARAMS = {
     key: YOUTUBE_API_KEY,
-    part: 'snippet',
+    part: 'snippet, statistics',
 };
 
 export const buildSearchUrl = (query) => {
