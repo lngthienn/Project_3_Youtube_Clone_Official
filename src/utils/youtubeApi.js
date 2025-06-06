@@ -15,12 +15,3 @@ export const buildSearchUrl = (query) => {
     });
     return `${BASE_URL}?${params.toString()}`;
 };
-
-export const buildChannelUrl = (channelId) => {
-    const BASE_URL = 'https://www.googleapis.com/youtube/v3/channels';
-    const params = new URLSearchParams({
-        ...COMMON_PARAMS,
-        id: channelId,
-    });
-    return `${BASE_URL}?${params.toString()}`;
-};
