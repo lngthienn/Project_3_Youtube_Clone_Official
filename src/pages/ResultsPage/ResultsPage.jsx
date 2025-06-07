@@ -11,8 +11,8 @@ import styles from '../../style/pages/ResultsPage/ResultsPage.module.scss';
 
 const ResultsPage = () => {
     const dispatch = useDispatch();
-    const { videos, status } = useSelector((state) => state.search);
     const navigate = useNavigate();
+    const { videos, status } = useSelector((state) => state.search);
     const [searchParams] = useSearchParams();
     const query = searchParams.get('query');
 
@@ -59,7 +59,6 @@ const ResultsPage = () => {
                                 </div>
                             </div>
                             <div>{video.snippet.description}</div>
-                            <span>{video.statistics.viewCount}</span>
                         </div>
                     </li>
                 ))}
