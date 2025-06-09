@@ -1,0 +1,13 @@
+.location {
+    width: 13.512px;
+    height: 44px;
+    position: relative;
+
+    span {
+        font-size: 10px;
+        color: #606060;
+        position: absolute;
+        right: 5px;
+        top: 7px;
+    }
+}

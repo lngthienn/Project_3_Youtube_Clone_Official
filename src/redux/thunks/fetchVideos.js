@@ -9,8 +9,8 @@ const fetchVideos = createAsyncThunk('search/fetchVideos', async (query, { getSt
     if (search.query === query && search.videos.length > 0) {
         return search.videos;
     }
-
     const response = await axios.get(buildSearchUrl(query));
+    console.log(response.data);
     return response.data.items;
 });
 

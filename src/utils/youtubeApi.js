@@ -6,7 +6,7 @@ export const COMMON_PARAMS = {
 };
 
 export const buildSearchUrl = (query) => {
-    const BASE_URL = 'https://www.googleapis.com/youtube/v3/search';
+    const BASE_URL = 'https://www.googleapis.com/youtube/v3/search1';
     const params = new URLSearchParams({
         ...COMMON_PARAMS,
         type: 'video',

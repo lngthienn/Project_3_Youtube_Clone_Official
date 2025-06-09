@@ -12,45 +12,15 @@
     overflow-y: auto;
     overflow-x: hidden;
 
-    > div:first-child {
+    > section:first-child {
         display: flex;
-        justify-content: center;
+        width: 169px;
+        height: 56px;
         align-items: center;
         position: relative;
-
-        div {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 40px;
-            height: 40px;
-            background: #fff;
-            cursor: pointer;
-
-            &:hover {
-                border-radius: 50%;
-                background: #f2f2f2;
-            }
-
-            &:active {
-                background: #d4d4d4;
-            }
-        }
-
-        a {
-            padding: 18px 14px 18px 16px;
-        }
-
-        span {
-            font-size: 10px;
-            color: #606060;
-            position: absolute;
-            right: 0;
-            top: 12px;
-        }
     }
 
-    > div:nth-child(2) {
+    > section:nth-child(2) {
         display: flex;
         justify-content: space-between;
         width: 732px;
@@ -132,34 +102,15 @@
                 }
             }
         }
-
-        > div:last-child {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background: #f2f2f2;
-            cursor: pointer;
-
-            &:hover {
-                background: #e1dbdb;
-            }
-        }
     }
 
-    > div:last-child {
+    > section:last-child {
         display: flex;
         justify-content: space-between;
         align-items: center;
         width: 225px;
         height: 40px;
         padding-left: 50px;
-
-        div {
-            cursor: pointer;
-        }
 
         button {
             display: flex;

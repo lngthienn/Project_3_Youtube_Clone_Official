@@ -1,11 +1,17 @@
 import styles from '../style/layout/Header.module.scss';
-import { FaMicrophone, FaEllipsisV, FaUserCircle } from 'react-icons/fa';
+import { FaUserCircle } from 'react-icons/fa';
 import { ImKeyboard } from 'react-icons/im';
 import { CiSearch } from 'react-icons/ci';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { setQuery, clearVideos } from '../redux/slices/searchSlice';
 import fetchVideos from '../redux/thunks/fetchVideos';
+
+import SidebarButton from '../components/Header/SidebarButton/SidebarButton';
+import Logo from '../components/Header/Logo/Logo';
+import Location from '../components/Header/Location/Location';
+import VoiceSearch from '../components/Header/VoiceSearch/VoiceSearch';
+import YouTubeSettings from '../components/Header/YouTubeSettings/YouTubeSettings';
 
 function Header({ toggleSidebar }) {
     const dispatch = useDispatch();
@@ -22,20 +28,12 @@ function Header({ toggleSidebar }) {
 
     return (
         <header className={styles.header}>
-            <div>
-                <div onClick={toggleSidebar} title="Mở/Đóng Sidebar">
-                    ☰
-                </div>
-                <a href="/">
-                    <img
-                        src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg"
-                        alt="YouTube Logo"
-                        width={93}
-                    />
-                </a>
-                <span>VN</span>
-            </div>
-            <div>
+            <section>
+                <SidebarButton toggleSidebar={toggleSidebar} />
+                <Logo />
+                <Location />
+            </section>
+            <section>
                 <div>
                     <div>
                         <CiSearch className={styles.searchheader} />
@@ -61,19 +59,15 @@ function Header({ toggleSidebar }) {
                         </button>
                     </div>
                 </div>
-                <div title="Tìm kiếm bằng giọng nói">
-                    <FaMicrophone />
-                </div>
-            </div>
-            <div>
-                <div>
-                    <FaEllipsisV title="Tùy chọn" />
-                </div>
+                <VoiceSearch />
+            </section>
+            <section>
+                <YouTubeSettings />
                 <button title="Đăng nhập">
                     <FaUserCircle style={{ fontSize: '20px' }} />
                     <p>Đăng nhập</p>
                 </button>
-            </div>
+            </section>
         </header>
     );
 }
