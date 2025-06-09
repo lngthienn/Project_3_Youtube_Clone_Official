@@ -1,5 +1,5 @@
 import { BsList } from 'react-icons/bs';
 
-export const SidebarButtonIcon = {
+export const SidebarButtonIcons = {
     button: BsList,
 };

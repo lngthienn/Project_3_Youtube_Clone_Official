@@ -1,5 +1,5 @@
 import { FaMicrophone } from 'react-icons/fa';
 
-export const VoiceSearchIcon = {
+export const VoiceSearchIcons = {
     button: FaMicrophone,
 };

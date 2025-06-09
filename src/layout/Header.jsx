@@ -1,7 +1,5 @@
 import styles from '../style/layout/Header.module.scss';
-import { FaUserCircle } from 'react-icons/fa';
 import { ImKeyboard } from 'react-icons/im';
-import { CiSearch } from 'react-icons/ci';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { setQuery, clearVideos } from '../redux/slices/searchSlice';
@@ -12,6 +10,8 @@ import Logo from '../components/Header/Logo/Logo';
 import Location from '../components/Header/Location/Location';
 import VoiceSearch from '../components/Header/VoiceSearch/VoiceSearch';
 import YouTubeSettings from '../components/Header/YouTubeSettings/YouTubeSettings';
+import Login from '../components/Header/Login/Login';
+import HiddenSearchInput from '../components/Header/Search/HiddenSearchInput';
 
 function Header({ toggleSidebar }) {
     const dispatch = useDispatch();
@@ -36,7 +36,7 @@ function Header({ toggleSidebar }) {
             <section>
                 <div>
                     <div>
-                        <CiSearch className={styles.searchheader} />
+                        {<HiddenSearchInput />}
                         <form onSubmit={(e) => e.preventDefault()}>
                             <input
                                 type="text"
@@ -55,7 +55,7 @@ function Header({ toggleSidebar }) {
                     </div>
                     <div>
                         <button title="Tìm kiếm nhanh" onClick={handleSearch}>
-                            <CiSearch style={{ fontSize: '24px', cursor: 'pointer' }} />
+                            {/* <CiSearch style={{ fontSize: '24px', cursor: 'pointer' }} /> */}
                         </button>
                     </div>
                 </div>
@@ -63,10 +63,7 @@ function Header({ toggleSidebar }) {
             </section>
             <section>
                 <YouTubeSettings />
-                <button title="Đăng nhập">
-                    <FaUserCircle style={{ fontSize: '20px' }} />
-                    <p>Đăng nhập</p>
-                </button>
+                <Login />
             </section>
         </header>
     );
