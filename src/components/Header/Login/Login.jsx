@@ -3,10 +3,10 @@ import { LoginIcons } from '../../../assets/Header/Login/LoginIcons';
 
 function Login() {
     return (
-        <button className={styles.login} title="Đăng nhập">
-            <LoginIcons.button style={{ fontSize: '20px' }} />
+        <a href="https://accounts.google.com/" className={styles.login} title="Đăng nhập">
+            <LoginIcons.button />
             <p>Đăng nhập</p>
-        </button>
+        </a>
     );
 }
 
