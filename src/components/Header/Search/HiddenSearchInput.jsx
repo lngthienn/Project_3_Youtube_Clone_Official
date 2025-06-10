@@ -3,8 +3,8 @@ import { HiddenSearchInputIcons } from '../../../assets/Header/Search/HiddenSear
 
 function HiddenSearchInput() {
     return (
-        <button className={styles.hiddensearchinput} title="Nút nhấn ẩn bên trong Input">
-            <HiddenSearchInputIcons.button className={styles.searchheader} />
+        <button title="Nút Search ẩn bên trong Input" className={styles.hiddenSearchInput}>
+            <HiddenSearchInputIcons.button style={{ fontSize: '20px' }} />
         </button>
     );
 }

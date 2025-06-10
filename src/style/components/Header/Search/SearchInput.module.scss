@@ -1,0 +1,14 @@
+.searchinput {
+    width: 484.2px;
+    height: 24px;
+
+    input {
+        display: block;
+        width: inherit;
+        height: 22px;
+
+        &:focus {
+            outline: none;
+        }
+    }
+}

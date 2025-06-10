@@ -1,19 +1,15 @@
 import styles from '../style/layout/Header.module.scss';
-import { ImKeyboard } from 'react-icons/im';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import { setQuery, clearVideos } from '../redux/slices/searchSlice';
+import { clearVideos } from '../redux/slices/searchSlice';
 import fetchVideos from '../redux/thunks/fetchVideos';
-
-import SidebarButton from '../components/Header/SidebarButton/SidebarButton';
-import Logo from '../components/Header/Logo/Logo';
-import Location from '../components/Header/Location/Location';
-import VoiceSearch from '../components/Header/VoiceSearch/VoiceSearch';
-import YouTubeSettings from '../components/Header/YouTubeSettings/YouTubeSettings';
-import Login from '../components/Header/Login/Login';
-import HiddenSearchInput from '../components/Header/Search/HiddenSearchInput';
+import { SidebarButton, Logo, Location, VoiceSearch, YouTubeSettings, Login } from '../components/Header';
+import { HiddenSearchInput, SearchInput, OskInput, SearchButton } from '../components/Header/Search';
+import { useRef, useState } from 'react';
 
 function Header({ toggleSidebar }) {
+    const [expanded, setExpanded] = useState(false);
+    const inputRef = useRef(null);
     const dispatch = useDispatch();
     const navigate = useNavigate();
     const query = useSelector((state) => state.search.query);
@@ -26,6 +22,21 @@ function Header({ toggleSidebar }) {
         }
     };
 
+    const handleClickSearch = () => {
+        setExpanded(true);
+        inputRef.current.focus();
+    };
+
+    const handleBlur = () => {
+        const timer = setTimeout(() => {
+            if (document.activeElement !== inputRef.current) {
+                setExpanded(false);
+            }
+        }, 50);
+
+        return () => clearTimeout(timer);
+    };
+
     return (
         <header className={styles.header}>
             <section>
@@ -35,31 +46,18 @@ function Header({ toggleSidebar }) {
             </section>
             <section>
                 <div>
-                    <div>
-                        {<HiddenSearchInput />}
-                        <form onSubmit={(e) => e.preventDefault()}>
-                            <input
-                                type="text"
-                                placeholder="Tìm kiếm"
-                                value={query}
-                                onChange={(e) => dispatch(setQuery(e.target.value))}
-                                onKeyDown={(e) => e.key === 'Enter' && handleSearch()}
-                                aria-label="Nhập từ khóa tìm kiếm"
-                            />
-                        </form>
-                        <button title="Tìm kiếm" onClick={handleSearch}>
-                            <ImKeyboard
-                                style={{ fontSize: '18px', background: '#fff', color: '#7b7b7b', cursor: 'pointer' }}
-                            />
-                        </button>
+                    <div onClick={handleClickSearch} onBlur={handleBlur}>
+                        {expanded && <HiddenSearchInput />}
+                        <SearchInput handleSearch={handleSearch} query={query} dispatch={dispatch} ref={inputRef} />
+                        <OskInput />
                     </div>
                     <div>
-                        <button title="Tìm kiếm nhanh" onClick={handleSearch}>
-                            {/* <CiSearch style={{ fontSize: '24px', cursor: 'pointer' }} /> */}
-                        </button>
+                        <SearchButton handleSearch={handleSearch} />
                     </div>
                 </div>
-                <VoiceSearch />
+                <div>
+                    <VoiceSearch />
+                </div>
             </section>
             <section>
                 <YouTubeSettings />
