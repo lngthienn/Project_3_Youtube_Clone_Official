@@ -1,6 +1,11 @@
 @use '../../../../style/components/Shared/GlobalStyles/Colors.scss';
 
 .youtubeSettings {
+    svg {
+        font-size: 17px;
+        cursor: pointer;
+    }
+
     > section {
         display: flex;
         flex-direction: column;

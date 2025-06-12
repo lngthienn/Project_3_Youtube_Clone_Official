@@ -39,7 +39,7 @@ function YouTubeSettings() {
 
     return (
         <div className={styles.youtubeSettings} title="Cài đặt">
-            <YouTubeSettingsIcons.button onClick={handleOpenSettings} style={{ cursor: 'pointer', fontSize: '17' }} />
+            <YouTubeSettingsIcons.button onClick={handleOpenSettings} />
             {isSettingsOpen && (
                 <section ref={settingsRef}>
                     <div>
