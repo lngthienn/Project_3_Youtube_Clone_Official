@@ -3,7 +3,7 @@ import { SidebarIcons } from '../../../assets/Sidebar/SidebarIcons';
 
 function SidebarHelp() {
     return (
-        <a href="" className={styles.sidebarLink}>
+        <a href="" className={styles.sidebarLinkOpen}>
             <SidebarIcons.help />
             <p>Trợ giúp</p>
         </a>

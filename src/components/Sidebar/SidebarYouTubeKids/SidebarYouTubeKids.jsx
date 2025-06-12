@@ -3,7 +3,7 @@ import { SidebarIcons } from '../../../assets/Sidebar/SidebarIcons';
 
 function SidebarYouTubeKids() {
     return (
-        <a href="" className={styles.sidebarLink}>
+        <a href="" className={styles.sidebarLinkOpen}>
             <SidebarIcons.youtubeKids style={{ color: 'red' }} />
             <p>Youtube Kids</p>
         </a>

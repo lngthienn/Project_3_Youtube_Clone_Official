@@ -3,7 +3,7 @@ import { SidebarIcons } from '../../../assets/Sidebar/SidebarIcons';
 
 function SidebarHome({ isSidebarOpen }) {
     return (
-        <a href="" className={`${styles.sidebarLink} ${isSidebarOpen ? styles.sidebarLink : styles.sidebarClosed}`}>
+        <a href="" className={isSidebarOpen ? styles.sidebarLinkOpen : styles.sidebarLinkClosed}>
             <SidebarIcons.home />
             <p>Trang chủ</p>
         </a>

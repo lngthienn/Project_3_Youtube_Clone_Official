@@ -1,4 +1,4 @@
-.sidebar {
+.sidebarOpen {
     display: block;
     width: 240px;
     --sidebar-open-width: 140px;
@@ -79,11 +79,13 @@
     }
 }
 
-.closed {
+.sidebarClosed {
     width: 72px;
     height: auto;
     padding: 0 4px;
     transition: 0.3s ease-in-out;
+    position: fixed;
+    left: 0;
 
     &:hover {
         overflow: hidden;
@@ -100,12 +102,14 @@
 
     > div:first-child,
     > div:nth-child(2) {
+        width: 100%;
+        height: auto;
         border-bottom: none;
         padding: 0;
     }
 }
 
-.sidebarLink {
+.sidebarLinkOpen {
     display: flex;
     align-items: center;
     width: 204px;
@@ -130,7 +134,7 @@
     }
 }
 
-.sidebarClosed {
+.sidebarLinkClosed {
     display: flex;
     flex-direction: column;
     justify-content: center;

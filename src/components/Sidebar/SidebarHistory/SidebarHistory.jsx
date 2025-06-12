@@ -3,7 +3,7 @@ import { SidebarIcons } from '../../../assets/Sidebar/SidebarIcons';
 
 function SidebarHistory({ isSidebarOpen }) {
     return (
-        <a href="" className={`${styles.sidebarLink} ${isSidebarOpen ? styles.sidebarLink : styles.sidebarClosed}`}>
+        <a href="" className={isSidebarOpen ? styles.sidebarLinkOpen : styles.sidebarLinkClosed}>
             <SidebarIcons.history />
             <p>Video đã xem</p>
         </a>

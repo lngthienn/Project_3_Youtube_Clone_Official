@@ -22,7 +22,7 @@ import {
 
 function Sidebar({ isSidebarOpen }) {
     return (
-        <aside className={`${styles.sidebar} ${isSidebarOpen ? styles.sidebar : styles.closed}`}>
+        <aside className={isSidebarOpen ? styles.sidebarOpen : styles.sidebarClosed}>
             <div>
                 <SidebarHome isSidebarOpen={isSidebarOpen} />
                 <SidebarShorts isSidebarOpen={isSidebarOpen} />

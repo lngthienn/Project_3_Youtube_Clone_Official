@@ -3,7 +3,7 @@ import { SidebarIcons } from '../../../assets/Sidebar/SidebarIcons';
 
 function SidebarNews() {
     return (
-        <a href="" className={styles.sidebarLink}>
+        <a href="" className={styles.sidebarLinkOpen}>
             <SidebarIcons.news />
             <p>Tin tức</p>
         </a>

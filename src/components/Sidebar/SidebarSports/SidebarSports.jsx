@@ -3,7 +3,7 @@ import { SidebarIcons } from '../../../assets/Sidebar/SidebarIcons';
 
 function SidebarSports() {
     return (
-        <a href="" className={styles.sidebarLink}>
+        <a href="" className={styles.sidebarLinkOpen}>
             <SidebarIcons.sports />
             <p>Thể thao</p>
         </a>
