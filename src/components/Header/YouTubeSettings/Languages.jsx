@@ -41,7 +41,9 @@ function Languages({ expanded, setExpanded }) {
                         {languages.map((lang) => (
                             <li
                                 key={lang.code}
-                                onClick={() => changeLanguage(lang.code)}
+                                onClick={() => {
+                                    changeLanguage(lang.code);
+                                }}
                                 className={lang.code === currentLanguage ? 'active' : ''}
                             >
                                 {lang.label}
