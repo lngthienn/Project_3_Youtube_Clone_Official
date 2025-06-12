@@ -5,6 +5,7 @@
     width: calc(100% - var(--sidebar-open-width));
     height: auto;
     margin: 56px 0 0 var(--sidebar-open-width);
+    padding-left: 15px;
 }
 
 .contentSidebarClosed {
@@ -12,4 +13,5 @@
     width: calc(100% - var(--sidebar-closed-width));
     height: auto;
     margin: 56px 0 0 var(--sidebar-closed-width);
+    padding-left: 15px;
 }
