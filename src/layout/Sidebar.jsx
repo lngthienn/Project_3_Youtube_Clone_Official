@@ -1,4 +1,6 @@
 import styles from '../style/layout/Sidebar.module.scss';
+import translations from '../locales/i18n';
+import { useLanguage } from '../context/useLanguage';
 import {
     SidebarHome,
     SidebarShorts,
@@ -21,6 +23,8 @@ import {
 } from '../components/Sidebar/indexSidebar';
 
 function Sidebar({ isSidebarOpen }) {
+    const { currentLanguage } = useLanguage();
+
     return (
         <aside className={isSidebarOpen ? styles.sidebarOpen : styles.sidebarClosed}>
             <div>
@@ -33,11 +37,11 @@ function Sidebar({ isSidebarOpen }) {
                 <SidebarHistory isSidebarOpen={isSidebarOpen} />
             </div>
             <div>
-                <p>Hãy đăng nhập để thích video, bình luận và đăng ký kênh.</p>
+                <p>{translations[currentLanguage].sidebar.sidebarSignIn}</p>
                 <SidebarSignIn />
             </div>
             <div>
-                <h3>Khám phá</h3>
+                <h3>{translations[currentLanguage].sidebar.sidebarExplore}</h3>
                 <SidebarTrending />
                 <SidebarMusic />
                 <SidebarGaming />
@@ -45,7 +49,7 @@ function Sidebar({ isSidebarOpen }) {
                 <SidebarSports />
             </div>
             <div>
-                <h3>Dịch vụ khác của YouTube</h3>
+                <h3>{translations[currentLanguage].sidebar.sidebarMoreFromYouTube}</h3>
                 <SidebarYouTubePremium />
                 <SidebarYouTubeMusic />
                 <SidebarYouTubeKids />
@@ -58,20 +62,20 @@ function Sidebar({ isSidebarOpen }) {
             </div>
             <div>
                 <div>
-                    <a href="">Giới thiệu</a>
-                    <a href="">Báo chí</a>
-                    <a href="">Bản quyền</a>
-                    <a href="">Liên hệ với chúng tôi</a>
-                    <a href="">Người sáng tạo</a>
-                    <a href="">Quảng cáo</a>
-                    <a href="">Nhà phát triển</a>
+                    <a href="">{translations[currentLanguage].sidebar.sidebarAbout}</a>
+                    <a href="">{translations[currentLanguage].sidebar.sidebarPress}</a>
+                    <a href="">{translations[currentLanguage].sidebar.sidebarCopyright}</a>
+                    <a href="">{translations[currentLanguage].sidebar.sidebarContactUs}</a>
+                    <a href="">{translations[currentLanguage].sidebar.sidebarCreators}</a>
+                    <a href="">{translations[currentLanguage].sidebar.sidebarAdvertise}</a>
+                    <a href="">{translations[currentLanguage].sidebar.sidebarDevelopers}</a>
                 </div>
                 <div>
-                    <a href="#">Điều khoản</a>
-                    <a href="#">Quyền riêng tư</a>
-                    <a href="#">Chính sách và an toàn</a>
-                    <a href="#">Cách YouTube hoạt động</a>
-                    <a href="#">Thử các tính năng mới</a>
+                    <a href="#">{translations[currentLanguage].sidebar.sidebarTerms}</a>
+                    <a href="#">{translations[currentLanguage].sidebar.sidebarPrivacy}</a>
+                    <a href="#">{translations[currentLanguage].sidebar.sidebarPolicyAndSafety}</a>
+                    <a href="#">{translations[currentLanguage].sidebar.sidebarHowYouTubeWorks}</a>
+                    <a href="#">{translations[currentLanguage].sidebar.sidebarTestNewFeatures}</a>
                 </div>
                 <div>
                     <div>© 2025 Google LLC</div>

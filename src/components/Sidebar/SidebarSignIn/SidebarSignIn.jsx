@@ -1,11 +1,15 @@
 import styles from '../../../style/components/Sidebar/SidebarSignIn/SidebarSignIn.module.scss';
 import { SidebarIcons } from '../../../assets/Sidebar/SidebarIcons';
+import translations from '../../../locales/i18n';
+import { useLanguage } from '../../../context/useLanguage';
 
 function SidebarSignIn() {
+    const { currentLanguage } = useLanguage();
+
     return (
         <button className={styles.sidebarSignIn}>
             <SidebarIcons.signIn />
-            <p>Đăng nhập</p>
+            <p>{translations[currentLanguage].sidebar.sidebarSignInButton}</p>
         </button>
     );
 }

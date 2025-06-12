@@ -1,0 +1,42 @@
+{
+    "header": {
+        "inputPlaceholder": "Tìm kiếm",
+        "signIn": "Đăng nhập"
+    },
+
+    "sidebar": {
+        "sidebarHome": "Trang chủ",
+        "sidebarShorts": "Shorts",
+        "sidebarSubscriptions": "Kênh đăng ký",
+        "sidebarYou": "Bạn",
+        "sidebarHistory": "Video đã xem",
+        "sidebarSignIn": "Hãy đăng nhập để thích video, bình luận và đăng ký kênh.",
+        "sidebarSignInButton": "Đăng nhập",
+        "sidebarExplore": "Khám phá",
+        "sidebarTrending": "Thịnh hành",
+        "sidebarMusic": "Âm nhạc",
+        "sidebarGaming": "Trò chơi",
+        "sidebarNews": "Tin tức",
+        "sidebarSports": "Thể thao",
+        "sidebarYouTubePremium": "YouTube Premium",
+        "sidebarYouTubeMusic": "YouTube Music",
+        "sidebarYouTubeKids": "YouTube Kids",
+        "sidebarMoreFromYouTube": "Dịch vụ khác của YouTube",
+        "sidebarSettings": "Cài đặt",
+        "sidebarReportHistory": "Nhật ký báo cáo",
+        "sidebarHelp": "Trợ giúp",
+        "sidebarSendFeedback": "Gửi ý kiến phản hồi",
+        "sidebarAbout": "Giới thiệu",
+        "sidebarPress": "Báo chí",
+        "sidebarCopyright": "Bản quyền",
+        "sidebarContactUs": "Liên hệ với chúng tôi",
+        "sidebarCreators": "Người sáng tạo",
+        "sidebarAdvertise": "Quảng cáo",
+        "sidebarDevelopers": "Nhà phát triển",
+        "sidebarTerms": "Điều khoản",
+        "sidebarPrivacy": "Quyền riêng tư",
+        "sidebarPolicyAndSafety": "Chính sách và an toàn",
+        "sidebarHowYouTubeWorks": "Cách YouTube hoạt động",
+        "sidebarTestNewFeatures": "Thử các tính năng mới"
+    }
+}

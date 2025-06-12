@@ -1,0 +1,42 @@
+{
+    "header": {
+        "inputPlaceholder": "Search",
+        "signIn": "Sign in"
+    },
+
+    "sidebar": {
+        "sidebarHome": "Home",
+        "sidebarShorts": "Shorts",
+        "sidebarSubscriptions": "Subscriptions",
+        "sidebarYou": "You",
+        "sidebarHistory": "History",
+        "sidebarSignIn": "Sign in to like videos, comment, and subscribe.",
+        "sidebarSignInButton": "Sign In",
+        "sidebarTrending": "Trending",
+        "sidebarExplore": "Explore",
+        "sidebarMusic": "Music",
+        "sidebarGaming": "Gaming",
+        "sidebarNews": "News",
+        "sidebarSports": "Sports",
+        "sidebarYouTubePremium": "YouTube Premium",
+        "sidebarYouTubeMusic": "YouTube Music",
+        "sidebarYouTubeKids": "YouTube Kids",
+        "sidebarMoreFromYouTube": "More From YouTube",
+        "sidebarSettings": "Settings",
+        "sidebarReportHistory": "Report History",
+        "sidebarHelp": "Help",
+        "sidebarSendFeedback": "Send Feedback",
+        "sidebarAbout": "About",
+        "sidebarPress": "Press",
+        "sidebarCopyright": "Copyright",
+        "sidebarContactUs": "Contact Us",
+        "sidebarCreators": "Creators",
+        "sidebarAdvertise": "Advertise",
+        "sidebarDevelopers": "Developers",
+        "sidebarTerms": "Terms",
+        "sidebarPrivacy": "Privacy",
+        "sidebarPolicyAndSafety": "Policy & Safety",
+        "sidebarHowYouTubeWorks": "How YouTube Works",
+        "sidebarTestNewFeatures": "Test New Features"
+    }
+}

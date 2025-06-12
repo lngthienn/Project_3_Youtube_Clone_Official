@@ -2,9 +2,13 @@ import youtubeSettingsStyles from '../../../style/components/Header/YouTubeSetti
 import languagesYouTubeSettingsStyles from '../../../style/components/Header/YouTubeSettings/Languages.module.scss';
 import { YouTubeSettingsIcons } from '../../../assets/Header/YouTubeSettings/YouTubeSettingsIcons';
 import clsx from 'clsx';
+import languages from '../../../locales/languages';
+import { useLanguage } from '../../../context/useLanguage';
 import { IoMdArrowBack } from 'react-icons/io';
 
 function Languages({ expanded, setExpanded }) {
+    const { currentLanguage, changeLanguage } = useLanguage();
+
     const handleExpanded = (event) => {
         event.stopPropagation();
         setExpanded(false);
@@ -34,8 +38,15 @@ function Languages({ expanded, setExpanded }) {
                         <h2>Chọn ngôn ngữ của bạn</h2>
                     </div>
                     <ul>
-                        <li>Tiếng Việt</li>
-                        <li>English</li>
+                        {languages.map((lang) => (
+                            <li
+                                key={lang.code}
+                                onClick={() => changeLanguage(lang.code)}
+                                className={lang.code === currentLanguage ? 'active' : ''}
+                            >
+                                {lang.label}
+                            </li>
+                        ))}
                     </ul>
                 </div>
             )}
