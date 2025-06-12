@@ -24,9 +24,7 @@ function Layout({ children }) {
         <>
             <Header toggleSidebar={toggleSidebar} />
             <Sidebar isSidebarOpen={isSidebarOpen} />
-            <main className={`${styles.content} ${isSidebarOpen ? styles.sidebaropen : styles.sidebarclosed}`}>
-                {children}
-            </main>
+            <main className={isSidebarOpen ? styles.contentSidebarOpen : styles.contentSidebarClosed}>{children}</main>
         </>
     );
 }

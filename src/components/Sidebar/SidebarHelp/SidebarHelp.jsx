@@ -5,7 +5,7 @@ function SidebarHelp() {
     return (
         <a href="" className={styles.sidebarLink}>
             <SidebarIcons.help />
-            <p>Gửi ý kiến phản hồi</p>
+            <p>Trợ giúp</p>
         </a>
     );
 }

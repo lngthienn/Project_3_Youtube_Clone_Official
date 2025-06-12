@@ -1,18 +1,15 @@
-.content {
+@use '../../style/layout/Sidebar.module.scss';
+
+.contentSidebarOpen {
     display: flex;
-    width: calc(100% - 240px);
+    width: calc(100% - var(--sidebar-open-width));
     height: auto;
     margin: 56px 0 0 240px;
 }
 
-.sidebaropen {
-    width: calc(100% - 240px);
-    height: auto;
-    margin: 56px 0 0 240px;
-}
-
-.sidebarclosed {
-    width: calc(100% - 72px);
+.contentSidebarClosed {
+    display: flex;
+    width: calc(100% - var(--sidebar-closed-width));
     height: auto;
     margin: 56px 0 0 72px;
 }

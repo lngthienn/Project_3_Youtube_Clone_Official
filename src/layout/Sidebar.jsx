@@ -24,13 +24,13 @@ function Sidebar({ isSidebarOpen }) {
     return (
         <aside className={`${styles.sidebar} ${isSidebarOpen ? styles.sidebar : styles.closed}`}>
             <div>
-                <SidebarHome />
-                <SidebarShorts />
-                <SidebarSubscriptions />
+                <SidebarHome isSidebarOpen={isSidebarOpen} />
+                <SidebarShorts isSidebarOpen={isSidebarOpen} />
+                <SidebarSubscriptions isSidebarOpen={isSidebarOpen} />
             </div>
             <div>
-                <SidebarYou />
-                <SidebarHistory />
+                <SidebarYou isSidebarOpen={isSidebarOpen} />
+                <SidebarHistory isSidebarOpen={isSidebarOpen} />
             </div>
             <div>
                 <p>Hãy đăng nhập để thích video, bình luận và đăng ký kênh.</p>
