@@ -4,12 +4,12 @@
     display: flex;
     width: calc(100% - var(--sidebar-open-width));
     height: auto;
-    margin: 56px 0 0 240px;
+    margin: 56px 0 0 var(--sidebar-open-width);
 }
 
 .contentSidebarClosed {
     display: flex;
     width: calc(100% - var(--sidebar-closed-width));
     height: auto;
-    margin: 56px 0 0 72px;
+    margin: 56px 0 0 var(--sidebar-closed-width);
 }
