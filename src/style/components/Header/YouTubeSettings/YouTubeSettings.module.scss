@@ -1,7 +1,7 @@
 @use '../../../../style/components/Shared/GlobalStyles/Colors.scss';
 
-.youtubesettings {
-    section {
+.youtubeSettings {
+    > section {
         display: flex;
         flex-direction: column;
         position: fixed;
@@ -20,53 +20,18 @@
         > div:last-child {
             padding: 8px 0;
             border-bottom: 1px solid rgb(233, 231, 231);
-
-            > div {
-                --components-settings-height: 40px;
-                display: flex;
-                align-items: center;
-                width: 100%;
-                height: var(--components-settings-height);
-                padding: 0 36px 0 16px;
-                cursor: pointer;
-
-                > i:first-child {
-                    display: flex;
-                    align-items: center;
-                    margin-right: 16px;
-                }
-
-                p {
-                    display: flex;
-                    align-items: center;
-                    font-size: 14px;
-                    width: 100%;
-                    white-space: wrap;
-                    height: 20px;
-                    color: var(--color-text-light);
-                    font-size: 400;
-                }
-
-                &:hover {
-                    background: #f3f0f0;
-                }
-
-                svg {
-                    font-size: 24px;
-                }
-            }
-
-            > div:nth-child(2),
-            > div:nth-child(3),
-            > div:nth-child(4),
-            > div:nth-child(5) {
-                padding: 0 16px 0 16px;
-            }
         }
 
         > div:first-child {
             width: inherit;
             height: 256.8px;
+
+            > div:nth-child(2),
+            > div:nth-child(3),
+            > div:nth-child(4),
+            > div:nth-child(5) {
+                padding: 0 0 0 16px;
+            }
         }
         > div:nth-child(2) {
             width: inherit;
@@ -76,6 +41,38 @@
             width: inherit;
             height: 80px;
             border-bottom: none;
+        }
+    }
+
+    .compsYouTubeSettings {
+        --components-settings-height: 40px;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: var(--components-settings-height);
+        padding: 0 36px 0 16px;
+        cursor: pointer;
+
+        p {
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+            width: 100%;
+            height: 20px;
+            white-space: normal;
+            color: var(--color-text-light);
+            font-size: 400;
+        }
+
+        &:hover {
+            background: #f3f0f0;
+        }
+
+        svg {
+            display: flex;
+            align-items: center;
+            margin-right: 16px;
+            font-size: 24px;
         }
     }
 }

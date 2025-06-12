@@ -1,9 +1,9 @@
-import styles from '../../../style/components/Header/YouTubeSettings/Location.module.scss';
+import styles from '../../../style/components/Header/YouTubeSettings/YouTubeSettings.module.scss';
 import { YouTubeSettingsIcons } from '../../../assets/Header/YouTubeSettings/YouTubeSettingsIcons';
 
 function Location() {
     return (
-        <div className={styles.location}>
+        <div className={styles.compsYouTubeSettings}>
             <i>
                 <YouTubeSettingsIcons.location />
             </i>

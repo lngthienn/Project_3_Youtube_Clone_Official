@@ -1,9 +1,9 @@
-import styles from '../../../style/components/Header/YouTubeSettings/Security.module.scss';
+import styles from '../../../style/components/Header/YouTubeSettings/YouTubeSettings.module.scss';
 import { YouTubeSettingsIcons } from '../../../assets/Header/YouTubeSettings/YouTubeSettingsIcons';
 
 function Security() {
     return (
-        <div className={styles.security}>
+        <div className={styles.compsYouTubeSettings}>
             <i>
                 <YouTubeSettingsIcons.security />
             </i>

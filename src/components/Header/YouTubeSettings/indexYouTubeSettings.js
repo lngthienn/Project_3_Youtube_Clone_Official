@@ -1,0 +1,9 @@
+export { default as Security } from './Security';
+export { default as Theme } from './Theme';
+export { default as Languages } from './Languages';
+export { default as LimitedMode } from './LimitedMode';
+export { default as Location } from './Location';
+export { default as Shortcut } from './Shortcut';
+export { default as Settings } from './Settings';
+export { default as Help } from './Help';
+export { default as FeedBack } from './FeedBack';

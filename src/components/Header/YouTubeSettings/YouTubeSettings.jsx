@@ -2,18 +2,21 @@ import styles from '../../../style/components/Header/YouTubeSettings/YouTubeSett
 import { YouTubeSettingsIcons } from '../../../assets/Header/YouTubeSettings/YouTubeSettingsIcons';
 import { useRef, useState } from 'react';
 import { useEffect } from 'react';
-import Security from './Security';
-import Theme from './Theme';
-import Languages from './Languages';
-import LimitedMode from './LimitedMode';
-import Location from './Location';
-import Shortcut from './Shortcut';
-import Settings from './Settings';
-import Help from './Help';
-import FeedBack from './FeedBack';
+import {
+    Security,
+    Theme,
+    Languages,
+    LimitedMode,
+    Location,
+    Shortcut,
+    Settings,
+    Help,
+    FeedBack,
+} from './indexYouTubeSettings';
 
 function YouTubeSettings() {
-    const [isSettingsOpen, setIsSettingsOpen] = useState();
+    const [isSettingsOpen, setIsSettingsOpen] = useState(false);
+    const [expanded, setExpanded] = useState(false);
     const settingsRef = useRef(null);
 
     const handleOpenSettings = () => {
@@ -24,6 +27,7 @@ function YouTubeSettings() {
         const handleClickOutSide = (e) => {
             if (settingsRef.current && !settingsRef.current.contains(e.target)) {
                 setIsSettingsOpen(false);
+                setExpanded(false);
             }
         };
 
@@ -34,18 +38,14 @@ function YouTubeSettings() {
     }, []);
 
     return (
-        <div className={styles.youtubesettings} title="Cài đặt">
-            <YouTubeSettingsIcons.button
-                onClick={handleOpenSettings}
-                onBlur={() => setIsSettingsOpen(false)}
-                style={{ cursor: 'pointer', fontSize: '17' }}
-            />
+        <div className={styles.youtubeSettings} title="Cài đặt">
+            <YouTubeSettingsIcons.button onClick={handleOpenSettings} style={{ cursor: 'pointer', fontSize: '17' }} />
             {isSettingsOpen && (
                 <section ref={settingsRef}>
                     <div>
                         <Security />
                         <Theme />
-                        <Languages />
+                        <Languages expanded={expanded} setExpanded={setExpanded} />
                         <LimitedMode />
                         <Location />
                         <Shortcut />

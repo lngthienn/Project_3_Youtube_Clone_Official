@@ -1,9 +1,9 @@
-import styles from '../../../style/components/Header/YouTubeSettings/Theme.module.scss';
+import styles from '../../../style/components/Header/YouTubeSettings/YouTubeSettings.module.scss';
 import { YouTubeSettingsIcons } from '../../../assets/Header/YouTubeSettings/YouTubeSettingsIcons';
 
 function Theme() {
     return (
-        <div className={styles.theme}>
+        <div className={styles.compsYouTubeSettings}>
             <i>
                 <YouTubeSettingsIcons.theme />
             </i>

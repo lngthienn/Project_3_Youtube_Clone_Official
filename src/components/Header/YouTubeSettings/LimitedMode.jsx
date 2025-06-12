@@ -1,9 +1,9 @@
-import styles from '../../../style/components/Header/YouTubeSettings/LimitedMode.module.scss';
+import styles from '../../../style/components/Header/YouTubeSettings/YouTubeSettings.module.scss';
 import { YouTubeSettingsIcons } from '../../../assets/Header/YouTubeSettings/YouTubeSettingsIcons';
 
 function LimitedMode() {
     return (
-        <div className={styles.limitedMode}>
+        <div className={styles.compsYouTubeSettings}>
             <i>
                 <YouTubeSettingsIcons.limitedMode />
             </i>
