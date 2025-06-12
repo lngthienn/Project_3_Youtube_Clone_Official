@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { clearVideos } from '../redux/slices/searchSlice';
 import fetchVideos from '../redux/thunks/fetchVideos';
-import { SidebarButton, Logo, Location, VoiceSearch, YouTubeSettings, Login } from '../components/Header';
+import { SidebarButton, Logo, Location, VoiceSearch, YouTubeSettings, SignIn } from '../components/Header';
 import { HiddenSearchInput, SearchInput, OskInput, SearchButton } from '../components/Header/Search';
 import { useRef, useState } from 'react';
 
@@ -22,7 +22,10 @@ function Header({ toggleSidebar }) {
         }
     };
 
-    const handleClickSearch = () => {
+    const handleClickSearch = (event) => {
+        if (event.target.tagName !== 'INPUT') {
+            event.currentTarget.querySelector('input')?.focus();
+        }
         setExpanded(true);
         inputRef.current.focus();
     };
@@ -46,7 +49,7 @@ function Header({ toggleSidebar }) {
             </section>
             <section>
                 <div>
-                    <div onClick={handleClickSearch} onBlur={handleBlur}>
+                    <div onFocus={handleClickSearch} onBlur={handleBlur} tabIndex={0}>
                         {expanded && <HiddenSearchInput />}
                         <SearchInput handleSearch={handleSearch} query={query} dispatch={dispatch} ref={inputRef} />
                         <OskInput />
@@ -61,7 +64,7 @@ function Header({ toggleSidebar }) {
             </section>
             <section>
                 <YouTubeSettings />
-                <Login />
+                <SignIn />
             </section>
         </header>
     );
