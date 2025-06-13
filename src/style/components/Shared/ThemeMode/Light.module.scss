@@ -1,0 +1,9 @@
+$bg-color: #ffffff;
+$text-color: #000000;
+$secondary-bg-color: #f9f9f9;
+$highlight-color: #065fd4;
+
+@mixin light-theme {
+    background-color: $bg-color;
+    color: $text-color;
+}

@@ -1,0 +1,10 @@
+@use './Light.module.scss' as light;
+@use './Dark.module.scss' as dark;
+
+.lightMode {
+    @include light.light-theme;
+}
+
+.darkMode {
+    @include dark.dark-theme;
+}
