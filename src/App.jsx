@@ -6,18 +6,18 @@ import ResultsPage from './pages/ResultsPage/ResultsPage';
 import VideoPlayer from './pages/VideoPlayer/VideoPlayer';
 import Layout from './layout/Layout';
 import './locales/i18n';
-import { useTheme } from './context/Theme/useTheme';
+// import { useTheme } from './context/Theme/useTheme';
 
 function App() {
     const { i18n } = useTranslation();
-    const { toggleTheme } = useTheme();
+    // const { toggleTheme } = useTheme();
 
-    useEffect(() => {
-        const savedTheme = localStorage.getItem('theme');
-        if (savedTheme) {
-            toggleTheme(savedTheme);
-        }
-    }, [toggleTheme]);
+    // useEffect(() => {
+    //     const savedTheme = localStorage.getItem('theme');
+    //     if (savedTheme) {
+    //         toggleTheme(savedTheme);
+    //     }
+    // }, [toggleTheme]);
 
     useEffect(() => {
         const savedLanguage = sessionStorage.getItem('language');
