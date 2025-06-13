@@ -1,15 +1,14 @@
 import styles from '../../../style/layout/Sidebar.module.scss';
 import { SidebarIcons } from '../../../assets/Sidebar/SidebarIcons';
-import translations from '../../../locales/i18n';
-import { useLanguage } from '../../../context/Languages/useLanguage';
+import { useTranslation } from 'react-i18next';
 
 function SidebarHome({ isSidebarOpen }) {
-    const { currentLanguage } = useLanguage();
+    const { t } = useTranslation();
 
     return (
         <a href="" className={isSidebarOpen ? styles.sidebarLinkOpen : styles.sidebarLinkClosed}>
             <SidebarIcons.home />
-            <p>{translations[currentLanguage].sidebar.sidebarHome}</p>
+            <p>{t('sidebar.sidebarHome')}</p>
         </a>
     );
 }

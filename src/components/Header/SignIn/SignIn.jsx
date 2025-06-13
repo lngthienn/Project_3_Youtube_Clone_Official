@@ -1,15 +1,14 @@
 import styles from '../../../style/components/Header/Login/Login.module.scss';
 import { LoginIcons } from '../../../assets/Header/Login/LoginIcons';
-import translations from '../../../locales/i18n';
-import { useLanguage } from '../../../context//Languages/useLanguage';
+import { useTranslation } from 'react-i18next';
 
 function Login() {
-    const { currentLanguage } = useLanguage();
+    const { t } = useTranslation();
 
     return (
         <a href="https://accounts.google.com/" className={styles.login} title="Đăng nhập">
             <LoginIcons.button />
-            <p>{translations[currentLanguage].header.signIn}</p>
+            <p>{t('header.signIn')}</p>
         </a>
     );
 }

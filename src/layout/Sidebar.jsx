@@ -1,6 +1,5 @@
 import styles from '../style/layout/Sidebar.module.scss';
-import translations from '../locales/i18n';
-import { useLanguage } from '../context/Languages/useLanguage';
+import { useTranslation } from 'react-i18next';
 import {
     SidebarHome,
     SidebarShorts,
@@ -23,7 +22,7 @@ import {
 } from '../components/Sidebar/indexSidebar';
 
 function Sidebar({ isSidebarOpen }) {
-    const { currentLanguage } = useLanguage();
+    const { t } = useTranslation();
 
     return (
         <aside className={isSidebarOpen ? styles.sidebarOpen : styles.sidebarClosed}>
@@ -37,11 +36,11 @@ function Sidebar({ isSidebarOpen }) {
                 <SidebarHistory isSidebarOpen={isSidebarOpen} />
             </div>
             <div>
-                <p>{translations[currentLanguage].sidebar.sidebarSignIn}</p>
+                <p>{t('sidebar.sidebarSignIn')}</p>
                 <SidebarSignIn />
             </div>
             <div>
-                <h3>{translations[currentLanguage].sidebar.sidebarExplore}</h3>
+                <h3>{t('sidebar.sidebarExplore')}</h3>
                 <SidebarTrending />
                 <SidebarMusic />
                 <SidebarGaming />
@@ -49,7 +48,7 @@ function Sidebar({ isSidebarOpen }) {
                 <SidebarSports />
             </div>
             <div>
-                <h3>{translations[currentLanguage].sidebar.sidebarMoreFromYouTube}</h3>
+                <h3>{t('sidebar.sidebarMoreFromYouTube')}</h3>
                 <SidebarYouTubePremium />
                 <SidebarYouTubeMusic />
                 <SidebarYouTubeKids />
@@ -62,20 +61,20 @@ function Sidebar({ isSidebarOpen }) {
             </div>
             <div>
                 <div>
-                    <a href="">{translations[currentLanguage].sidebar.sidebarAbout}</a>
-                    <a href="">{translations[currentLanguage].sidebar.sidebarPress}</a>
-                    <a href="">{translations[currentLanguage].sidebar.sidebarCopyright}</a>
-                    <a href="">{translations[currentLanguage].sidebar.sidebarContactUs}</a>
-                    <a href="">{translations[currentLanguage].sidebar.sidebarCreators}</a>
-                    <a href="">{translations[currentLanguage].sidebar.sidebarAdvertise}</a>
-                    <a href="">{translations[currentLanguage].sidebar.sidebarDevelopers}</a>
+                    <a href="">{t('sidebar.sidebarAbout')}</a>
+                    <a href="">{t('sidebar.sidebarPress')}</a>
+                    <a href="">{t('sidebar.sidebarCopyright')}</a>
+                    <a href="">{t('sidebar.sidebarContactUs')}</a>
+                    <a href="">{t('sidebar.sidebarCreators')}</a>
+                    <a href="">{t('sidebar.sidebarAdvertise')}</a>
+                    <a href="">{t('sidebar.sidebarDevelopers')}</a>
                 </div>
                 <div>
-                    <a href="#">{translations[currentLanguage].sidebar.sidebarTerms}</a>
-                    <a href="#">{translations[currentLanguage].sidebar.sidebarPrivacy}</a>
-                    <a href="#">{translations[currentLanguage].sidebar.sidebarPolicyAndSafety}</a>
-                    <a href="#">{translations[currentLanguage].sidebar.sidebarHowYouTubeWorks}</a>
-                    <a href="#">{translations[currentLanguage].sidebar.sidebarTestNewFeatures}</a>
+                    <a href="#">{t('sidebar.sidebarTerms')}</a>
+                    <a href="#">{t('sidebar.sidebarPrivacy')}</a>
+                    <a href="#">{t('sidebar.sidebarPolicyAndSafety')}</a>
+                    <a href="#">{t('sidebar.sidebarHowYouTubeWorks')}</a>
+                    <a href="#">{t('sidebar.sidebarTestNewFeatures')}</a>
                 </div>
                 <div>
                     <div>© 2025 Google LLC</div>

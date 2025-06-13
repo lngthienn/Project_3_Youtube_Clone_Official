@@ -1,17 +1,16 @@
 import styles from '../../../style/components/Header/YouTubeSettings/YouTubeSettings.module.scss';
 import { YouTubeSettingsIcons } from '../../../assets/Header/YouTubeSettings/YouTubeSettingsIcons';
-import translations from '../../../locales/i18n';
-import { useLanguage } from '../../../context/Languages/useLanguage';
+import { useTranslation } from 'react-i18next';
 
 function Security() {
-    const { currentLanguage } = useLanguage();
+    const { t } = useTranslation();
 
     return (
         <div className={styles.compsYouTubeSettings}>
             <i>
                 <YouTubeSettingsIcons.security />
             </i>
-            <p>{translations[currentLanguage].header.headerSettings.headerSettingsSecurity}</p>
+            <p>{t('header.headerSettings.headerSettingsSecurity')}</p>
         </div>
     );
 }

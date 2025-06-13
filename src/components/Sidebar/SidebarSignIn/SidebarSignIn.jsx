@@ -1,15 +1,14 @@
 import styles from '../../../style/components/Sidebar/SidebarSignIn/SidebarSignIn.module.scss';
 import { SidebarIcons } from '../../../assets/Sidebar/SidebarIcons';
-import translations from '../../../locales/i18n';
-import { useLanguage } from '../../../context/Languages/useLanguage';
+import { useTranslation } from 'react-i18next';
 
 function SidebarSignIn() {
-    const { currentLanguage } = useLanguage();
+    const { t } = useTranslation();
 
     return (
         <button className={styles.sidebarSignIn}>
             <SidebarIcons.signIn />
-            <p>{translations[currentLanguage].sidebar.sidebarSignInButton}</p>
+            <p>{t('sidebar.sidebarSignInButton')}</p>
         </button>
     );
 }

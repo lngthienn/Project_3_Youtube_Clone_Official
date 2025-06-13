@@ -1,15 +1,14 @@
 import styles from '../../../style/layout/Sidebar.module.scss';
 import { SidebarIcons } from '../../../assets/Sidebar/SidebarIcons';
-import translations from '../../../locales/i18n';
-import { useLanguage } from '../../../context/Languages/useLanguage';
+import { useTranslation } from 'react-i18next';
 
 function SidebarYouTubeKids() {
-    const { currentLanguage } = useLanguage();
+    const { t } = useTranslation();
 
     return (
         <a href="" className={styles.sidebarLinkOpen}>
             <SidebarIcons.youtubeKids style={{ color: 'red' }} />
-            <p>{translations[currentLanguage].sidebar.sidebarYouTubeKids}</p>
+            <p>{t('sidebar.sidebarYouTubeKids')}</p>
         </a>
     );
 }

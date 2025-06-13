@@ -54,5 +54,22 @@
         "sidebarPolicyAndSafety": "Policy & Safety",
         "sidebarHowYouTubeWorks": "How YouTube Works",
         "sidebarTestNewFeatures": "Test New Features"
+    },
+
+    "content": {
+        "contentPopularTypes": [
+            { "id": 1, "name": "All" },
+            { "id": 2, "name": "Music" },
+            { "id": 3, "name": "Podcast" },
+            { "id": 4, "name": "Gaming" },
+            { "id": 5, "name": "Live" },
+            { "id": 6, "name": "News" },
+            { "id": 7, "name": "Sitcom" },
+            { "id": 8, "name": "Animation" },
+            { "id": 9, "name": "Travel" },
+            { "id": 10, "name": "Nature" },
+            { "id": 11, "name": "Rap" },
+            { "id": 12, "name": "Recently Uploaded" }
+        ]
     }
 }

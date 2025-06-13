@@ -1,15 +1,14 @@
 import styles from '../../../style/layout/Sidebar.module.scss';
 import { SidebarIcons } from '../../../assets/Sidebar/SidebarIcons';
-import translations from '../../../locales/i18n';
-import { useLanguage } from '../../../context/Languages/useLanguage';
+import { useTranslation } from 'react-i18next';
 
 function SidebarSubscriptions({ isSidebarOpen }) {
-    const { currentLanguage } = useLanguage();
+    const { t } = useTranslation();
 
     return (
         <a href="" className={isSidebarOpen ? styles.sidebarLinkOpen : styles.sidebarLinkClosed}>
             <SidebarIcons.subscriptions />
-            <p>{translations[currentLanguage].sidebar.sidebarSubscriptions}</p>
+            <p>{t('sidebar.sidebarSubscriptions')}</p>
         </a>
     );
 }

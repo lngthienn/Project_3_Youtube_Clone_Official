@@ -2,19 +2,32 @@ import youtubeSettingsStyles from '../../../style/components/Header/YouTubeSetti
 import languagesYouTubeSettingsStyles from '../../../style/components/Header/YouTubeSettings/Languages.module.scss';
 import { YouTubeSettingsIcons } from '../../../assets/Header/YouTubeSettings/YouTubeSettingsIcons';
 import clsx from 'clsx';
-import translations from '../../../locales/i18n';
-import { useLanguage } from '../../../context/Languages/useLanguage';
+import { useTranslation } from 'react-i18next';
 import { IoMdArrowBack } from 'react-icons/io';
+import { useEffect } from 'react';
 
 function Languages({ expanded, setExpanded }) {
-    const { currentLanguage, changeLanguage } = useLanguage();
+    const { t, i18n } = useTranslation();
+
+    useEffect(() => {
+        const savedLanguage = sessionStorage.getItem('language');
+        if (savedLanguage && savedLanguage !== i18n.language) {
+            i18n.changeLanguage(savedLanguage);
+        }
+    }, [i18n]);
 
     const handleClose = (event) => {
         event.stopPropagation();
         setExpanded(false);
     };
 
-    const langList = translations[currentLanguage]?.header?.headerSettings?.headerSettingsLanguagesList || [];
+    const langList = t('header.headerSettings.headerSettingsLanguagesList', { returnObjects: true }) || [];
+
+    const changeLanguage = (languageCode) => {
+        sessionStorage.setItem('language', languageCode);
+        i18n.changeLanguage(languageCode);
+        console.log('Ngôn ngữ đã được lưu:', sessionStorage.getItem('language'));
+    };
 
     return (
         <div
@@ -27,7 +40,7 @@ function Languages({ expanded, setExpanded }) {
             <i>
                 <YouTubeSettingsIcons.languages />
             </i>
-            <p>{translations[currentLanguage].header.headerSettings.headerSettingsLanguage}</p>
+            <p>{t('header.headerSettings.headerSettingsLanguage')}</p>
             <i>
                 <YouTubeSettingsIcons.next />
             </i>
@@ -38,7 +51,7 @@ function Languages({ expanded, setExpanded }) {
                         <i onClick={handleClose}>
                             <IoMdArrowBack />
                         </i>
-                        <h2>{translations[currentLanguage].header.headerSettings.headerSettingsLanguagesChoose}</h2>
+                        <h2>{t('header.headerSettings.headerSettingsLanguagesChoose')}</h2>
                     </div>
                     <ul>
                         {langList.map(({ code, label }) => (
