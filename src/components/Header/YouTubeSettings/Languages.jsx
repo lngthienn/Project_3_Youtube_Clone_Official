@@ -3,7 +3,7 @@ import languagesYouTubeSettingsStyles from '../../../style/components/Header/You
 import { YouTubeSettingsIcons } from '../../../assets/Header/YouTubeSettings/YouTubeSettingsIcons';
 import clsx from 'clsx';
 import translations from '../../../locales/i18n';
-import { useLanguage } from '../../../context/useLanguage';
+import { useLanguage } from '../../../context/Languages/useLanguage';
 import { IoMdArrowBack } from 'react-icons/io';
 
 function Languages({ expanded, setExpanded }) {
@@ -42,11 +42,7 @@ function Languages({ expanded, setExpanded }) {
                     </div>
                     <ul>
                         {langList.map(({ code, label }) => (
-                            <li
-                                key={code}
-                                onClick={() => changeLanguage(code)}
-                                className={code === currentLanguage ? 'active' : ''}
-                            >
+                            <li key={code} onClick={() => changeLanguage(code)}>
                                 {label}
                             </li>
                         ))}

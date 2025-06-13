@@ -1,6 +1,6 @@
 import styles from '../style/layout/Sidebar.module.scss';
 import translations from '../locales/i18n';
-import { useLanguage } from '../context/useLanguage';
+import { useLanguage } from '../context/Languages/useLanguage';
 import {
     SidebarHome,
     SidebarShorts,

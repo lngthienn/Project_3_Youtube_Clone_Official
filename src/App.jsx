@@ -3,7 +3,7 @@ import Home from './pages/Home/Home';
 import ResultsPage from './pages/ResultsPage/ResultsPage';
 import VideoPlayer from './pages/VideoPlayer/VideoPlayer';
 import Layout from './layout/Layout';
-import { LanguageProvider } from './context/LanguageContext.jsx';
+import { LanguageProvider } from './context/Languages/LanguageContext.jsx';
 
 function App() {
     return (

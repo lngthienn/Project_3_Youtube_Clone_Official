@@ -2,7 +2,7 @@ import { forwardRef } from 'react';
 import styles from '../../../style/components/Header/Search/SearchInput.module.scss';
 import { setQuery } from '../../../redux/slices/searchSlice';
 import translations from '../../../locales/i18n';
-import { useLanguage } from '../../../context/useLanguage';
+import { useLanguage } from '../../../context/Languages/useLanguage';
 
 const SearchInput = forwardRef(({ handleSearch, query, dispatch }, ref) => {
     const { currentLanguage } = useLanguage();

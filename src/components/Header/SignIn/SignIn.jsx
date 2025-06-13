@@ -1,7 +1,7 @@
 import styles from '../../../style/components/Header/Login/Login.module.scss';
 import { LoginIcons } from '../../../assets/Header/Login/LoginIcons';
 import translations from '../../../locales/i18n';
-import { useLanguage } from '../../../context/useLanguage';
+import { useLanguage } from '../../../context//Languages/useLanguage';
 
 function Login() {
     const { currentLanguage } = useLanguage();
