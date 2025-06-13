@@ -4,15 +4,43 @@
         "signIn": "Sign in",
         "headerSettings": {
             "headerSettingsSecurity": " Your data in YouTube",
-            "headerSettingsTheme": "Appearance: Light",
-            "headerSettingsLanguage": "Language: English",
-            "headerSettingsLanguagesChoose": "Choose your language",
-            "headerSettingsLanguagesList": [
-                { "code": "vi", "label": "Vietnamese" },
-                { "code": "en", "label": "English (US)" }
-            ],
-            "headerSettingsRestrictedMode": "Restricted Mode: Off",
-            "headerSettingsLocation": "Location: Vietnam",
+            "headerSettingsTheme": {
+                "status": {
+                    "auto": "Use device theme",
+                    "dark": "Dark theme",
+                    "light": "Light theme"
+                },
+                "title": "Appearance",
+                "description": "Settings applies to this browser only",
+                "autoMode": "Use device theme",
+                "darkMode": "Dark theme",
+                "lightMode": "Light theme"
+            },
+            "headerSettingsLanguage": {
+                "current": "Language: Vietnamese",
+                "title": "Choose your language",
+                "list": [
+                    { "code": "vi", "label": "Vietnamese" },
+                    { "code": "en", "label": "English (UK)" }
+                ]
+            },
+            "headerSettingsRestrictedMode": {
+                "status": "Restricted Mode: Off",
+                "title": "Restricted Mode",
+                "description": "This helps hide potentially mature videos. No filter is 100% accurate.",
+                "browserNotice": "This setting only applies to this browser.",
+                "toggleAction": "ACTIVATE RESTRICTED MODE"
+            },
+            "headerSettingsLocation": {
+                "current": "Location: Vietnam",
+                "title": "Choose your location",
+                "list": [
+                    { "code": "vn", "label": "Vietnam" },
+                    { "code": "ru", "label": "Russia" },
+                    { "code": "it", "label": "Italy" },
+                    { "code": "pt", "label": "Portugal" }
+                ]
+            },
             "headerSettingsKeyboardShortcuts": "Keyboard shortcuts",
             "headerSettingsSettings": "Settings",
             "headerSettingsHelp": "Help",

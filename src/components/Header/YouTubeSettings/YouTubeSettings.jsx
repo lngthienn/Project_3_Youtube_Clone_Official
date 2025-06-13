@@ -16,7 +16,6 @@ import {
 
 function YouTubeSettings() {
     const [isSettingsOpen, setIsSettingsOpen] = useState(false);
-    const [expanded, setExpanded] = useState(false);
     const settingsRef = useRef(null);
 
     const handleOpenSettings = () => {
@@ -27,7 +26,6 @@ function YouTubeSettings() {
         const handleClickOutSide = (e) => {
             if (settingsRef.current && !settingsRef.current.contains(e.target)) {
                 setIsSettingsOpen(false);
-                setExpanded(false);
             }
         };
 
@@ -49,7 +47,7 @@ function YouTubeSettings() {
                     <div>
                         <Security />
                         <Theme />
-                        <Languages expanded={expanded} setExpanded={setExpanded} />
+                        <Languages />
                         <RestrictedMode />
                         <Location />
                         <Shortcut />

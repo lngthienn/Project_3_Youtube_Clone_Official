@@ -4,15 +4,44 @@
         "signIn": "Đăng nhập",
         "headerSettings": {
             "headerSettingsSecurity": "Dữ liệu của bạn trong YouTube",
-            "headerSettingsTheme": "Giao diện: Sáng",
-            "headerSettingsLanguage": "Ngôn ngữ: Tiếng Việt",
-            "headerSettingsLanguagesChoose": "Chọn ngôn ngữ của bạn",
-            "headerSettingsLanguagesList": [
-                { "code": "vi", "label": "Tiếng Việt" },
-                { "code": "en", "label": "English (US)" }
-            ],
-            "headerSettingsRestrictedMode": "Chế độ hạn chế: Đã tắt",
-            "headerSettingsLocation": "Địa điểm: Việt Nam",
+            "headerSettingsTheme": {
+                "status": {
+                    "auto": "Dùng giao diện của thiết bị",
+                    "dark": "Giao diện: Tối",
+                    "light": "Giao diện: Sáng"
+                },
+                "title": "Giao diện",
+                "description": "Tuỳ chọn cài đặt chỉ áp dụng cho trình duyệt này",
+                "autoMode": "Dùng giao diện của thiết bị",
+                "darkMode": "Giao diện tối",
+                "lightMode": "Giao diện sáng"
+            },
+            "headerSettingsLanguage": {
+                "current": "Ngôn ngữ: Tiếng Việt",
+                "title": "Chọn ngôn ngữ",
+                "list": [
+                    { "code": "vi", "label": "Tiếng Việt" },
+                    { "code": "en", "label": "English (UK)" }
+                ]
+            },
+            "headerSettingsRestrictedMode": {
+                "status": "Chế độ hạn chế: Đã tắt",
+                "title": "Chế độ hạn chế",
+                "description": "Chế độ này giúp ẩn các video có thể chứa nội dung dành cho người trưởng thành. Tuy nhiên, không có bộ lọc nào là chính xác 100%.",
+                "browserNotice": "Tùy chọn cài đặt này chỉ áp dụng cho trình duyệt này.",
+                "toggleAction": "KÍCH HOẠT CHẾ ĐỘ HẠN CHẾ"
+            },
+            "headerSettingsLocation": {
+                "current": "Địa điểm: Việt Nam",
+                "title": "Chọn vị trí của bạn",
+                "list": [
+                    { "code": "vn", "label": "Việt Nam" },
+                    { "code": "ru", "label": "Nga" },
+                    { "code": "it", "label": "Ý" },
+                    { "code": "pt", "label": "Bồ Đào Nha" }
+                ]
+            },
+
             "headerSettingsKeyboardShortcuts": "Phím tắt",
             "headerSettingsSettings": "Cài đặt",
             "headerSettingsHelp": "Trợ giúp",

@@ -17,19 +17,19 @@ function Theme() {
         event.stopPropagation();
         setChooseTheme(false);
     };
+
     return (
         <section
-            onClick={handleChooseTheme}
             className={clsx(
                 youtubeSettingsStyles.compsYouTubeSettings,
                 themeYouTubeSettingsStyles.themeYouTubeSettings,
             )}
         >
-            <div>
+            <div onClick={handleChooseTheme}>
                 <i>
                     <YouTubeSettingsIcons.theme />
                 </i>
-                <p>{t('header.headerSettings.headerSettingsTheme')}</p>
+                <p>{t('header.headerSettings.headerSettingsTheme.status.light')}</p>
                 <i>
                     <YouTubeSettingsIcons.next />
                 </i>
@@ -40,11 +40,12 @@ function Theme() {
                         <i onClick={handleClose}>
                             <YouTubeSettingsIcons.back />
                         </i>
-                        <h2>Giao diện</h2>
+                        <h2>{t('header.headerSettings.headerSettingsTheme.title')}</h2>
                     </section>
                     <ul>
-                        <li>Giao diện tối</li>
-                        <li>Giao diện sáng</li>
+                        <li>{t('header.headerSettings.headerSettingsTheme.autoMode')}</li>
+                        <li>{t('header.headerSettings.headerSettingsTheme.darkMode')}</li>
+                        <li>{t('header.headerSettings.headerSettingsTheme.lightMode')}</li>
                     </ul>
                 </div>
             )}

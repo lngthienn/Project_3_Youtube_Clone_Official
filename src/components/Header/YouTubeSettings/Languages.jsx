@@ -4,8 +4,10 @@ import clsx from 'clsx';
 import { YouTubeSettingsIcons } from '../../../assets/Header/YouTubeSettings/YouTubeSettingsIcons';
 import { useTranslation } from 'react-i18next';
 import { useEffect } from 'react';
+import { useState } from 'react';
 
-function Languages({ expanded, setExpanded }) {
+function Languages() {
+    const [chooseLanguages, setChooseLanguages] = useState();
     const { t, i18n } = useTranslation();
 
     useEffect(() => {
@@ -15,12 +17,16 @@ function Languages({ expanded, setExpanded }) {
         }
     }, [i18n]);
 
-    const handleClose = (event) => {
-        event.stopPropagation();
-        setExpanded(false);
+    const handleChooseLanguages = () => {
+        setChooseLanguages((prev) => !prev);
     };
 
-    const langList = t('header.headerSettings.headerSettingsLanguagesList', { returnObjects: true }) || [];
+    const handleClose = (event) => {
+        event.stopPropagation();
+        setChooseLanguages(false);
+    };
+
+    const langList = t('header.headerSettings.headerSettingsLanguage.list', { returnObjects: true }) || [];
 
     const changeLanguage = (languageCode) => {
         sessionStorage.setItem('language', languageCode);
@@ -34,24 +40,23 @@ function Languages({ expanded, setExpanded }) {
                 youtubeSettingsStyles.compsYouTubeSettings,
                 themeYouTubeSettingsStyles.themeYouTubeSettings,
             )}
-            onClick={() => setExpanded(true)}
         >
-            <div>
+            <div onClick={handleChooseLanguages}>
                 <i>
                     <YouTubeSettingsIcons.languages />
                 </i>
-                <p>{t('header.headerSettings.headerSettingsLanguage')}</p>
+                <p>{t('header.headerSettings.headerSettingsLanguage.current')}</p>
                 <i>
                     <YouTubeSettingsIcons.next />
                 </i>
             </div>
-            {expanded && (
+            {chooseLanguages && (
                 <div>
                     <section>
                         <i onClick={handleClose}>
                             <YouTubeSettingsIcons.back />
                         </i>
-                        <h2>{t('header.headerSettings.headerSettingsLanguagesChoose')}</h2>
+                        <h2>{t('header.headerSettings.headerSettingsLanguage.title')}</h2>
                     </section>
                     <ul>
                         {langList.map(({ code, label }) => (
