@@ -1,7 +1,23 @@
 {
     "header": {
         "inputPlaceholder": "Search",
-        "signIn": "Sign in"
+        "signIn": "Sign in",
+        "headerSettings": {
+            "headerSettingsSecurity": " Your data in YouTube",
+            "headerSettingsTheme": "Appearance: Light",
+            "headerSettingsLanguage": "Language: English",
+            "headerSettingsLanguagesChoose": "Choose your language",
+            "headerSettingsLanguagesList": [
+                { "code": "vi", "label": "Vietnamese" },
+                { "code": "en", "label": "English (US)" }
+            ],
+            "headerSettingsRestrictedMode": "Restricted Mode: Off",
+            "headerSettingsLocation": "Location: Vietnam",
+            "headerSettingsKeyboardShortcuts": "Keyboard shortcuts",
+            "headerSettingsSettings": "Settings",
+            "headerSettingsHelp": "Help",
+            "headerSettingsSendFeedback": "Send Feedback"
+        }
     },
 
     "sidebar": {

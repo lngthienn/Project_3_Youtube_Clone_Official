@@ -1,7 +1,23 @@
 {
     "header": {
         "inputPlaceholder": "Tìm kiếm",
-        "signIn": "Đăng nhập"
+        "signIn": "Đăng nhập",
+        "headerSettings": {
+            "headerSettingsSecurity": "Dữ liệu của bạn trong YouTube",
+            "headerSettingsTheme": "Giao diện: Sáng",
+            "headerSettingsLanguage": "Ngôn ngữ: Tiếng Việt",
+            "headerSettingsLanguagesChoose": "Chọn ngôn ngữ của bạn",
+            "headerSettingsLanguagesList": [
+                { "code": "vi", "label": "Tiếng Việt" },
+                { "code": "en", "label": "English (US)" }
+            ],
+            "headerSettingsRestrictedMode": "Chế độ hạn chế: Đã tắt",
+            "headerSettingsLocation": "Địa điểm: Việt Nam",
+            "headerSettingsKeyboardShortcuts": "Phím tắt",
+            "headerSettingsSettings": "Cài đặt",
+            "headerSettingsHelp": "Trợ giúp",
+            "headerSettingsSendFeedback": "Gửi ý kiến phản hồi"
+        }
     },
 
     "sidebar": {
