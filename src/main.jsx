@@ -3,9 +3,12 @@ import App from './App.jsx';
 import './style/components/Shared/GlobalStyles/Global.scss';
 import { store } from './redux/store.js';
 import { Provider } from 'react-redux';
+import { ThemeProvider } from './context/Theme/ThemeContext.jsx';
 
 createRoot(document.getElementById('root')).render(
     <Provider store={store}>
-        <App />
+        <ThemeProvider>
+            <App />
+        </ThemeProvider>
     </Provider>,
 );

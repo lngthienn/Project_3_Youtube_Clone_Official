@@ -6,3 +6,23 @@
 svg {
     font-size: 20px;
 }
+
+.light-mode {
+    --bg-color: #ffffff;
+    --secondary-bg-color: #f9f9f9;
+    --text-color: #000000;
+    --highlight-color: #065fd4;
+}
+
+.dark-mode {
+    --bg-color: #181818;
+    --secondary-bg-color: #212121;
+    --text-color: #ffffff;
+    --highlight-color: #3ea6ff;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}

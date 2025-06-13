@@ -16,7 +16,7 @@ function Theme() {
 
     const handleChangeTheme = (theme) => {
         setSelectedTheme(theme);
-        sessionStorage.setItem('theme', theme);
+        localStorage.setItem('theme', theme);
     };
 
     const handleClose = (event) => {
@@ -51,7 +51,11 @@ function Theme() {
                     </section>
                     <ul>
                         {themeModeList.map(({ key, label }) => (
-                            <li key={key} onClick={() => handleChangeTheme(key)}>
+                            <li
+                                key={key}
+                                onClick={() => handleChangeTheme(key)}
+                                className={selectedTheme === key ? 'active-theme' : ''}
+                            >
                                 {selectedTheme === key && <span>✔️</span>}
                                 <p>{label}</p>
                             </li>

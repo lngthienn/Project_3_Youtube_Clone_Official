@@ -6,9 +6,9 @@
             "headerSettingsSecurity": " Your data in YouTube",
             "headerSettingsTheme": {
                 "status": {
-                    "auto": "Use device theme",
-                    "dark": "Dark theme",
-                    "light": "Light theme"
+                    "auto": "Appearance: Use device theme",
+                    "dark": "Appearance: Dark ",
+                    "light": "Appearance: Light "
                 },
                 "title": "Appearance",
                 "description": "Settings applies to this browser only",
@@ -19,7 +19,7 @@
                 ]
             },
             "headerSettingsLanguage": {
-                "current": "Language: Vietnamese",
+                "current": "Language: English (UK)",
                 "title": "Choose your language",
                 "list": [
                     { "code": "vi", "label": "Vietnamese" },
