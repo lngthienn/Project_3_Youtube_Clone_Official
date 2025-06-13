@@ -8,15 +8,22 @@ import { useState } from 'react';
 function Theme() {
     const { t } = useTranslation();
     const [chooseTheme, setChooseTheme] = useState(false);
+    const [selectedTheme, setSelectedTheme] = useState('light');
 
     const handleChooseTheme = () => {
         setChooseTheme((prev) => !prev);
+    };
+
+    const handleChangeTheme = (theme) => {
+        setSelectedTheme(theme);
+        sessionStorage.setItem('theme', theme);
     };
 
     const handleClose = (event) => {
         event.stopPropagation();
         setChooseTheme(false);
     };
+    const themeModeList = t('header.headerSettings.headerSettingsTheme.mode', { returnObjects: true }) || [];
 
     return (
         <section
@@ -43,9 +50,12 @@ function Theme() {
                         <h2>{t('header.headerSettings.headerSettingsTheme.title')}</h2>
                     </section>
                     <ul>
-                        <li>{t('header.headerSettings.headerSettingsTheme.autoMode')}</li>
-                        <li>{t('header.headerSettings.headerSettingsTheme.darkMode')}</li>
-                        <li>{t('header.headerSettings.headerSettingsTheme.lightMode')}</li>
+                        {themeModeList.map(({ key, label }) => (
+                            <li key={key} onClick={() => handleChangeTheme(key)}>
+                                {selectedTheme === key && <span>✔️</span>}
+                                <p>{label}</p>
+                            </li>
+                        ))}
                     </ul>
                 </div>
             )}

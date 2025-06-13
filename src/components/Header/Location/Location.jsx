@@ -1,11 +1,14 @@
+import { memo } from 'react';
 import styles from '../../../style/components/Header/Location/Location.module.scss';
 
 function Location() {
+    const location = sessionStorage.getItem('location') ?? '';
+
     return (
         <section className={styles.location}>
-            <span>VN</span>
+            <span>{location}</span>
         </section>
     );
 }
 
-export default Location;
+export default memo(Location);

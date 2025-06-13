@@ -8,9 +8,15 @@ import { useState } from 'react';
 function Location() {
     const [chooseLocation, setChooseLocation] = useState();
     const { t } = useTranslation();
+    const [selectedLocation, setSelectedLocation] = useState(sessionStorage.getItem('location') || 'Việt Nam');
 
     const handleChooseLocation = () => {
         setChooseLocation((prev) => !prev);
+    };
+
+    const handleChangeLocation = (location) => {
+        sessionStorage.setItem('location', location);
+        setSelectedLocation(location);
     };
 
     const handleClose = (event) => {
@@ -46,7 +52,10 @@ function Location() {
                     </section>
                     <ul>
                         {locationList.map(({ code, label }) => (
-                            <li key={code}>{label}</li>
+                            <li key={code} onClick={() => handleChangeLocation(code)}>
+                                <p>{label}</p>
+                                {selectedLocation === code && <span>✔️</span>}
+                            </li>
                         ))}
                     </ul>
                 </div>

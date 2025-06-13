@@ -9,6 +9,7 @@ import { useState } from 'react';
 function Languages() {
     const [chooseLanguages, setChooseLanguages] = useState();
     const { t, i18n } = useTranslation();
+    const [selectedLanguage, setSelectedLanguage] = useState(i18n.language);
 
     useEffect(() => {
         const savedLanguage = sessionStorage.getItem('language');
@@ -31,7 +32,7 @@ function Languages() {
     const changeLanguage = (languageCode) => {
         sessionStorage.setItem('language', languageCode);
         i18n.changeLanguage(languageCode);
-        console.log('Ngôn ngữ đã được lưu:', sessionStorage.getItem('language'));
+        setSelectedLanguage(languageCode);
     };
 
     return (
@@ -61,7 +62,8 @@ function Languages() {
                     <ul>
                         {langList.map(({ code, label }) => (
                             <li key={code} onClick={() => changeLanguage(code)}>
-                                {label}
+                                {selectedLanguage === code && <span>✔️</span>}
+                                <p>{label}</p>
                             </li>
                         ))}
                     </ul>

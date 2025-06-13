@@ -12,9 +12,11 @@
                 },
                 "title": "Appearance",
                 "description": "Settings applies to this browser only",
-                "autoMode": "Use device theme",
-                "darkMode": "Dark theme",
-                "lightMode": "Light theme"
+                "mode": [
+                    { "key": "auto", "label": "Use device theme" },
+                    { "key": "dark", "label": "Dark theme" },
+                    { "key": "light", "label": "Light theme" }
+                ]
             },
             "headerSettingsLanguage": {
                 "current": "Language: Vietnamese",

@@ -58,6 +58,11 @@
                 &:hover {
                     background-color: #f2efef;
                 }
+
+                span {
+                    position: absolute;
+                    left: 20px;
+                }
             }
         }
     }

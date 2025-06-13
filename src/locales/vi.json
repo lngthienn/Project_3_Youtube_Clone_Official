@@ -12,9 +12,11 @@
                 },
                 "title": "Giao diện",
                 "description": "Tuỳ chọn cài đặt chỉ áp dụng cho trình duyệt này",
-                "autoMode": "Dùng giao diện của thiết bị",
-                "darkMode": "Giao diện tối",
-                "lightMode": "Giao diện sáng"
+                "mode": [
+                    { "key": "auto", "label": "Dùng giao diện của thiết bị" },
+                    { "key": "dark", "label": "Giao diện tối" },
+                    { "key": "light", "label": "Giao diện sáng" }
+                ]
             },
             "headerSettingsLanguage": {
                 "current": "Ngôn ngữ: Tiếng Việt",
