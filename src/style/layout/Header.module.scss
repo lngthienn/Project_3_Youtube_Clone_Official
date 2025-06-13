@@ -1,3 +1,5 @@
+$search-button-width: 568px;
+
 .header {
     display: flex;
     justify-content: space-between;
@@ -9,7 +11,7 @@
     top: 0;
     left: 0;
     padding: 0px 16px;
-    // background: #fff;
+    background: #fff;
     overflow-y: auto;
     overflow-x: hidden;
 
@@ -49,7 +51,7 @@
 
                 &:focus-within {
                     margin-left: 0;
-                    width: 568px;
+                    width: $search-button-width;
                     border: 1px solid #1c1cdb;
                     box-shadow: inset 0 2px 2px #cfcece;
                     padding: 0px 4px 0px 48px;
