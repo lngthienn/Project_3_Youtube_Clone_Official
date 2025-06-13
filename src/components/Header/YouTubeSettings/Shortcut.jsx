@@ -6,12 +6,14 @@ function Shortcut() {
     const { t } = useTranslation();
 
     return (
-        <div className={styles.compsYouTubeSettings}>
-            <i>
-                <YouTubeSettingsIcons.shortcut />
-            </i>
-            <p>{t('header.headerSettings.headerSettingsKeyboardShortcuts')}</p>
-        </div>
+        <section className={styles.compsYouTubeSettings}>
+            <div>
+                <i>
+                    <YouTubeSettingsIcons.shortcut />
+                </i>
+                <p>{t('header.headerSettings.headerSettingsKeyboardShortcuts')}</p>
+            </div>
+        </section>
     );
 }
 

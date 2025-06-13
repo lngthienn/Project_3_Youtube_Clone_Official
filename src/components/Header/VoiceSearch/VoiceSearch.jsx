@@ -3,9 +3,11 @@ import { VoiceSearchIcons } from '../../../assets/Header/VoiceSearch/VoiceSearch
 
 function VoiceSearch() {
     return (
-        <div className={styles.voicesearch} title="Tìm kiếm bằng giọng nói">
-            <VoiceSearchIcons.button />
-        </div>
+        <section className={styles.voicesearch} title="Tìm kiếm bằng giọng nói">
+            <div>
+                <VoiceSearchIcons.button />
+            </div>
+        </section>
     );
 }
 

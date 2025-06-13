@@ -6,12 +6,14 @@ function Help() {
     const { t } = useTranslation();
 
     return (
-        <div className={styles.compsYouTubeSettings}>
-            <i>
-                <YouTubeSettingsIcons.help />
-            </i>
-            <p>{t('header.headerSettings.headerSettingsHelp')}</p>
-        </div>
+        <section className={styles.compsYouTubeSettings}>
+            <div>
+                <i>
+                    <YouTubeSettingsIcons.help />
+                </i>
+                <p>{t('header.headerSettings.headerSettingsHelp')}</p>
+            </div>
+        </section>
     );
 }
 

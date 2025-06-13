@@ -3,9 +3,9 @@ import { SidebarButtonIcons } from '../../../assets/Header/SidebarButton/Sidebar
 
 function SidebarButton({ toggleSidebar }) {
     return (
-        <div className={styles.sidebarbutton} onClick={toggleSidebar} title="Mở/Đóng Sidebar">
+        <section className={styles.sidebarbutton} onClick={toggleSidebar} title="Mở/Đóng Sidebar">
             <SidebarButtonIcons.button style={{ fontSize: '24' }} />
-        </div>
+        </section>
     );
 }
 

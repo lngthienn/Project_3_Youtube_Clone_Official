@@ -2,19 +2,22 @@ import styles from '../../../style/components/Header/YouTubeSettings/YouTubeSett
 import { YouTubeSettingsIcons } from '../../../assets/Header/YouTubeSettings/YouTubeSettingsIcons';
 import { useTranslation } from 'react-i18next';
 
-function Settings() {
+function RestrictedMode() {
     const { t } = useTranslation();
 
     return (
         <section className={styles.compsYouTubeSettings}>
             <div>
                 <i>
-                    <YouTubeSettingsIcons.settings />
+                    <YouTubeSettingsIcons.restrictedMode />
                 </i>
-                <p>{t('header.headerSettings.headerSettingsSettings')}</p>
+                <p>{t('header.headerSettings.headerSettingsRestrictedMode')}</p>
+                <i>
+                    <YouTubeSettingsIcons.next />
+                </i>
             </div>
         </section>
     );
 }
 
-export default Settings;
+export default RestrictedMode;

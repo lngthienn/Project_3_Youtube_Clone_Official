@@ -1,12 +1,15 @@
 @use '../../../../style/components/Shared/GlobalStyles/Colors.scss';
 
-.youtubeSettings {
+.headerYouTubeSettings {
     svg {
         font-size: 17px;
         cursor: pointer;
     }
 
-    > section {
+    > div:first-child {
+    }
+
+    > div:last-child {
         display: flex;
         flex-direction: column;
         position: fixed;
@@ -38,10 +41,12 @@
                 padding: 0 0 0 16px;
             }
         }
+
         > div:nth-child(2) {
             width: inherit;
             height: 56.8px;
         }
+
         > div:last-child {
             width: inherit;
             height: 80px;

@@ -3,11 +3,11 @@ import { SearchButtonIcons } from '../../../assets/Header/Search/SearchButtonIco
 
 function SearchButton({ handleSearch }) {
     return (
-        <>
-            <button className={styles.searchbutton} title="Tìm kiếm nhanh" onClick={handleSearch}>
-                <SearchButtonIcons.button style={{ fontSize: '24px', cursor: 'pointer' }} />
+        <section className={styles.searchbutton} title="Tìm kiếm nhanh" onClick={handleSearch}>
+            <button>
+                <SearchButtonIcons.button />
             </button>
-        </>
+        </section>
     );
 }
 

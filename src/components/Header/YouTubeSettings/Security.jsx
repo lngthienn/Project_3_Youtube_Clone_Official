@@ -6,12 +6,14 @@ function Security() {
     const { t } = useTranslation();
 
     return (
-        <div className={styles.compsYouTubeSettings}>
-            <i>
-                <YouTubeSettingsIcons.security />
-            </i>
-            <p>{t('header.headerSettings.headerSettingsSecurity')}</p>
-        </div>
+        <section className={styles.compsYouTubeSettings}>
+            <div>
+                <i>
+                    <YouTubeSettingsIcons.security />
+                </i>
+                <p>{t('header.headerSettings.headerSettingsSecurity')}</p>
+            </div>
+        </section>
     );
 }
 

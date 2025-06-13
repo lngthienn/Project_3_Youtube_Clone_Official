@@ -6,10 +6,12 @@ function Login() {
     const { t } = useTranslation();
 
     return (
-        <a href="https://accounts.google.com/" className={styles.login} title="Đăng nhập">
-            <LoginIcons.button />
-            <p>{t('header.signIn')}</p>
-        </a>
+        <section className={styles.login}>
+            <a href="https://accounts.google.com/" title="Đăng nhập">
+                <LoginIcons.button />
+                <p>{t('header.signIn')}</p>
+            </a>
+        </section>
     );
 }
 

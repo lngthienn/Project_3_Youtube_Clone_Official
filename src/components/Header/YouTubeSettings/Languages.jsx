@@ -1,9 +1,8 @@
 import youtubeSettingsStyles from '../../../style/components/Header/YouTubeSettings/YouTubeSettings.module.scss';
-import languagesYouTubeSettingsStyles from '../../../style/components/Header/YouTubeSettings/Languages.module.scss';
-import { YouTubeSettingsIcons } from '../../../assets/Header/YouTubeSettings/YouTubeSettingsIcons';
+import themeYouTubeSettingsStyles from '../../../style/components/Header/YouTubeSettings/Theme.module.scss';
 import clsx from 'clsx';
+import { YouTubeSettingsIcons } from '../../../assets/Header/YouTubeSettings/YouTubeSettingsIcons';
 import { useTranslation } from 'react-i18next';
-import { IoMdArrowBack } from 'react-icons/io';
 import { useEffect } from 'react';
 
 function Languages({ expanded, setExpanded }) {
@@ -30,29 +29,30 @@ function Languages({ expanded, setExpanded }) {
     };
 
     return (
-        <div
+        <section
             className={clsx(
                 youtubeSettingsStyles.compsYouTubeSettings,
-                languagesYouTubeSettingsStyles.languagesYouTubeSettings,
+                themeYouTubeSettingsStyles.themeYouTubeSettings,
             )}
             onClick={() => setExpanded(true)}
         >
-            <i>
-                <YouTubeSettingsIcons.languages />
-            </i>
-            <p>{t('header.headerSettings.headerSettingsLanguage')}</p>
-            <i>
-                <YouTubeSettingsIcons.next />
-            </i>
-
+            <div>
+                <i>
+                    <YouTubeSettingsIcons.languages />
+                </i>
+                <p>{t('header.headerSettings.headerSettingsLanguage')}</p>
+                <i>
+                    <YouTubeSettingsIcons.next />
+                </i>
+            </div>
             {expanded && (
                 <div>
-                    <div>
+                    <section>
                         <i onClick={handleClose}>
-                            <IoMdArrowBack />
+                            <YouTubeSettingsIcons.back />
                         </i>
                         <h2>{t('header.headerSettings.headerSettingsLanguagesChoose')}</h2>
-                    </div>
+                    </section>
                     <ul>
                         {langList.map(({ code, label }) => (
                             <li key={code} onClick={() => changeLanguage(code)}>
@@ -62,7 +62,7 @@ function Languages({ expanded, setExpanded }) {
                     </ul>
                 </div>
             )}
-        </div>
+        </section>
     );
 }
 

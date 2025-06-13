@@ -42,12 +42,12 @@ function Header({ toggleSidebar }) {
 
     return (
         <header className={styles.header}>
-            <section>
+            <div>
                 <SidebarButton toggleSidebar={toggleSidebar} />
                 <Logo />
                 <Location />
-            </section>
-            <section>
+            </div>
+            <div>
                 <div>
                     <div onFocus={handleClickSearch} onBlur={handleBlur} tabIndex={0}>
                         {expanded && <HiddenSearchInput />}
@@ -61,11 +61,11 @@ function Header({ toggleSidebar }) {
                 <div>
                     <VoiceSearch />
                 </div>
-            </section>
-            <section>
+            </div>
+            <div>
                 <YouTubeSettings />
                 <SignIn />
-            </section>
+            </div>
         </header>
     );
 }

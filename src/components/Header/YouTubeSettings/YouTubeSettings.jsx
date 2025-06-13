@@ -6,7 +6,7 @@ import {
     Security,
     Theme,
     Languages,
-    LimitedMode,
+    RestrictedMode,
     Location,
     Shortcut,
     Settings,
@@ -38,15 +38,19 @@ function YouTubeSettings() {
     }, []);
 
     return (
-        <div className={styles.youtubeSettings} title="Cài đặt">
-            <YouTubeSettingsIcons.button onClick={handleOpenSettings} />
+        <section className={styles.headerYouTubeSettings} title="Cài đặt">
+            <div>
+                <i>
+                    <YouTubeSettingsIcons.button onClick={handleOpenSettings} />
+                </i>
+            </div>
             {isSettingsOpen && (
-                <section ref={settingsRef}>
+                <div ref={settingsRef}>
                     <div>
                         <Security />
                         <Theme />
                         <Languages expanded={expanded} setExpanded={setExpanded} />
-                        <LimitedMode />
+                        <RestrictedMode />
                         <Location />
                         <Shortcut />
                     </div>
@@ -57,9 +61,9 @@ function YouTubeSettings() {
                         <Help />
                         <FeedBack />
                     </div>
-                </section>
+                </div>
             )}
-        </div>
+        </section>
     );
 }
 

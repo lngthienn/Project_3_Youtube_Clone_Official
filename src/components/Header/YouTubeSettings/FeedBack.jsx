@@ -6,12 +6,14 @@ function FeedBack() {
     const { t } = useTranslation();
 
     return (
-        <div className={styles.compsYouTubeSettings}>
-            <i>
-                <YouTubeSettingsIcons.feedback />
-            </i>
-            <p>{t('header.headerSettings.headerSettingsSendFeedback')}</p>
-        </div>
+        <section className={styles.compsYouTubeSettings}>
+            <div>
+                <i>
+                    <YouTubeSettingsIcons.feedback />
+                </i>
+                <p>{t('header.headerSettings.headerSettingsSendFeedback')}</p>
+            </div>
+        </section>
     );
 }
 

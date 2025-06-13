@@ -3,11 +3,11 @@ import { OskInputIcons } from '../../../assets/Header/Search/OskInputIcons';
 
 function OskInput() {
     return (
-        <button className={styles.oskinput} title="Tìm kiếm">
-            <OskInputIcons.button
-                style={{ fontSize: '18px', background: '#fff', color: '#7b7b7b', cursor: 'pointer' }}
-            />
-        </button>
+        <section className={styles.oskinput}>
+            <button title="Tìm kiếm">
+                <OskInputIcons.button />
+            </button>
+        </section>
     );
 }
 

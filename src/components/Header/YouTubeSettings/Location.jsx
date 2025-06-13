@@ -6,15 +6,17 @@ function Location() {
     const { t } = useTranslation();
 
     return (
-        <div className={styles.compsYouTubeSettings}>
-            <i>
-                <YouTubeSettingsIcons.location />
-            </i>
-            <p>{t('header.headerSettings.headerSettingsLocation')}</p>
-            <i>
-                <YouTubeSettingsIcons.next />
-            </i>
-        </div>
+        <section className={styles.compsYouTubeSettings}>
+            <div>
+                <i>
+                    <YouTubeSettingsIcons.location />
+                </i>
+                <p>{t('header.headerSettings.headerSettingsLocation')}</p>
+                <i>
+                    <YouTubeSettingsIcons.next />
+                </i>
+            </div>
+        </section>
     );
 }
 

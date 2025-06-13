@@ -1,5 +1,14 @@
 .oskinput {
-    display: flex;
-    align-items: center;
-    padding: 4px;
+    button {
+        display: flex;
+        align-items: center;
+        padding: 4px;
+
+        svg {
+            font-size: 18px;
+            background: #fff;
+            color: #7b7b7b;
+            cursor: pointer;
+        }
+    }
 }

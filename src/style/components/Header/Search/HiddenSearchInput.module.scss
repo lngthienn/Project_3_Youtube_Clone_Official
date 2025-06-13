@@ -1,8 +1,12 @@
 .hiddenSearchInput {
-    display: block;
-    height: 24px;
-    width: 24px;
-    position: absolute;
-    left: 20px;
-    font-size: 24px;
+    button {
+        display: block;
+        position: absolute;
+        left: 20px;
+        top: 7px;
+
+        svg {
+            font-size: 24px;
+        }
+    }
 }

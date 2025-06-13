@@ -2,9 +2,9 @@ import styles from '../../../style/components/Header/Location/Location.module.sc
 
 function Location() {
     return (
-        <div className={styles.location}>
+        <section className={styles.location}>
             <span>VN</span>
-        </div>
+        </section>
     );
 }
 
