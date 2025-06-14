@@ -1,11 +1,12 @@
 import styles from '../../../style/components/Header/Search/SearchButton.module.scss';
 import { HeaderSearchIcons } from '../../../assets/Header/HeaderSearch/HeaderSearchIcons.js';
 
-function SearchButton({ handleSearch }) {
+function SearchButton() {
     return (
-        <section className={styles.searchbutton} title="Tìm kiếm nhanh" onClick={handleSearch}>
+        <section className={styles.searchbutton} title="Tìm kiếm nhanh">
             <button>
-                <HeaderSearchIcons.rightSearchButton />
+                {/* <HeaderSearchIcons.rightSearchButton /> */}
+                <p>Đang bảo trì</p>
             </button>
         </section>
     );

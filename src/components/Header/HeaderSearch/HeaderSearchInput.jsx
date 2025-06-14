@@ -45,7 +45,11 @@ const SearchInput = () => {
                         onChange={(e) => {
                             dispatch(setQuery(e.target.value));
                         }}
-                        onKeyDown={(e) => e.key === 'Enter' && handleSearch()}
+                        oonKeyDown={(e) => {
+                            if (e.key === 'Enter' && query.trim()) {
+                                handleSearch();
+                            }
+                        }}
                     />
                 </form>
                 <button>
