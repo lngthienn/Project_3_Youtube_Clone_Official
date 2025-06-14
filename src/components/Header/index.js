@@ -1,6 +1,6 @@
-export { default as Location } from './Location/Location';
-export { default as SignIn } from './SignIn/SignIn';
-export { default as Logo } from './Logo/Logo';
-export { default as SidebarButton } from './SidebarButton/SidebarButton';
-export { default as VoiceSearch } from './VoiceSearch/VoiceSearch';
-export { default as YouTubeSettings } from './YouTubeSettings/YouTubeSettings';
+export { default as HeaderSidebarButton } from './HeaderSidebarButton/HeaderSidebarButton';
+export { default as HeaderLogo } from './HeaderLogo/HeaderLogo';
+export { default as HeaderDisplayLocation } from './HeaderDisplayLocation/HeaderDisplayLocation';
+export { default as HeaderVoiceSearch } from './HeaderVoiceSearch/HeaderVoiceSearch';
+export { default as HeaderYouTubeSettings } from './HeaderYouTubeSettings/HeaderYouTubeSettings';
+export { default as HeaderSignIn } from './HeaderSignIn/HeaderSignIn';

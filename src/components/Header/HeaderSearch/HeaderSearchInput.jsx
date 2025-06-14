@@ -1,4 +1,4 @@
-import styles from '../../../style/components/Header/Search/HeaderSearchInput.module.scss';
+import styles from '../../../style/components/Header/HeaderSearch/HeaderSearchInput.module.scss';
 import { HeaderSearchIcons } from '../../../assets/Header/HeaderSearch/HeaderSearchIcons';
 import { setQuery } from '../../../redux/slices/searchSlice';
 import { useTranslation } from 'react-i18next';

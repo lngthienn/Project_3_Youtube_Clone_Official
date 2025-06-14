@@ -1,6 +1,6 @@
-import styles from '../../../style/components/Header/Logo/Logo.module.scss';
+import styles from '../../../style/components/Header/HeaderLogo/HeaderLogo.module.scss';
 
-function Logo() {
+function HeaderLogo() {
     return (
         <section className={styles.logo}>
             <a href="/">
@@ -15,4 +15,4 @@ function Logo() {
     );
 }
 
-export default Logo;
+export default HeaderLogo;

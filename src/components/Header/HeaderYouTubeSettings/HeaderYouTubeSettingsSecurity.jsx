@@ -1,20 +1,20 @@
-import styles from '../../../style/components/Header/YouTubeSettings/YouTubeSettings.module.scss';
+import styles from '../../../style/components/Header/HeaderYouTubeSettings/HeaderYouTubeSettings.module.scss';
 import { YouTubeSettingsIcons } from '../../../assets/Header/YouTubeSettings/YouTubeSettingsIcons';
 import { useTranslation } from 'react-i18next';
 
-function FeedBack() {
+function HeaderYouTubeSettingsSecurity() {
     const { t } = useTranslation();
 
     return (
         <section className={styles.compsYouTubeSettings}>
             <div>
                 <i>
-                    <YouTubeSettingsIcons.feedback />
+                    <YouTubeSettingsIcons.security />
                 </i>
-                <p>{t('header.headerSettings.headerSettingsSendFeedback')}</p>
+                <p>{t('header.headerSettings.headerSettingsSecurity')}</p>
             </div>
         </section>
     );
 }
 
-export default FeedBack;
+export default HeaderYouTubeSettingsSecurity;

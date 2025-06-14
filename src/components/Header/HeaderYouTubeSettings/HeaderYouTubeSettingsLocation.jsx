@@ -1,11 +1,11 @@
-import youtubeSettingsStyles from '../../../style/components/Header/YouTubeSettings/YouTubeSettings.module.scss';
-import themeYouTubeSettingsStyles from '../../../style/components/Header/YouTubeSettings/Theme.module.scss';
+import youtubeSettingsStyles from '../../../style/components/Header/HeaderYouTubeSettings/HeaderYouTubeSettings.module.scss';
+import themeYouTubeSettingsStyles from '../../../style/components/Header/HeaderYouTubeSettings/HeaderYouTubeSettingsTheme.module.scss';
 import clsx from 'clsx';
 import { YouTubeSettingsIcons } from '../../../assets/Header/YouTubeSettings/YouTubeSettingsIcons';
 import { useTranslation } from 'react-i18next';
 import { useState } from 'react';
 
-function Location() {
+function HeaderYouTubeSettingsLocation() {
     const [chooseLocation, setChooseLocation] = useState();
     const { t } = useTranslation();
     const [selectedLocation, setSelectedLocation] = useState(sessionStorage.getItem('location') || 'Việt Nam');
@@ -64,4 +64,4 @@ function Location() {
     );
 }
 
-export default Location;
+export default HeaderYouTubeSettingsLocation;

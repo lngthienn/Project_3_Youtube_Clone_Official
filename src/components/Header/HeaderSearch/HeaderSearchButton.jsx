@@ -1,4 +1,4 @@
-import styles from '../../../style/components/Header/Search/SearchButton.module.scss';
+import styles from '../../../style/components/Header/HeaderSearch/SearchButton.module.scss';
 import { HeaderSearchIcons } from '../../../assets/Header/HeaderSearch/HeaderSearchIcons.js';
 
 function SearchButton() {

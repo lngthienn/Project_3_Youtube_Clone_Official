@@ -1,7 +1,7 @@
-import styles from '../../../style/components/Header/SidebarButton/SidebarButton.module.scss';
+import styles from '../../../style/components/Header/HeaderSidebarButton/HeaderSidebarButton.module.scss';
 import { SidebarButtonIcons } from '../../../assets/Header/SidebarButton/SidebarButtonIcons';
 
-function SidebarButton({ toggleSidebar }) {
+function HeaderSidebarButton({ toggleSidebar }) {
     return (
         <section className={styles.sidebarbutton} onClick={toggleSidebar} title="Mở/Đóng Sidebar">
             <SidebarButtonIcons.button style={{ fontSize: '24' }} />
@@ -9,4 +9,4 @@ function SidebarButton({ toggleSidebar }) {
     );
 }
 
-export default SidebarButton;
+export default HeaderSidebarButton;

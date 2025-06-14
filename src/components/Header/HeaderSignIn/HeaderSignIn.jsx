@@ -1,8 +1,8 @@
-import styles from '../../../style/components/Header/Login/Login.module.scss';
+import styles from '../../../style/components/Header/HeaderSignIn/HeaderSignIn.module.scss';
 import { LoginIcons } from '../../../assets/Header/Login/LoginIcons';
 import { useTranslation } from 'react-i18next';
 
-function Login() {
+function HeaderSignIn() {
     const { t } = useTranslation();
 
     return (
@@ -15,4 +15,4 @@ function Login() {
     );
 }
 
-export default Login;
+export default HeaderSignIn;

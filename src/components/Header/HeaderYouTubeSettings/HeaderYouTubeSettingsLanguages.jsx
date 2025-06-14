@@ -1,12 +1,12 @@
-import youtubeSettingsStyles from '../../../style/components/Header/YouTubeSettings/YouTubeSettings.module.scss';
-import themeYouTubeSettingsStyles from '../../../style/components/Header/YouTubeSettings/Theme.module.scss';
+import youtubeSettingsStyles from '../../../style/components/Header/HeaderYouTubeSettings/HeaderYouTubeSettings.module.scss';
+import themeYouTubeSettingsStyles from '../../../style/components/Header/HeaderYouTubeSettings/HeaderYouTubeSettingsTheme.module.scss';
 import clsx from 'clsx';
 import { YouTubeSettingsIcons } from '../../../assets/Header/YouTubeSettings/YouTubeSettingsIcons';
 import { useTranslation } from 'react-i18next';
 import { useEffect } from 'react';
 import { useState } from 'react';
 
-function Languages() {
+function HeaderYouTubeSettingsLanguages() {
     const [chooseLanguages, setChooseLanguages] = useState();
     const { t, i18n } = useTranslation();
     const [selectedLanguage, setSelectedLanguage] = useState(i18n.language);
@@ -73,4 +73,4 @@ function Languages() {
     );
 }
 
-export default Languages;
+export default HeaderYouTubeSettingsLanguages;

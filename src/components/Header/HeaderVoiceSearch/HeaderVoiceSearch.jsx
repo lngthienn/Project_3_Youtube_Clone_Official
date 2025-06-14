@@ -1,7 +1,7 @@
-import styles from '../../../style/components/Header/VoiceSearch/VoiceSearch.module.scss';
+import styles from '../../../style/components/Header/HeaderVoiceSearch/HeaderVoiceSearch.module.scss';
 import { VoiceSearchIcons } from '../../../assets/Header/VoiceSearch/VoiceSearchIcons';
 
-function VoiceSearch() {
+function HeaderVoiceSearch() {
     return (
         <section className={styles.voicesearch} title="Tìm kiếm bằng giọng nói">
             <div>
@@ -11,4 +11,4 @@ function VoiceSearch() {
     );
 }
 
-export default VoiceSearch;
+export default HeaderVoiceSearch;

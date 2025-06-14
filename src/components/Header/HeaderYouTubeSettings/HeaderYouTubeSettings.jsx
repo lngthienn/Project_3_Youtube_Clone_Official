@@ -1,20 +1,20 @@
-import styles from '../../../style/components/Header/YouTubeSettings/YouTubeSettings.module.scss';
+import styles from '../../../style/components/Header/HeaderYouTubeSettings/HeaderYouTubeSettings.module.scss';
 import { YouTubeSettingsIcons } from '../../../assets/Header/YouTubeSettings/YouTubeSettingsIcons';
 import { useRef, useState } from 'react';
 import { useEffect } from 'react';
 import {
-    Security,
-    Theme,
-    Languages,
-    RestrictedMode,
-    Location,
-    Shortcut,
-    Settings,
-    Help,
-    FeedBack,
+    HeaderYouTubeSettingsSecurity,
+    HeaderYouTubeSettingsTheme,
+    HeaderYouTubeSettingsLanguages,
+    HeaderYouTubeSettingsRestrictedMode,
+    HeaderYouTubeSettingsLocation,
+    HeaderYouTubeSettingsShortcut,
+    HeaderYouTubeSettingsSettings,
+    HeaderYouTubeSettingsHelp,
+    HeaderYouTubeSettingsFeedBack,
 } from './indexYouTubeSettings';
 
-function YouTubeSettings() {
+function HeaderYouTubeSettings() {
     const [isSettingsOpen, setIsSettingsOpen] = useState(false);
     const settingsRef = useRef(null);
 
@@ -45,19 +45,19 @@ function YouTubeSettings() {
             {isSettingsOpen && (
                 <div ref={settingsRef}>
                     <div>
-                        <Security />
-                        <Theme />
-                        <Languages />
-                        <RestrictedMode />
-                        <Location />
-                        <Shortcut />
+                        <HeaderYouTubeSettingsSecurity />
+                        <HeaderYouTubeSettingsTheme />
+                        <HeaderYouTubeSettingsLanguages />
+                        <HeaderYouTubeSettingsRestrictedMode />
+                        <HeaderYouTubeSettingsLocation />
+                        <HeaderYouTubeSettingsShortcut />
                     </div>
                     <div>
-                        <Settings />
+                        <HeaderYouTubeSettingsSettings />
                     </div>
                     <div>
-                        <Help />
-                        <FeedBack />
+                        <HeaderYouTubeSettingsHelp />
+                        <HeaderYouTubeSettingsFeedBack />
                     </div>
                 </div>
             )}
@@ -65,4 +65,4 @@ function YouTubeSettings() {
     );
 }
 
-export default YouTubeSettings;
+export default HeaderYouTubeSettings;
