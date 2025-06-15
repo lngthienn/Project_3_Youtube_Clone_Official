@@ -1,14 +1,13 @@
 import styles from '../styles/layout/Header.module.scss';
 import {
-    HeaderDisplayLocation,
-    HeaderSignIn,
     HeaderSidebarButton,
     HeaderLogo,
+    HeaderDisplayLocation,
+    HeaderSearch,
     HeaderVoiceSearch,
     HeaderYouTubeMore,
+    HeaderSignIn,
 } from '../components/Header/HeaderImports';
-
-import { HeaderSearchInput, HeaderSearchButton } from '../components/Header/HeaderSearch/HeaderSearchImports';
 
 function Header({ toggleSidebar }) {
     return (
@@ -20,12 +19,7 @@ function Header({ toggleSidebar }) {
             </div>
             <div>
                 <div>
-                    <div>
-                        <HeaderSearchInput />
-                    </div>
-                    <div>
-                        <HeaderSearchButton />
-                    </div>
+                    <HeaderSearch />
                 </div>
                 <div>
                     <HeaderVoiceSearch />

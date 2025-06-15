@@ -51,6 +51,11 @@ const HeaderSearchInput = () => {
                     <HeaderSearchIcons.oskInput />
                 </button>
             </div>
+            <div>
+                <button onClick={handleSearch}>
+                    <HeaderSearchIcons.rightSearchButton />
+                </button>
+            </div>
             {query && (
                 <ul>
                     <li>hehe</li>

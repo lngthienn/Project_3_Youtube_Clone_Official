@@ -26,20 +26,7 @@
         width: 732px;
         height: 40px;
         position: relative;
-
-        > div:first-child {
-            display: flex;
-            width: 640px;
-            height: inherit;
-            position: relative;
-            padding: 0px 4px;
-            margin-left: 40px;
-
-            > div:last-child {
-                width: 64px;
-                height: inherit;
-            }
-        }
+        justify-content: space-between;
     }
 
     > div:last-child {
