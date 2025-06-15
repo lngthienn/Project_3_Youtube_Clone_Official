@@ -1,0 +1,18 @@
+// 🎨 Light mode
+$theme-light: (
+    bg: #ffffff,
+    text: #282828,
+    primary: #ff0000,
+    secondary: #f1f1f1,
+);
+
+// 🌙 Dark mode
+$theme-dark: (
+    bg: #0f0f0f,
+    text: #f1f1f1,
+    primary: #ff0000,
+    secondary: #272727,
+);
+
+// 🌓 Biến theme chính
+$theme: if(global-variable-exists('theme-mode') and $theme-mode == 'light', $theme-light, $theme-dark);
