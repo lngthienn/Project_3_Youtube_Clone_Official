@@ -5,7 +5,7 @@ import {
     HeaderSidebarButton,
     HeaderLogo,
     HeaderVoiceSearch,
-    HeaderYouTubeSettings,
+    HeaderYouTubeMore,
 } from '../components/Header/HeaderImports';
 
 import { HeaderSearchInput, HeaderSearchButton } from '../components/Header/HeaderSearch/HeaderSearchImports';
@@ -32,7 +32,7 @@ function Header({ toggleSidebar }) {
                 </div>
             </div>
             <div>
-                <HeaderYouTubeSettings />
+                <HeaderYouTubeMore />
                 <HeaderSignIn />
             </div>
         </header>

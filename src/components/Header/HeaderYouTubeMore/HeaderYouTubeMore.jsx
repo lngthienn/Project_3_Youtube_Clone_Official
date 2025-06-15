@@ -9,7 +9,7 @@ import {
     HeaderYouTubeMoreRestrictedMode,
     HeaderYouTubeMoreLocation,
     HeaderYouTubeMoreShortcut,
-    HeaderYouTubeSettings,
+    HeaderYouTubeMoreSettings,
     HeaderYouTubeMoreHelp,
     HeaderYouTubeMoreFeedBack,
 } from './HeaderYouTubeMoreImports';
@@ -53,7 +53,7 @@ function HeaderYouTubeMore() {
                         <HeaderYouTubeMoreShortcut />
                     </div>
                     <div>
-                        <HeaderYouTubeSettings />
+                        <HeaderYouTubeMoreSettings />
                     </div>
                     <div>
                         <HeaderYouTubeMoreHelp />

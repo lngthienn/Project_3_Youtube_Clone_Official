@@ -5,7 +5,7 @@ function HeaderSearchButton() {
     return (
         <section className={styles.Header} title="Tìm kiếm nhanh">
             <button>
-                <HeaderSearchIcons.rightHeader />
+                <HeaderSearchIcons.rightSearchButton />
             </button>
         </section>
     );

@@ -1,5 +1,5 @@
 import styles from '../../../styles/components/Header/HeaderSignIn/HeaderSignIn.module.scss';
-import { LoginIcons } from '../../../assets/icons/Header/HeaderLogin/HeaderLoginIcons';
+import { HeaderSignInIcons } from '../../../assets/icons/Header/HeaderSignIn/HeaderSignInIcons';
 import { useTranslation } from 'react-i18next';
 
 function HeaderSignIn() {
@@ -8,7 +8,7 @@ function HeaderSignIn() {
     return (
         <section className={styles.login}>
             <a href="https://accounts.google.com/" title="Đăng nhập">
-                <LoginIcons.button />
+                <HeaderSignInIcons.signIn />
                 <p>{t('header.signIn')}</p>
             </a>
         </section>

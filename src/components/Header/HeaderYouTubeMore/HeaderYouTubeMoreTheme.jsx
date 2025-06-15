@@ -1,5 +1,5 @@
-import headerYouTubeMoreCompsStyles from '../../../styles/components/Header/HeaderYouTubeMore/HeaderYouTubeMore.module.scss';
-import headerYouTubeMoreThemeStyles from '../../../styles/components/Header/HeaderYouTubeMore/HeaderYouTubeMoreTheme.module.scss';
+import headerYouTubeMoreComps from '../../../styles/components/Header/HeaderYouTubeMore/HeaderYouTubeMore.module.scss';
+import headerYouTubeMoreTheme from '../../../styles/components/Header/HeaderYouTubeMore/HeaderYouTubeMoreTheme.module.scss';
 import clsx from 'clsx';
 import { HeaderYouTubeMoreIcons } from '../../../assets/icons/Header/HeaderYouTubeMore/HeaderYouTubeMoreIcons';
 import { useTranslation } from 'react-i18next';
@@ -28,8 +28,8 @@ function HeaderYouTubeMoreTheme() {
     return (
         <section
             className={clsx(
-                headerYouTubeMoreCompsStyles.headerYouTubeMoreComps,
-                headerYouTubeMoreThemeStyles.headerYouTubeMoreTheme,
+                headerYouTubeMoreComps.headerYouTubeMoreComps,
+                headerYouTubeMoreTheme.headerYouTubeMoreTheme,
             )}
         >
             <div onClick={handleChooseTheme}>

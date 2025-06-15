@@ -5,7 +5,7 @@ function HeaderVoiceSearch() {
     return (
         <section className={styles.voicesearch} title="Tìm kiếm bằng giọng nói">
             <div>
-                <VoiceSearchIcons.button />
+                <HeaderVoiceSearchIcons.button />
             </div>
         </section>
     );
