@@ -1,19 +1,19 @@
 @use '../../Shared/core/colors' as *;
 
 .headerLogo {
-    div {
-        a {
+    a {
+        div {
             display: flex;
-            align-items: center;
             justify-content: center;
+            align-items: center;
             width: 123px;
             height: 56px;
 
             img {
                 width: 93px;
                 height: 40px;
-                background-color: $color-border;
-                border: 1px solid $color-border;
+                // background-color: $color-border;
+                // border: 1px solid $color-border;
                 border-radius: 10px;
             }
         }

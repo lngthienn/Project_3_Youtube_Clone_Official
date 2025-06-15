@@ -4,7 +4,9 @@
 // 🎨 Light
 $theme-light: (
     bg: #ffffff,
+    bg-box: #0000000d,
     bg-title: #0000000d,
+    bg-box-hover: #0000000d,
     text: #0f0f0f,
     svg: #030303,
     hover: #f1f1f1,
@@ -15,7 +17,9 @@ $theme-light: (
 $theme-dark: (
     bg: #0f0f0f,
     bg-title: #0000000d,
-    text: #ffffff,
+    bg-box: #ffffff1a,
+    bg-box-hover: #383838,
+    text: #f1f1f1,
     svg: #ffffff,
     h3: #606060,
     hover: #ffffff,
@@ -27,6 +31,8 @@ $theme: if(config.$theme-mode == 'light', $theme-light, $theme-dark);
 
 // 🧩 Token màu
 $color-bg: map.get($theme, bg);
+$color-bg-box: map.get($theme, bg-box);
+$color-bg-box-hover: map.get($theme, bg-box-hover);
 $color-bg-title: map.get($theme, bg-title);
 $color-text: map.get($theme, text);
 $color-svg: map.get($theme, svg);

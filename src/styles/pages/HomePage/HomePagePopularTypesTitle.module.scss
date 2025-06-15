@@ -12,13 +12,13 @@
         width: auto;
         height: 32px;
         padding: 12px;
-        background-color: $color-bg-title;
+        background-color: $color-bg-box;
         border-radius: 8px;
         margin: 0 12px 12px 0;
         cursor: pointer;
 
         &:hover {
-            background-color: $color-bg-title;
+            background-color: $color-bg-box;
         }
 
         p {

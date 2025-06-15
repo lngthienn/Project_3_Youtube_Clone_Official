@@ -1,3 +1,5 @@
+@use '../core/colors' as *;
+
 * {
     margin: 0;
     padding: 0;
@@ -7,6 +9,7 @@
 
 html {
     font-family: 'Roboto', Arial, sans-serif;
+    background-color: $color-bg;
 }
 
 a {

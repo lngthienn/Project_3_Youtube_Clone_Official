@@ -76,9 +76,7 @@ function Sidebar({ isSidebarOpen }) {
                     <a href="#">{t('sidebar.sidebarHowYouTubeWorks')}</a>
                     <a href="#">{t('sidebar.sidebarTestNewFeatures')}</a>
                 </div>
-                <div>
-                    <div>© 2025 Google LLC</div>
-                </div>
+                <div>© 2025 Google LLC</div>
             </div>
         </aside>
     );
