@@ -6,14 +6,14 @@
             "headerSettingsSecurity": "Dữ liệu của bạn trong YouTube",
             "headerSettingsTheme": {
                 "status": {
-                    "auto": "Dùng giao diện của thiết bị",
+                    "auto": "Giao diện: Giao diện thiết bị",
                     "dark": "Giao diện: Tối",
                     "light": "Giao diện: Sáng"
                 },
                 "title": "Giao diện",
                 "description": "Tuỳ chọn cài đặt chỉ áp dụng cho trình duyệt này",
                 "mode": [
-                    { "key": "auto", "label": "Dùng giao diện của thiết bị" },
+                    { "key": "auto", "label": "Giao diện của thiết bị" },
                     { "key": "dark", "label": "Giao diện tối" },
                     { "key": "light", "label": "Giao diện sáng" }
                 ]

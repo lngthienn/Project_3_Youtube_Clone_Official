@@ -37,7 +37,7 @@ function HeaderYouTubeMoreTheme() {
                 <i>
                     <HeaderYouTubeMoreIcons.theme />
                 </i>
-                <p>{t('header.headerSettings.headerSettingsTheme.status.light')}</p>
+                <p>{t(`header.headerSettings.headerSettingsTheme.status.${selectedTheme}`)}</p>
                 <i>
                     <HeaderYouTubeMoreIcons.next />
                 </i>
@@ -52,11 +52,7 @@ function HeaderYouTubeMoreTheme() {
                     </section>
                     <ul>
                         {themeModeList.map(({ key, label }) => (
-                            <li
-                                key={key}
-                                onClick={() => handleChangeTheme(key)}
-                                className={selectedTheme === key ? 'active-theme' : ''}
-                            >
+                            <li key={key} onClick={() => handleChangeTheme(key)}>
                                 {selectedTheme === key && <span>✔️</span>}
                                 <p>{label}</p>
                             </li>
