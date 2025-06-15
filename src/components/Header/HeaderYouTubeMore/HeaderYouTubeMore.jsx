@@ -1,4 +1,4 @@
-import styles from '../../../styles/components/Header/HeaderYouTubeMore/HeaderYouTubeMore.module.scss';
+import headerYouTubeMore from '../../../styles/components/Header/HeaderYouTubeMore/HeaderYouTubeMore.module.scss';
 import { HeaderYouTubeMoreIcons } from '../../../assets/icons/Header/HeaderYouTubeMore/HeaderYouTubeMoreIcons';
 import { useRef, useState } from 'react';
 import { useEffect } from 'react';
@@ -36,7 +36,7 @@ function HeaderYouTubeMore() {
     }, []);
 
     return (
-        <section className={styles.headerYouTubeMore} title="Cài đặt">
+        <section className={headerYouTubeMore.headerYouTubeMore} title="Cài đặt">
             <div>
                 <i>
                     <HeaderYouTubeMoreIcons.button onClick={handleOpenSettings} />

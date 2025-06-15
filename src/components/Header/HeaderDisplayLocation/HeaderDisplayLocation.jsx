@@ -1,8 +1,8 @@
-import styles from '../../../styles/components/Header/HeaderDisplayLocation/HeaderDisplayLocation.module.scss';
+import headerDisplayLocation from '../../../styles/components/Header/HeaderDisplayLocation/HeaderDisplayLocation.module.scss';
 
 function HeaderDisplayLocation() {
     return (
-        <section className={styles.location}>
+        <section className={headerDisplayLocation.headerDisplayLocation}>
             <span>VN</span>
         </section>
     );

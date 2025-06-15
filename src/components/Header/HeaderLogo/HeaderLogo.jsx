@@ -1,8 +1,8 @@
-import styles from '../../../styles/components/Header/HeaderLogo/HeaderLogo.module.scss';
+import headerLogo from '../../../styles/components/Header/HeaderLogo/HeaderLogo.module.scss';
 
 function HeaderLogo() {
     return (
-        <section className={styles.logo}>
+        <section className={headerLogo.headerLogo}>
             <a href="/">
                 <div>
                     <img

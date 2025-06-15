@@ -1,4 +1,4 @@
-import styles from '../../../styles/components/Header/HeaderSearch/HeaderSearchInput.module.scss';
+import headerSearchInput from '../../../styles/components/Header/HeaderSearch/HeaderSearchInput.module.scss';
 import { HeaderSearchIcons } from '../../../assets/icons/Header/HeaderSearch/HeaderSearchIcons';
 import { setQuery, clearVideos } from '../../../redux/features/search/searchSlice';
 import fetchVideos from '../../../redux/features/search/fetchVideos';
@@ -30,7 +30,7 @@ const HeaderSearchInput = () => {
     };
 
     return (
-        <section className={styles.searchinput} onFocus={handleClickSearchInput} tabIndex={0}>
+        <section className={headerSearchInput.headerSearchInput} onFocus={handleClickSearchInput} tabIndex={0}>
             <div>
                 <button>
                     <HeaderSearchIcons.hiddenLeftSearchButton />
