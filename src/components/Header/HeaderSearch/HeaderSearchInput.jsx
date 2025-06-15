@@ -8,7 +8,7 @@ import { clearVideos } from '../../../redux/slices/searchSlice';
 import fetchVideos from '../../../redux/thunks/fetchVideos';
 import { useRef } from 'react';
 
-const SearchInput = () => {
+const HeaderSearchInput = () => {
     const { t } = useTranslation();
     const dispatch = useDispatch();
     const query = useSelector((state) => state.search.query);
@@ -61,4 +61,4 @@ const SearchInput = () => {
     );
 };
 
-export default SearchInput;
+export default HeaderSearchInput;

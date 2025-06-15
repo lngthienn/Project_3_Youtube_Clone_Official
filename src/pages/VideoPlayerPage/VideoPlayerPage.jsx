@@ -1,9 +1,9 @@
-import styles from '../../style/pages/VideoPlayer/VideoPlayer.module.scss';
+import styles from '../../style/pages/VideoPlayerPage/VideoPlayerPage.module.scss';
 import { useParams } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import he from 'he';
 
-const VideoPlayer = () => {
+const VideoPlayerPage = () => {
     const { videoId } = useParams();
     const videos = useSelector((state) => state.search.videos);
     const videoData = videos.find((video) => video.id.videoId === videoId);
@@ -23,4 +23,4 @@ const VideoPlayer = () => {
     );
 };
 
-export default VideoPlayer;
+export default VideoPlayerPage;

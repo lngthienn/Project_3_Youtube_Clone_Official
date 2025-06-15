@@ -1,15 +1,14 @@
-import styles from '../../../style/components/Header/HeaderSearch/SearchButton.module.scss';
+import styles from '../../../style/components/Header/HeaderSearch/HeaderSearchButton.module.scss';
 import { HeaderSearchIcons } from '../../../assets/Header/HeaderSearch/HeaderSearchIcons.js';
 
-function SearchButton() {
+function HeaderSearchButton() {
     return (
-        <section className={styles.searchbutton} title="Tìm kiếm nhanh">
+        <section className={styles.Header} title="Tìm kiếm nhanh">
             <button>
-                {/* <HeaderSearchIcons.rightSearchButton /> */}
-                <p>Đang bảo trì</p>
+                <HeaderSearchIcons.rightHeader />
             </button>
         </section>
     );
 }
 
-export default SearchButton;
+export default HeaderSearchButton;

@@ -1,12 +1,12 @@
 import { useEffect, useState } from 'react';
-import styles from '../../style/pages//Home/PopularMusic.module.scss';
+import styles from '../../style/pages//Home/HomePageMusicContent.module.scss';
 import axios from 'axios';
 import { BsThreeDotsVertical } from 'react-icons/bs';
 import { useNavigate } from 'react-router-dom';
 
 const API_KEY = import.meta.env.VITE_YOUTUBE_API_KEY;
 
-function PopularMusic() {
+function HomePageMusicContent() {
     const [music, setMusic] = useState([]);
     const navigate = useNavigate();
 
@@ -64,4 +64,4 @@ function PopularMusic() {
     );
 }
 
-export default PopularMusic;
+export default HomePageMusicContent;

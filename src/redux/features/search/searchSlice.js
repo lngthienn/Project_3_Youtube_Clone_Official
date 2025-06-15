@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-import fetchVideos from '../thunks/fetchVideos';
+import fetchVideos from './fetchVideos';
 
 const searchSlice = createSlice({
     name: 'search',

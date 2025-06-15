@@ -12,7 +12,7 @@ import {
     HeaderYouTubeSettingsSettings,
     HeaderYouTubeSettingsHelp,
     HeaderYouTubeSettingsFeedBack,
-} from './indexYouTubeSettings';
+} from './HeaderYouTubeSettingsImports';
 
 function HeaderYouTubeSettings() {
     const [isSettingsOpen, setIsSettingsOpen] = useState(false);

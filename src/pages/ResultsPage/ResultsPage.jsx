@@ -3,7 +3,7 @@ import { useNavigate, useSearchParams } from 'react-router-dom';
 import { useEffect } from 'react';
 import fetchVideos from '../../redux/thunks/fetchVideos';
 import he from 'he';
-import PopularTypes from '../Home/PopularTypes';
+import PopularTypes from '../HomePage/PopularTypes';
 import { IoMdMusicalNote } from 'react-icons/io';
 import { FaRegUserCircle } from 'react-icons/fa';
 import { BsThreeDotsVertical } from 'react-icons/bs';

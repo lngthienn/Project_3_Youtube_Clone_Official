@@ -1,7 +1,7 @@
-import styles from '../../style/pages/Home/PopularTypes.module.scss';
+import styles from '../../style/pages/HomePage/HomePagePopularTypes.module.scss';
 import { useTranslation } from 'react-i18next';
 
-function PopularTypes() {
+function HomePagePopularTypes() {
     const { t } = useTranslation();
     const popularTypesList = t('content.contentPopularTypes', { returnObjects: true }) || [];
 
@@ -16,4 +16,4 @@ function PopularTypes() {
     );
 }
 
-export default PopularTypes;
+export default HomePagePopularTypes;
