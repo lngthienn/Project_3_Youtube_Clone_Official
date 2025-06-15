@@ -1,18 +1,35 @@
-// 🎨 Light mode
+@use 'sass:map';
+@use './ThemeConfig.scss' as config;
+
+// 🎨 Light
 $theme-light: (
     bg: #ffffff,
-    text: #282828,
-    primary: #ff0000,
-    secondary: #f1f1f1,
+    bg-title: #0000000d,
+    text: #0f0f0f,
+    svg: #030303,
+    hover: #f1f1f1,
+    border: #f1f1f1,
 );
 
-// 🌙 Dark mode
+// 🌙 Dark
 $theme-dark: (
     bg: #0f0f0f,
-    text: #f1f1f1,
-    primary: #ff0000,
-    secondary: #272727,
+    bg-title: #0000000d,
+    text: #ffffff,
+    svg: #ffffff,
+    h3: #606060,
+    hover: #ffffff,
+    border: #ffffff,
 );
 
-// 🌓 Biến theme chính
-$theme: if(global-variable-exists('theme-mode') and $theme-mode == 'light', $theme-light, $theme-dark);
+// 🌓 Gán biến theme đúng
+$theme: if(config.$theme-mode == 'light', $theme-light, $theme-dark);
+
+// 🧩 Token màu
+$color-bg: map.get($theme, bg);
+$color-bg-title: map.get($theme, bg-title);
+$color-text: map.get($theme, text);
+$color-svg: map.get($theme, svg);
+$color-h3: map.get($theme, h3);
+$color-hover: map.get($theme, hover);
+$color-border: map.get($theme, border);

@@ -1,13 +1,20 @@
+@use '../../Shared/core/colors' as *;
+
 .headerLogo {
-    a {
-        div {
+    div {
+        a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
             width: 123px;
             height: 56px;
-            padding: 18px 14px 18px 16px;
 
             img {
                 width: 93px;
-                height: 20px;
+                height: 40px;
+                background-color: $color-border;
+                border: 1px solid $color-border;
+                border-radius: 10px;
             }
         }
     }

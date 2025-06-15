@@ -1,3 +1,5 @@
+@use '../../components/Shared/core/colors' as *;
+
 .resultspage {
     width: 100%;
     height: auto;
@@ -17,7 +19,7 @@
         i {
             font-size: 14px;
             font-weight: 500;
-            color: #0f0f0f;
+            color: $color-text;
         }
     }
 
@@ -59,7 +61,7 @@
                         height: auto;
                         line-height: 28px;
                         font-size: 18px;
-                        color: #0f0f0f;
+                        color: $color-text;
                         cursor: pointer;
                     }
                 }
@@ -71,12 +73,12 @@
 
                     p {
                         font-size: 12px;
-                        color: #606060;
+                        color: $color-h3;
                         margin-left: 5px;
                         cursor: pointer;
 
                         &:hover {
-                            color: #2b2929;
+                            color: $color-text;
                         }
                     }
 
@@ -87,7 +89,7 @@
                         margin-left: 5px;
                         width: 13px;
                         height: 13px;
-                        background-color: #606060;
+                        background-color: $color-h3;
                         border-radius: 50%;
                     }
                 }
@@ -95,7 +97,7 @@
                 > div:last-child {
                     font-size: 12px;
                     line-height: 18px;
-                    color: #606060;
+                    color: $color-h3;
                 }
             }
         }

@@ -1,4 +1,6 @@
-.popularmusic {
+@use '../../components/Shared/core/colors' as *;
+
+.homePageMusicContent {
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -40,7 +42,7 @@
                     width: 40px;
                     height: 40px;
                     border-radius: 50%;
-                    background-color: rgba(0, 0, 0, 0.09);
+                    background-color: $color-bg-title;
                     margin: 12px 12px 0 0;
                 }
             }
@@ -52,7 +54,7 @@
 
                 h3 {
                     font-size: 16px;
-                    color: #0f0f0f;
+                    color: $color-text;
                     font-weight: 500;
                     line-height: 22px;
                     padding: 12px 0 4px 0;

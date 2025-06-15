@@ -35,7 +35,7 @@ function HomePageMusicContent() {
     }, []);
 
     return (
-        <section className={styles.popularmusic}>
+        <section className={styles.homePageMusicContent}>
             {music.map((track) => (
                 <div key={track.id}>
                     <a>

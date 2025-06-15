@@ -6,7 +6,7 @@ function HomePagePopularTypesTitle() {
     const popularTypesList = t('content.contentPopularTypes', { returnObjects: true }) || [];
 
     return (
-        <ul className={styles.populartypes}>
+        <ul className={styles.homePagePopularTypesTitle}>
             {popularTypesList.map(({ id, name }) => (
                 <li key={id}>
                     <p>{name}</p>

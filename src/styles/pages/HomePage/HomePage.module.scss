@@ -1,5 +1,8 @@
+@use '../../components/Shared/core/colors' as *;
+
 .home {
     width: 100%;
     height: auto;
     padding: 12px 24px 0 12px;
+    background-color: $color-bg;
 }

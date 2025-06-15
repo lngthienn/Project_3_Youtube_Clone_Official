@@ -1,4 +1,6 @@
-.populartypes {
+@use '../../components/Shared/core/colors' as *;
+
+.homePagePopularTypesTitle {
     display: flex;
     width: 100%;
     height: auto;
@@ -10,19 +12,19 @@
         width: auto;
         height: 32px;
         padding: 12px;
-        background-color: rgba(0, 0, 0, 0.05);
+        background-color: $color-bg-title;
         border-radius: 8px;
         margin: 0 12px 12px 0;
         cursor: pointer;
 
         &:hover {
-            background-color: rgba(0, 0, 0, 0.1);
+            background-color: $color-bg-title;
         }
 
         p {
             font-size: 14px;
             font-weight: 500;
-            color: #0f0f0f;
+            color: $color-text;
         }
     }
 }
