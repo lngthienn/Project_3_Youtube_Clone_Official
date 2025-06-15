@@ -37,8 +37,9 @@
                 "browserNotice": "Tùy chọn cài đặt này chỉ áp dụng cho trình duyệt này.",
                 "toggleAction": "KÍCH HOẠT CHẾ ĐỘ HẠN CHẾ"
             },
+
             "headerSettingsLocation": {
-                "current": "Địa điểm: Việt Nam",
+                "current": "Địa điểm:",
                 "title": "Chọn vị trí của bạn",
                 "list": [
                     { "code": "vn", "label": "Việt Nam" },

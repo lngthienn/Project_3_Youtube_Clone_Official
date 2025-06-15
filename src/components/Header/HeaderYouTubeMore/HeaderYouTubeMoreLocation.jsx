@@ -8,7 +8,7 @@ import { useState } from 'react';
 function HeaderYouTubeMoreLocation() {
     const [chooseLocation, setChooseLocation] = useState();
     const { t } = useTranslation();
-    const [selectedLocation, setSelectedLocation] = useState(sessionStorage.getItem('location') || 'Việt Nam');
+    const [selectedLocation, setSelectedLocation] = useState(sessionStorage.getItem('location') || 'vn');
 
     const handleChooseLocation = () => {
         setChooseLocation((prev) => !prev);
@@ -37,7 +37,11 @@ function HeaderYouTubeMoreLocation() {
                 <i>
                     <HeaderYouTubeMoreIcons.location />
                 </i>
-                <p>{t('header.headerSettings.headerSettingsLocation.current')}</p>
+                <p>
+                    {t('header.headerSettings.headerSettingsLocation.current')}{' '}
+                    {locationList.find((loc) => loc.code === selectedLocation)?.label || 'Không rõ vị trí'}
+                </p>
+
                 <i>
                     <HeaderYouTubeMoreIcons.next />
                 </i>
