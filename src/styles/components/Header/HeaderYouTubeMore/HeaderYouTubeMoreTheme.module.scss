@@ -24,12 +24,14 @@
             border-bottom: 1px solid #f5f2f2;
 
             i:first-child {
+                display: flex;
+                align-items: center;
                 margin-right: 10px;
+                margin-left: 14px;
 
                 svg {
                     width: 25px;
                     height: 25px;
-                    margin-left: 14px;
                     cursor: pointer;
 
                     &:hover {

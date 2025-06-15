@@ -27,7 +27,8 @@
                 ]
             },
             "headerSettingsRestrictedMode": {
-                "status": "Restricted Mode: Off",
+                "status": "Restricted Mode: ",
+                "mode": { "on": "On", "off": "Off" },
                 "title": "Restricted Mode",
                 "description": "This helps hide potentially mature videos. No filter is 100% accurate.",
                 "browserNotice": "This setting only applies to this browser.",

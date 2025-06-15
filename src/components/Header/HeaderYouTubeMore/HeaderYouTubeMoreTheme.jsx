@@ -17,6 +17,7 @@ function HeaderYouTubeMoreTheme() {
     const handleChangeTheme = (theme) => {
         setSelectedTheme(theme);
         localStorage.setItem('theme', theme);
+        console.log(theme);
     };
 
     const handleClose = (event) => {
