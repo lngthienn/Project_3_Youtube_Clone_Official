@@ -1,13 +1,13 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import { useEffect } from 'react';
-import fetchVideos from '../../redux/thunks/fetchVideos';
 import he from 'he';
-import PopularTypes from '../HomePage/PopularTypes';
+import fetchVideos from '../../redux/features/search/fetchVideos';
+import PopularTypes from '../HomePage/HomePagePopularTypesTitle';
 import { IoMdMusicalNote } from 'react-icons/io';
 import { FaRegUserCircle } from 'react-icons/fa';
 import { BsThreeDotsVertical } from 'react-icons/bs';
-import styles from '../../style/pages/ResultsPage/ResultsPage.module.scss';
+import styles from '../../styles/pages/ResultsPage/ResultsPage.module.scss';
 
 const ResultsPage = () => {
     const dispatch = useDispatch();

@@ -1,4 +1,4 @@
-import styles from '../style/layout/Header.module.scss';
+import styles from '../styles/layout/Header.module.scss';
 import {
     HeaderDisplayLocation,
     HeaderSignIn,
@@ -6,9 +6,9 @@ import {
     HeaderLogo,
     HeaderVoiceSearch,
     HeaderYouTubeSettings,
-} from '../components/Header/index';
+} from '../components/Header/HeaderImports';
 
-import { HeaderSearchInput, HeaderSearchButton } from '../components/Header/HeaderSearch/headerSearchIndex';
+import { HeaderSearchInput, HeaderSearchButton } from '../components/Header/HeaderSearch/HeaderSearchImports';
 
 function Header({ toggleSidebar }) {
     return (

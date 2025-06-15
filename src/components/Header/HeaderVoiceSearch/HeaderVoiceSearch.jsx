@@ -1,5 +1,5 @@
-import styles from '../../../style/components/Header/HeaderVoiceSearch/HeaderVoiceSearch.module.scss';
-import { VoiceSearchIcons } from '../../../assets/Header/VoiceSearch/VoiceSearchIcons';
+import styles from '../../../styles/components/Header/HeaderVoiceSearch/HeaderVoiceSearch.module.scss';
+import { HeaderVoiceSearchIcons } from '../../../assets/icons/Header/HeaderVoiceSearch/HeaderVoiceSearchIcons';
 
 function HeaderVoiceSearch() {
     return (

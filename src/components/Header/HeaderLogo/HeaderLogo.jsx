@@ -1,4 +1,4 @@
-import styles from '../../../style/components/Header/HeaderLogo/HeaderLogo.module.scss';
+import styles from '../../../styles/components/Header/HeaderLogo/HeaderLogo.module.scss';
 
 function HeaderLogo() {
     return (

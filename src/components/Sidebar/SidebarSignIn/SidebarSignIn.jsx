@@ -1,5 +1,5 @@
-import styles from '../../../style/components/Sidebar/SidebarSignIn/SidebarSignIn.module.scss';
-import { SidebarIcons } from '../../../assets/Sidebar/SidebarIcons';
+import styles from '../../../styles/components/Sidebar/SidebarSignIn/SidebarSignIn.module.scss';
+import { SidebarIcons } from '../../../assets/icons/Sidebar/SidebarIcons';
 import { useTranslation } from 'react-i18next';
 
 function SidebarSignIn() {

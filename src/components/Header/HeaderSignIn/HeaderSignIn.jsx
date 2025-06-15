@@ -1,5 +1,5 @@
-import styles from '../../../style/components/Header/HeaderSignIn/HeaderSignIn.module.scss';
-import { LoginIcons } from '../../../assets/Header/Login/LoginIcons';
+import styles from '../../../styles/components/Header/HeaderSignIn/HeaderSignIn.module.scss';
+import { LoginIcons } from '../../../assets/icons/Header/HeaderLogin/HeaderLoginIcons';
 import { useTranslation } from 'react-i18next';
 
 function HeaderSignIn() {

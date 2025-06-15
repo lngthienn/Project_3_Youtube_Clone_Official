@@ -1,4 +1,4 @@
-import styles from '../style/layout/Sidebar.module.scss';
+import styles from '../styles/layout/Sidebar.module.scss';
 import { useTranslation } from 'react-i18next';
 import {
     SidebarHome,
@@ -19,7 +19,7 @@ import {
     SidebarSendFeedback,
     SidebarHelp,
     SidebarSignIn,
-} from '../components/Sidebar/indexSidebar';
+} from '../components/Sidebar/SidebarImports';
 
 function Sidebar({ isSidebarOpen }) {
     const { t } = useTranslation();

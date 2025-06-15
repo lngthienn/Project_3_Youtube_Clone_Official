@@ -1,6 +1,6 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
-import { buildSearchUrl } from '../../utils/youtubeApi';
+import { buildSearchUrl } from '../../../utils/api/youtubeApi';
 
 const fetchVideos = createAsyncThunk('search/fetchVideos', async (query, { getState }) => {
     if (!query.trim()) return [];

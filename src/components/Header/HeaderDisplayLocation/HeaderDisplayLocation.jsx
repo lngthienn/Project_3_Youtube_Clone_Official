@@ -1,4 +1,4 @@
-import styles from '../../../style/components/Header/HeaderDisplayLocation/HeaderDisplayLocation.module.scss';
+import styles from '../../../styles/components/Header/HeaderDisplayLocation/HeaderDisplayLocation.module.scss';
 
 function HeaderDisplayLocation() {
     return (

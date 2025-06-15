@@ -1,7 +1,7 @@
-import youtubeSettingsStyles from '../../../style/components/Header/HeaderYouTubeSettings/HeaderYouTubeSettings.module.scss';
-import themeYouTubeSettingsStyles from '../../../style/components/Header/HeaderYouTubeSettings/HeaderYouTubeSettingsTheme.module.scss';
+import youtubeSettingsStyles from '../../../styles/components/Header/HeaderYouTubeMore/HeaderYouTubeMore.module.scss';
+import themeYouTubeSettingsStyles from '../../../styles/components/Header/HeaderYouTubeMore/HeaderYouTubeMoreTheme.module.scss';
 import clsx from 'clsx';
-import { YouTubeSettingsIcons } from '../../../assets/Header/YouTubeSettings/YouTubeSettingsIcons';
+import { HeaderYouTubeMoreIcons } from '../../../assets/icons/Header/HeaderYouTubeMore/HeaderYouTubeMoreIcons';
 import { useTranslation } from 'react-i18next';
 import { useState } from 'react';
 
@@ -34,18 +34,18 @@ function HeaderYouTubeSettingsTheme() {
         >
             <div onClick={handleChooseTheme}>
                 <i>
-                    <YouTubeSettingsIcons.theme />
+                    <HeaderYouTubeMoreIcons.theme />
                 </i>
                 <p>{t('header.headerSettings.headerSettingsTheme.status.light')}</p>
                 <i>
-                    <YouTubeSettingsIcons.next />
+                    <HeaderYouTubeMoreIcons.next />
                 </i>
             </div>
             {chooseTheme && (
                 <div>
                     <section>
                         <i onClick={handleClose}>
-                            <YouTubeSettingsIcons.back />
+                            <HeaderYouTubeMoreIcons.back />
                         </i>
                         <h2>{t('header.headerSettings.headerSettingsTheme.title')}</h2>
                     </section>

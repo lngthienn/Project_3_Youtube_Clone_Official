@@ -1,11 +1,11 @@
-import youtubeSettingsStyles from '../../../style/components/Header/HeaderYouTubeSettings/HeaderYouTubeSettings.module.scss';
-import themeYouTubeSettingsStyles from '../../../style/components/Header/HeaderYouTubeSettings/HeaderYouTubeSettingsTheme.module.scss';
+import youtubeSettingsStyles from '../../../styles/components/Header/HeaderYouTubeMore/HeaderYouTubeMore.module.scss';
+import themeYouTubeSettingsStyles from '../../../styles/components/Header/HeaderYouTubeMore/HeaderYouTubeMoreTheme.module.scss';
 import clsx from 'clsx';
-import { YouTubeSettingsIcons } from '../../../assets/Header/YouTubeSettings/YouTubeSettingsIcons';
+import { HeaderYouTubeMoreIcons } from '../../../assets/icons/Header/HeaderYouTubeMore/HeaderYouTubeMoreIcons';
 import { useTranslation } from 'react-i18next';
 import { useState } from 'react';
 
-function HeaderYouTubeSettingsLocation() {
+function HeaderYouTubeMoreLocation() {
     const [chooseLocation, setChooseLocation] = useState();
     const { t } = useTranslation();
     const [selectedLocation, setSelectedLocation] = useState(sessionStorage.getItem('location') || 'Việt Nam');
@@ -35,18 +35,18 @@ function HeaderYouTubeSettingsLocation() {
         >
             <div onClick={handleChooseLocation}>
                 <i>
-                    <YouTubeSettingsIcons.location />
+                    <HeaderYouTubeMoreIcons.location />
                 </i>
                 <p>{t('header.headerSettings.headerSettingsLocation.current')}</p>
                 <i>
-                    <YouTubeSettingsIcons.next />
+                    <HeaderYouTubeMoreIcons.next />
                 </i>
             </div>
             {chooseLocation && (
                 <div>
                     <section>
                         <i onClick={handleClose}>
-                            <YouTubeSettingsIcons.back />
+                            <HeaderYouTubeMoreIcons.back />
                         </i>
                         <h2>{t('header.headerSettings.headerSettingsLocation.title')}</h2>
                     </section>
@@ -64,4 +64,4 @@ function HeaderYouTubeSettingsLocation() {
     );
 }
 
-export default HeaderYouTubeSettingsLocation;
+export default HeaderYouTubeMoreLocation;

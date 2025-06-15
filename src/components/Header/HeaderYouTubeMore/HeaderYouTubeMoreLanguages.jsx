@@ -1,12 +1,12 @@
-import youtubeSettingsStyles from '../../../style/components/Header/HeaderYouTubeSettings/HeaderYouTubeSettings.module.scss';
-import themeYouTubeSettingsStyles from '../../../style/components/Header/HeaderYouTubeSettings/HeaderYouTubeSettingsTheme.module.scss';
+import youtubeSettingsStyles from '../../../styles/components/Header/HeaderYouTubeMore/HeaderYouTubeMore.module.scss';
+import themeYouTubeSettingsStyles from '../../../styles/components/Header/HeaderYouTubeMore/HeaderYouTubeMoreTheme.module.scss';
 import clsx from 'clsx';
-import { YouTubeSettingsIcons } from '../../../assets/Header/YouTubeSettings/YouTubeSettingsIcons';
+import { HeaderYouTubeMoreIcons } from '../../../assets/icons/Header/HeaderYouTubeMore/HeaderYouTubeMoreIcons';
 import { useTranslation } from 'react-i18next';
 import { useEffect } from 'react';
 import { useState } from 'react';
 
-function HeaderYouTubeSettingsLanguages() {
+function HeaderYouTubeMoreLanguages() {
     const [chooseLanguages, setChooseLanguages] = useState();
     const { t, i18n } = useTranslation();
     const [selectedLanguage, setSelectedLanguage] = useState(i18n.language);
@@ -44,18 +44,18 @@ function HeaderYouTubeSettingsLanguages() {
         >
             <div onClick={handleChooseLanguages}>
                 <i>
-                    <YouTubeSettingsIcons.languages />
+                    <HeaderYouTubeMoreIcons.languages />
                 </i>
                 <p>{t('header.headerSettings.headerSettingsLanguage.current')}</p>
                 <i>
-                    <YouTubeSettingsIcons.next />
+                    <HeaderYouTubeMoreIcons.next />
                 </i>
             </div>
             {chooseLanguages && (
                 <div>
                     <section>
                         <i onClick={handleClose}>
-                            <YouTubeSettingsIcons.back />
+                            <HeaderYouTubeMoreIcons.back />
                         </i>
                         <h2>{t('header.headerSettings.headerSettingsLanguage.title')}</h2>
                     </section>
@@ -73,4 +73,4 @@ function HeaderYouTubeSettingsLanguages() {
     );
 }
 
-export default HeaderYouTubeSettingsLanguages;
+export default HeaderYouTubeMoreLanguages;

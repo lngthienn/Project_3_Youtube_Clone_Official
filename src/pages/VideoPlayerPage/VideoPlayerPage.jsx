@@ -1,4 +1,4 @@
-import styles from '../../style/pages/VideoPlayerPage/VideoPlayerPage.module.scss';
+import styles from '../../styles/pages/VideoPlayerPage/VideoPlayerPage.module.scss';
 import { useParams } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import he from 'he';

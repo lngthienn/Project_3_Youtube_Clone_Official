@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import Header from './Header.jsx';
 import Sidebar from './Sidebar.jsx';
-import styles from '../style/layout/Layout.module.scss';
+import styles from '../styles/layout/Layout.module.scss';
 import { useLocation } from 'react-router-dom';
 
 function Layout({ children }) {

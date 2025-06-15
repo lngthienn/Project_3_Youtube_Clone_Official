@@ -1,5 +1,5 @@
-import styles from '../../../style/components/Header/HeaderSidebarButton/HeaderSidebarButton.module.scss';
-import { SidebarButtonIcons } from '../../../assets/Header/HeaderSidebarButton/HeaderSidebarButtonIcons';
+import styles from '../../../styles/components/Header/HeaderSidebarButton/HeaderSidebarButton.module.scss';
+import { SidebarButtonIcons } from '../../../assets/icons/Header/HeaderSidebarButton/HeaderSidebarButtonIcons';
 
 function HeaderSidebarButton({ toggleSidebar }) {
     return (

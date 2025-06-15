@@ -1,5 +1,5 @@
-import styles from '../../../style/components/Header/HeaderSearch/HeaderSearchButton.module.scss';
-import { HeaderSearchIcons } from '../../../assets/Header/HeaderSearch/HeaderSearchIcons.js';
+import styles from '../../../styles/components/Header/HeaderSearch/HeaderSearchButton.module.scss';
+import { HeaderSearchIcons } from '../../../assets/icons/Header/HeaderSearch/HeaderSearchIcons.js';
 
 function HeaderSearchButton() {
     return (

@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import styles from '../../style/pages//Home/HomePageMusicContent.module.scss';
+import styles from '../../styles/pages/HomePage/HomePageMusicContent.module.scss';
 import axios from 'axios';
 import { BsThreeDotsVertical } from 'react-icons/bs';
 import { useNavigate } from 'react-router-dom';

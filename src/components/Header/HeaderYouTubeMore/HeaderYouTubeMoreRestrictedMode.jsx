@@ -1,7 +1,7 @@
-import youtubeSettingsStyles from '../../../style/components/Header/HeaderYouTubeSettings/HeaderYouTubeSettings.module.scss';
-import themeYouTubeSettingsStyles from '../../../style/components/Header/HeaderYouTubeSettings/HeaderYouTubeSettingsTheme.module.scss';
+import youtubeSettingsStyles from '../../../styles/components/Header/HeaderYouTubeMore/HeaderYouTubeMore.module.scss';
+import themeYouTubeSettingsStyles from '../../../styles/components/Header/HeaderYouTubeMore/HeaderYouTubeMoreTheme.module.scss';
 import clsx from 'clsx';
-import { YouTubeSettingsIcons } from '../../../assets/Header/YouTubeSettings/YouTubeSettingsIcons';
+import { HeaderYouTubeMoreIcons } from '../../../assets/icons/Header/HeaderYouTubeMore/HeaderYouTubeMoreIcons';
 import { useTranslation } from 'react-i18next';
 import { useState } from 'react';
 
@@ -27,18 +27,18 @@ function HeaderYouTubeSettingsRestrictedMode() {
         >
             <div onClick={handleChooseRestrictedMode}>
                 <i>
-                    <YouTubeSettingsIcons.restrictedMode />
+                    <HeaderYouTubeMoreIcons.restrictedMode />
                 </i>
                 <p>{t('header.headerSettings.headerSettingsRestrictedMode.status')}</p>
                 <i>
-                    <YouTubeSettingsIcons.next />
+                    <HeaderYouTubeMoreIcons.next />
                 </i>
             </div>
             {chooseRestrictedMode && (
                 <div>
                     <section>
                         <i onClick={handleClose}>
-                            <YouTubeSettingsIcons.back />
+                            <HeaderYouTubeMoreIcons.back />
                         </i>
                         <h2>{t('header.headerSettings.headerSettingsRestrictedMode.title')}</h2>
                     </section>

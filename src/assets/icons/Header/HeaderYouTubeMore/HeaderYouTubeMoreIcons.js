@@ -5,7 +5,7 @@ import { IoEarthOutline, IoLanguageSharp, IoMoonOutline, IoSettingsOutline } fro
 import { MdNavigateNext, MdOutlineFeedback, MdOutlineKeyboardAlt } from 'react-icons/md';
 import { RiShieldUserLine } from 'react-icons/ri';
 
-export const HeaderYouTubeSettingsIcons = {
+export const HeaderYouTubeMoreIcons = {
     button: FaEllipsisV,
     security: RiShieldUserLine,
     theme: IoMoonOutline,
