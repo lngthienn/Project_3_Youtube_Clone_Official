@@ -51,10 +51,8 @@ function HeaderYouTubeMoreRestrictedMode() {
                     <HeaderYouTubeMoreIcons.restrictedMode />
                 </i>
                 <p>
-                    {t('header.headerSettings.headerSettingsRestrictedMode.status')} {''}
-                    {restrictedStatus
-                        ? t('header.headerSettings.headerSettingsRestrictedMode.mode.on')
-                        : t('header.headerSettings.headerSettingsRestrictedMode.mode.off')}
+                    {t('header.headerSettings.headerSettingsRestrictedMode.status')}{' '}
+                    {t(`header.headerSettings.headerSettingsRestrictedMode.mode.${restrictedStatus}`)}
                 </p>
                 <i>
                     <HeaderYouTubeMoreIcons.next />

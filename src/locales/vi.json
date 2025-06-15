@@ -29,8 +29,8 @@
             "headerSettingsRestrictedMode": {
                 "status": "Chế độ hạn chế:",
                 "mode": {
-                    "on": "Đã bật",
-                    "off": "Đã tắt"
+                    "true": "Đã bật",
+                    "false": "Đã tắt"
                 },
                 "title": "Chế độ hạn chế",
                 "description": "Chế độ này giúp ẩn các video có thể chứa nội dung dành cho người trưởng thành. Tuy nhiên, không có bộ lọc nào là chính xác 100%.",
