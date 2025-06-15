@@ -1,11 +1,11 @@
-import youtubeSettingsStyles from '../../../styles/components/Header/HeaderYouTubeMore/HeaderYouTubeMore.module.scss';
-import themeYouTubeSettingsStyles from '../../../styles/components/Header/HeaderYouTubeMore/HeaderYouTubeMoreTheme.module.scss';
+import headerYouTubeMoreCompsStyles from '../../../styles/components/Header/HeaderYouTubeMore/HeaderYouTubeMore.module.scss';
+import headerYouTubeMoreThemeStyles from '../../../styles/components/Header/HeaderYouTubeMore/HeaderYouTubeMoreTheme.module.scss';
 import clsx from 'clsx';
 import { HeaderYouTubeMoreIcons } from '../../../assets/icons/Header/HeaderYouTubeMore/HeaderYouTubeMoreIcons';
 import { useTranslation } from 'react-i18next';
 import { useState } from 'react';
 
-function HeaderYouTubeSettingsRestrictedMode() {
+function HeaderYouTubeMoreRestrictedMode() {
     const [chooseRestrictedMode, setRestrictedMode] = useState();
     const { t } = useTranslation();
 
@@ -21,8 +21,8 @@ function HeaderYouTubeSettingsRestrictedMode() {
     return (
         <section
             className={clsx(
-                youtubeSettingsStyles.compsYouTubeSettings,
-                themeYouTubeSettingsStyles.themeYouTubeSettings,
+                headerYouTubeMoreCompsStyles.headerYouTubeMoreComps,
+                headerYouTubeMoreThemeStyles.headerYouTubeMoreTheme,
             )}
         >
             <div onClick={handleChooseRestrictedMode}>
@@ -55,4 +55,4 @@ function HeaderYouTubeSettingsRestrictedMode() {
     );
 }
 
-export default HeaderYouTubeSettingsRestrictedMode;
+export default HeaderYouTubeMoreRestrictedMode;

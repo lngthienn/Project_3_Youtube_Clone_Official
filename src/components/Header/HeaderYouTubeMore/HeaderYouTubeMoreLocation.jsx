@@ -1,5 +1,5 @@
-import youtubeSettingsStyles from '../../../styles/components/Header/HeaderYouTubeMore/HeaderYouTubeMore.module.scss';
-import themeYouTubeSettingsStyles from '../../../styles/components/Header/HeaderYouTubeMore/HeaderYouTubeMoreTheme.module.scss';
+import headerYouTubeMoreCompsStyles from '../../../styles/components/Header/HeaderYouTubeMore/HeaderYouTubeMore.module.scss';
+import headerYouTubeMoreThemeStyles from '../../../styles/components/Header/HeaderYouTubeMore/HeaderYouTubeMoreTheme.module.scss';
 import clsx from 'clsx';
 import { HeaderYouTubeMoreIcons } from '../../../assets/icons/Header/HeaderYouTubeMore/HeaderYouTubeMoreIcons';
 import { useTranslation } from 'react-i18next';
@@ -29,8 +29,8 @@ function HeaderYouTubeMoreLocation() {
     return (
         <section
             className={clsx(
-                youtubeSettingsStyles.compsYouTubeSettings,
-                themeYouTubeSettingsStyles.themeYouTubeSettings,
+                headerYouTubeMoreCompsStyles.headerYouTubeMoreComps,
+                headerYouTubeMoreThemeStyles.headerYouTubeMoreTheme,
             )}
         >
             <div onClick={handleChooseLocation}>

@@ -36,7 +36,7 @@ function HeaderYouTubeMore() {
     }, []);
 
     return (
-        <section className={styles.headerYouTubeSettings} title="Cài đặt">
+        <section className={styles.headerYouTubeMore} title="Cài đặt">
             <div>
                 <i>
                     <HeaderYouTubeMoreIcons.button onClick={handleOpenSettings} />

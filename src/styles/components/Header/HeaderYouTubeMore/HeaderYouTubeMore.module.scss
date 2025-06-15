@@ -1,6 +1,6 @@
 @use '../../../../styles/components/Shared/GlobalStyles/Colors.scss';
 
-.headerYouTubeSettings {
+.headerYouTubeMore {
     > div:first-child {
         i {
             svg {
@@ -55,7 +55,7 @@
         }
     }
 
-    .compsYouTubeSettings {
+    .headerYouTubeMoreComps {
         > div:first-child {
             --components-settings-height: 40px;
             display: flex;

@@ -1,11 +1,11 @@
-import youtubeSettingsStyles from '../../../styles/components/Header/HeaderYouTubeMore/HeaderYouTubeMore.module.scss';
-import themeYouTubeSettingsStyles from '../../../styles/components/Header/HeaderYouTubeMore/HeaderYouTubeMoreTheme.module.scss';
+import headerYouTubeMoreCompsStyles from '../../../styles/components/Header/HeaderYouTubeMore/HeaderYouTubeMore.module.scss';
+import headerYouTubeMoreThemeStyles from '../../../styles/components/Header/HeaderYouTubeMore/HeaderYouTubeMoreTheme.module.scss';
 import clsx from 'clsx';
 import { HeaderYouTubeMoreIcons } from '../../../assets/icons/Header/HeaderYouTubeMore/HeaderYouTubeMoreIcons';
 import { useTranslation } from 'react-i18next';
 import { useState } from 'react';
 
-function HeaderYouTubeSettingsTheme() {
+function HeaderYouTubeMoreTheme() {
     const { t } = useTranslation();
     const [chooseTheme, setChooseTheme] = useState(false);
     const [selectedTheme, setSelectedTheme] = useState('light');
@@ -28,8 +28,8 @@ function HeaderYouTubeSettingsTheme() {
     return (
         <section
             className={clsx(
-                youtubeSettingsStyles.compsYouTubeSettings,
-                themeYouTubeSettingsStyles.themeYouTubeSettings,
+                headerYouTubeMoreCompsStyles.headerYouTubeMoreComps,
+                headerYouTubeMoreThemeStyles.headerYouTubeMoreTheme,
             )}
         >
             <div onClick={handleChooseTheme}>
@@ -67,4 +67,4 @@ function HeaderYouTubeSettingsTheme() {
     );
 }
 
-export default HeaderYouTubeSettingsTheme;
+export default HeaderYouTubeMoreTheme;
