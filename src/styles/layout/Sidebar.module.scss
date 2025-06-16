@@ -25,7 +25,7 @@
         width: 100%;
         height: auto;
         padding: 12px;
-        border-bottom: 1px solid $color-border;
+        border-bottom: 1px solid $color-border-btn-sign-in;
     }
 
     h3 {
@@ -135,7 +135,6 @@
     svg {
         font-size: 24px;
         margin-right: 24px;
-        color: $color-svg;
     }
 }
 

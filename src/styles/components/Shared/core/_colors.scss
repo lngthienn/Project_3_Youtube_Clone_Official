@@ -8,7 +8,7 @@ $theme-light: (
     bg-box-text: #0f0f0f,
     bg-box-hover: #0000000d,
     text: #0f0f0f,
-    svg: #030303,
+    primary-svg: #030303,
     hover: #f1f1f1,
     border: #f1f1f1,
     btn-sign-in: #065fd4,
@@ -22,7 +22,7 @@ $theme-dark: (
     bg-box-text: #f1f1f1,
     bg-box-hover: #383838,
     text: #f1f1f1,
-    svg: #ffffff,
+    primary-svg: #ffffff,
     h3: #606060,
     hover: #ffffff,
     border: #ffffff,
@@ -39,7 +39,7 @@ $color-bg-box: map.get($theme, bg-box);
 $color-bg-box-text: map.get($theme, bg-box-text);
 $color-bg-box-hover: map.get($theme, bg-box-hover);
 $color-text: map.get($theme, text);
-$color-svg: map.get($theme, svg);
+$color-primary-svg: map.get($theme, primary-svg);
 $color-h3: map.get($theme, h3);
 $color-hover: map.get($theme, hover);
 $color-border: map.get($theme, border);

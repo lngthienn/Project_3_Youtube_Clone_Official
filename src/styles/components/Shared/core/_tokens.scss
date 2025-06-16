@@ -1,0 +1,20 @@
+@use './colors' as c;
+
+// Base
+$bg: c.$color-bg;
+$text: c.$color-text;
+$hover: c.$color-hover;
+$border: c.$color-border;
+
+// Box
+$bg-box: c.$color-bg-box;
+$bg-box-hover: c.$color-bg-box-hover;
+$bg-box-text: c.$color-bg-box-text;
+
+// Icon & heading
+$primary-svg: c.$color-primary-svg;
+$h3: c.$color-h3;
+
+// Button
+$btn-sign-in: c.$color-btn-sign-in;
+$btn-sign-in-border: c.$color-border-btn-sign-in;

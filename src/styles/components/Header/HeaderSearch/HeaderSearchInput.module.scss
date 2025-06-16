@@ -1,6 +1,7 @@
+@use './../../Shared/core/colors' as *;
+
 .headerSearchInput {
     $searchinput-width: 536px;
-
     display: flex;
     width: calc(#{$searchinput-width} + 32px);
     height: 40px;
@@ -40,7 +41,7 @@
             display: flex;
             align-items: center;
             padding: 4px;
-            background: #fff;
+            background: $color-bg;
             cursor: pointer;
 
             svg {
@@ -100,7 +101,7 @@
         width: calc(#{$searchinput-width} + 32px);
         height: auto;
         max-height: 286.08px;
-        background-color: #fff;
+        background-color: $color-bg;
         position: fixed;
         left: 420px;
         top: 50px;
