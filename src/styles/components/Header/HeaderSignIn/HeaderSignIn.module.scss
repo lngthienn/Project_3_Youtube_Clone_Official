@@ -1,3 +1,5 @@
+@use './../../Shared/core/colors' as *;
+
 .headerSignIn {
     a {
         display: flex;
@@ -6,13 +8,18 @@
         width: 122px;
         height: 34.4px;
         border-radius: 18px;
-        color: #065fd4;
-        border: 1px solid #f2f2f2;
+        color: $color-btn-sign-in;
+        border: 1px solid $color-border-btn-sign-in;
         cursor: pointer;
 
         p {
             font-size: 14px;
             font-weight: 500;
+            color: $color-btn-sign-in;
+        }
+
+        svg {
+            color: $color-btn-sign-in;
         }
     }
 }
