@@ -22,11 +22,9 @@ const ResultsPage = () => {
         }
     }, [dispatch, query]);
 
-    console.log(videos);
-
     if (status === 'loading') return <p>🔄 Đang tải...</p>;
     if (status === 'failed') return <p>❌ Có lỗi xảy ra! Vui lòng thử lại vào ngày mai...</p>;
-    if (status === 'succeeded' && videos.length === 0) return <p>😕 Không tìm thấy kết quả nào!</p>;
+    if (status === 'succeeded' && videos?.length === 0) return <p>😕 Không tìm thấy kết quả nào!</p>;
 
     return (
         <section className={styles.resultspage}>
@@ -35,7 +33,7 @@ const ResultsPage = () => {
                 Ý bạn là: <i>{query}</i>
             </h2>
             <ul>
-                {videos.map((video) => (
+                {videos?.map((video) => (
                     <li key={video?.id?.videoId}>
                         <div>
                             <img

@@ -13,17 +13,21 @@ const searchSlice = createSlice({
             state.status = 'idle';
         },
     },
+
     extraReducers: (builder) => {
         builder
             .addCase(fetchVideos.pending, (state) => {
                 state.status = 'loading';
+                state.error = null;
             })
             .addCase(fetchVideos.fulfilled, (state, action) => {
                 state.status = 'succeeded';
                 state.videos = action.payload;
+                state.query = action.meta.arg;
             })
-            .addCase(fetchVideos.rejected, (state) => {
+            .addCase(fetchVideos.rejected, (state, action) => {
                 state.status = 'failed';
+                state.error = action.error.message;
             });
     },
 });
