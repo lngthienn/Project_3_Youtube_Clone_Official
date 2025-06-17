@@ -5,9 +5,7 @@ import fetchVideos from '../../../redux/features/search/fetchVideos';
 import { useTranslation } from 'react-i18next';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import { useRef, useState, useMemo, useEffect } from 'react';
-import { debounce } from 'lodash';
-import { fetchSuggestions } from '../../../utils/api/youtubeApi';
+import { useRef } from 'react';
 
 const HeaderSearchInput = () => {
     const { t } = useTranslation();
@@ -15,42 +13,6 @@ const HeaderSearchInput = () => {
     const query = useSelector((state) => state.search.query);
     const navigate = useNavigate();
     const inputRef = useRef(null);
-    const [suggestions, setSuggestions] = useState([]);
-    const [showSuggestions, setShowSuggestions] = useState(false);
-
-    const debouncedFetchSuggestions = useMemo(
-        () =>
-            debounce(async (text) => {
-                if (!text.trim()) {
-                    setSuggestions([]);
-                    setShowSuggestions(false);
-                    return;
-                }
-
-                try {
-                    const results = await fetchSuggestions(text);
-                    console.log('Gợi ý API:', results);
-                    setSuggestions(results);
-                    setShowSuggestions(results.length > 0);
-                } catch (error) {
-                    console.error('Lỗi gợi ý:', error);
-                }
-            }, 300),
-        [],
-    );
-
-    useEffect(() => {
-        debouncedFetchSuggestions(query);
-        return () => debouncedFetchSuggestions.cancel();
-    }, [query, debouncedFetchSuggestions]);
-
-    const handleSuggestionClick = (suggestion) => {
-        dispatch(setQuery(suggestion));
-        dispatch(clearVideos());
-        dispatch(fetchVideos(suggestion));
-        navigate(`/results?query=${suggestion}`);
-        setShowSuggestions(false);
-    };
 
     const handleSearch = () => {
         if (query.trim()) {
@@ -94,19 +56,6 @@ const HeaderSearchInput = () => {
                     <HeaderSearchIcons.rightSearchButton />
                 </button>
             </div>
-            {showSuggestions && suggestions.length > 0 && (
-                <ul className={headerSearchInput.suggestionList}>
-                    {suggestions.slice(0, 5).map((s, idx) => (
-                        <li
-                            key={idx}
-                            onMouseDown={() => handleSuggestionClick(s)}
-                            className={headerSearchInput.suggestionItem}
-                        >
-                            {s}
-                        </li>
-                    ))}
-                </ul>
-            )}
         </section>
     );
 };

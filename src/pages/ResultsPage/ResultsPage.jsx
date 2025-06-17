@@ -1,17 +1,18 @@
 import { useSelector, useDispatch } from 'react-redux';
-import { useNavigate, useSearchParams } from 'react-router-dom';
+import { useSearchParams } from 'react-router-dom';
 import { useEffect } from 'react';
-import he from 'he';
-import fetchVideos from '../../redux/features/search/fetchVideos';
 import PopularTypes from '../HomePage/HomePagePopularTypesTitle';
-import { IoMdMusicalNote } from 'react-icons/io';
-import { FaRegUserCircle } from 'react-icons/fa';
-import { BsThreeDotsVertical } from 'react-icons/bs';
+import fetchVideos from '../../redux/features/search/fetchVideos';
 import styles from '../../styles/pages/ResultsPage/ResultsPage.module.scss';
+import { lazy, Suspense } from 'react';
 
-const ResultsPage = () => {
+const ResultsPageItem1 = lazy(() => import('./ResultsPageItem/ResultsPageItem1'));
+const ResultsPageItem2 = lazy(() => import('./ResultsPageItem/ResultsPageItem2'));
+const ResultsPageItem3 = lazy(() => import('./ResultsPageItem/ResultsPageItem3'));
+const ResultsPageItem4 = lazy(() => import('./ResultsPageItem/ResultsPageItem4'));
+
+function ResultsPage() {
     const dispatch = useDispatch();
-    const navigate = useNavigate();
     const { videos, status } = useSelector((state) => state.search);
     const [searchParams] = useSearchParams();
     const query = searchParams.get('query');
@@ -32,39 +33,16 @@ const ResultsPage = () => {
             <h2>
                 Ý bạn là: <i>{query}</i>
             </h2>
-            <ul>
-                {videos?.map((video) => (
-                    <li key={video?.id?.videoId}>
-                        <div>
-                            <img
-                                src={video.snippet.thumbnails.high.url}
-                                onClick={() => navigate(`/results/video/${video.id.videoId}`)}
-                                alt={video.snippet.title}
-                            />
-                        </div>
-                        <div>
-                            <div>
-                                <p>{videos ? he.decode(video.snippet.title) : 'Loading'}</p>
-                                <span>
-                                    <BsThreeDotsVertical style={{ fontSize: '20' }} />
-                                </span>
-                            </div>
-                            <div>
-                                <div>
-                                    <FaRegUserCircle />
-                                </div>
-                                <p>{video.snippet.channelTitle}</p>
-                                <div>
-                                    <IoMdMusicalNote style={{ fontSize: '9', color: '#fff' }} />
-                                </div>
-                            </div>
-                            <div>{video.snippet.description}</div>
-                        </div>
-                    </li>
-                ))}
-            </ul>
+            <div>
+                <Suspense fallback={<p>🔄 Đang tải kết quả...</p>}>
+                    {videos[0] && <ResultsPageItem1 video={videos[0]} />}
+                    {videos[1] && <ResultsPageItem2 video={videos[1]} />}
+                    {videos[2] && <ResultsPageItem3 video={videos[2]} />}
+                    {videos[3] && <ResultsPageItem4 video={videos[3]} />}
+                </Suspense>
+            </div>
         </section>
     );
-};
+}
 
 export default ResultsPage;

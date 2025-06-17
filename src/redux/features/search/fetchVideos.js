@@ -1,5 +1,5 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
-import apiClient from '../../../utils/api/apiClient';
+import apiClient from '../../../utils/api/common/apiClient';
 
 const fetchVideos = createAsyncThunk('search/fetchVideos', async (query, { getState }) => {
     if (!query.trim()) return [];
@@ -10,7 +10,7 @@ const fetchVideos = createAsyncThunk('search/fetchVideos', async (query, { getSt
     }
 
     const response = await apiClient.get('/search', {
-        params: { q: query, maxResults: 2, type: 'video' },
+        params: { q: query, maxResults: 4, type: 'video' },
     });
 
     return response.data.items;
