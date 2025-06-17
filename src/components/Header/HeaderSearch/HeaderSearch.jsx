@@ -5,7 +5,7 @@ import fetchVideos from '../../../redux/features/search/fetchVideos';
 import { useTranslation } from 'react-i18next';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import { useRef, useState, useCallback, useEffect } from 'react';
+import { useRef, useState, useMemo, useEffect } from 'react';
 import { debounce } from 'lodash';
 import { fetchSuggestions } from '../../../utils/api/youtubeApi';
 
@@ -18,37 +18,38 @@ const HeaderSearchInput = () => {
     const [suggestions, setSuggestions] = useState([]);
     const [showSuggestions, setShowSuggestions] = useState(false);
 
-    const debouncedFetchSuggestions = useCallback(
-        debounce(async (text) => {
-            if (!text.trim()) {
-                setSuggestions([]);
-                setShowSuggestions(false);
-                return;
-            }
+    const debouncedFetchSuggestions = useMemo(
+        () =>
+            debounce(async (text) => {
+                if (!text.trim()) {
+                    setSuggestions([]);
+                    setShowSuggestions(false);
+                    return;
+                }
 
-            try {
-                const results = await fetchSuggestions(text);
-                console.log('Gợi ý API:', results);
-                setSuggestions(results);
-                setShowSuggestions(results.length > 0);
-            } catch (error) {
-                console.error('Lỗi gợi ý:', error);
-            }
-        }, 300),
+                try {
+                    const results = await fetchSuggestions(text);
+                    console.log('Gợi ý API:', results);
+                    setSuggestions(results);
+                    setShowSuggestions(results.length > 0);
+                } catch (error) {
+                    console.error('Lỗi gợi ý:', error);
+                }
+            }, 300),
         [],
     );
 
     useEffect(() => {
         debouncedFetchSuggestions(query);
         return () => debouncedFetchSuggestions.cancel();
-    }, [query]);
+    }, [query, debouncedFetchSuggestions]);
 
     const handleSuggestionClick = (suggestion) => {
-        dispatch(setQuery(suggestion)); // ✅ Cập nhật từ khoá tìm kiếm
-        dispatch(clearVideos()); // ✅ Xóa kết quả tìm kiếm cũ
-        dispatch(fetchVideos(suggestion)); // ✅ Tìm kiếm video mới
-        navigate(`/results?query=${suggestion}`); // ✅ Chuyển hướng đến trang kết quả
-        setShowSuggestions(false); // ✅ Ẩn danh sách gợi ý
+        dispatch(setQuery(suggestion));
+        dispatch(clearVideos());
+        dispatch(fetchVideos(suggestion));
+        navigate(`/results?query=${suggestion}`);
+        setShowSuggestions(false);
     };
 
     const handleSearch = () => {

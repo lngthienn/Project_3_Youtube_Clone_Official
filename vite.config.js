@@ -8,10 +8,9 @@ export default defineConfig({
     server: {
         proxy: {
             '/api/suggest': {
-                target: 'https://suggestqueries-clients6.youtube.com',
+                target: 'https://clients1.google.com',
                 changeOrigin: true,
-                rewrite: (path) =>
-                    path.replace(/^\/api\/suggest/, '/complete/search?client=youtube&hl=vi&gl=VN&geo=VN&ds=yt'),
+                rewrite: (path) => path.replace(/^\/api\/suggest/, '/complete/search?client=youtube&hl=vi&gl=VN&q='),
             },
         },
     },

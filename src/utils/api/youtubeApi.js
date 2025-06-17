@@ -1,7 +1,7 @@
-// import apiClient from './apiClient';
-
 export const fetchSuggestions = async (query) => {
-    const response = await fetch(`/api/suggest?q=${encodeURIComponent(query)}&hl=vi&gl=VN&geo=VN`);
+    if (!query.trim()) return [];
+
+    const response = await fetch(`/api/suggest?q=${encodeURIComponent(query)}&hl=vi&gl=VN`);
 
     if (!response.ok) throw new Error(`API lỗi: ${response.status}`);
 
@@ -14,7 +14,9 @@ export const fetchSuggestions = async (query) => {
     const jsonString = jsonMatch[0];
     const data = JSON.parse(jsonString);
 
-    return Array.isArray(data[1])
-        ? data[1].map((item) => item[0]).filter((suggestion) => suggestion && suggestion.toLowerCase() !== 'q')
-        : [];
+    const searchSuggestions = Array.isArray(data[1]) ? data[1].map((item) => item[0]) : [];
+
+    const cleanedSuggestions = searchSuggestions.map((suggestion) => suggestion.replace(/^q=?\s*/i, ''));
+
+    return cleanedSuggestions;
 };
