@@ -1,5 +1,5 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
-import { fetchYouTubeSearchResults } from '../../../utils/api/youtubeApi';
+import { fetchSuggestions } from '../../../utils/api/youtubeApi';
 
 const fetchVideos = createAsyncThunk('search/fetchVideos', async (query, { getState }) => {
     if (!query.trim()) return [];
@@ -9,7 +9,7 @@ const fetchVideos = createAsyncThunk('search/fetchVideos', async (query, { getSt
         return search.videos;
     }
 
-    const response = await fetchYouTubeSearchResults(query);
+    const response = await fetchSuggestions(query);
     return response.data.items;
 });
 
