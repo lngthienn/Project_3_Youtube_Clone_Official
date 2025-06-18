@@ -2,6 +2,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { useSearchParams } from 'react-router-dom';
 import { lazy, Suspense, useEffect, useState } from 'react';
 import { useInView } from 'react-intersection-observer';
+
 import PopularTypes from '../HomePage/HomePagePopularTypesTitle';
 import fetchVideos from '../../redux/features/search/fetchVideos';
 import styles from '../../styles/pages/ResultsPage/ResultsPage.module.scss';
@@ -28,12 +29,9 @@ function ResultsPage() {
     }, [dispatch, query]);
 
     useEffect(() => {
-        if (trigger3Visible && !show3) setShow3(true);
-    }, [trigger3Visible, show3]);
-
-    useEffect(() => {
-        if (trigger4Visible && !show4) setShow4(true);
-    }, [trigger4Visible, show4]);
+        if (trigger3Visible) setShow3(true);
+        if (trigger4Visible) setShow4(true);
+    }, [trigger3Visible, trigger4Visible]);
 
     if (status === 'loading') return <p>🔄 Đang tải...</p>;
     if (status === 'failed') return <p>❌ Có lỗi xảy ra! Vui lòng thử lại sau...</p>;
@@ -49,13 +47,13 @@ function ResultsPage() {
                 {videos[0] && <ResultsPageItem1 video={videos[0]} />}
                 {videos[1] && <ResultsPageItem2 video={videos[1]} />}
 
-                {!show3 && <div ref={trigger3} />}
+                {!show3 && <div ref={trigger3} style={{ height: 1 }} />}
                 {videos[2] && show3 && (
                     <>
                         <Suspense fallback="Loading...">
                             <ResultsPageItem3 video={videos[2]} />
                         </Suspense>
-                        {!show4 && <div ref={trigger4} />}
+                        {!show4 && <div ref={trigger4} style={{ height: 1 }} />}
                     </>
                 )}
 
@@ -72,5 +70,5 @@ function ResultsPage() {
 export default ResultsPage;
 
 function delayLazy(promise) {
-    return new Promise((resolve) => setTimeout(resolve, 3000)).then(() => promise);
+    return new Promise((resolve) => setTimeout(resolve, 1000)).then(() => promise);
 }
