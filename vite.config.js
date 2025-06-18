@@ -5,13 +5,4 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
     plugins: [react()],
-    server: {
-        proxy: {
-            '/api/suggest': {
-                target: 'https://clients1.google.com',
-                changeOrigin: true,
-                rewrite: (path) => path.replace(/^\/api\/suggest/, '/complete/search?client=youtube&hl=vi&gl=VN&q='),
-            },
-        },
-    },
 });

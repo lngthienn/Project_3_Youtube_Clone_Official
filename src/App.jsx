@@ -17,6 +17,12 @@ function App() {
         }
     }, [i18n]);
 
+    useEffect(() => {
+        if (sessionStorage.getItem('previousURLBeforeOffline')) {
+            sessionStorage.removeItem('previousURLBeforeOffline');
+        }
+    }, []);
+
     return (
         <Router>
             <Layout>

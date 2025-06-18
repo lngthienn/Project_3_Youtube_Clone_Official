@@ -5,6 +5,17 @@ import { store } from './redux/store.js';
 import { Provider } from 'react-redux';
 import { ThemeProvider } from './context/Theme/ThemeContext.jsx';
 
+window.addEventListener('offline', () => {
+    if (!sessionStorage.getItem('previousURLBeforeOffline')) {
+        sessionStorage.setItem('previousURLBeforeOffline', window.location.href);
+    }
+    window.location.href = '/offline.html';
+});
+
+window.addEventListener('online', () => {
+    location.reload();
+});
+
 createRoot(document.getElementById('root')).render(
     <Provider store={store}>
         <ThemeProvider>
