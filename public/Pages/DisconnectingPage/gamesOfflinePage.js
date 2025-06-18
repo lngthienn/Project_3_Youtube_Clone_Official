@@ -58,7 +58,7 @@ function updateGame() {
         obs.x -= 6;
         if (obs.x + obs.width < 0) obstacles.splice(index, 1);
 
-        // ✅ Cộng điểm nếu obstacle đã đi qua capybara
+        // ✅ Cộng điểm nếu obstacle đã đi qua dino
         if (!obs.counted && obs.x + obs.width < dino.x) {
             obs.counted = true;
             score++;
