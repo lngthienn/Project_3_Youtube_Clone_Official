@@ -9,7 +9,7 @@ window.addEventListener('offline', () => {
     if (!sessionStorage.getItem('previousURLBeforeOffline')) {
         sessionStorage.setItem('previousURLBeforeOffline', window.location.href);
     }
-    window.location.href = '/offline.html';
+    window.location.href = '../public/Pages/DisconnectingPage/offline.html';
 });
 
 window.addEventListener('online', () => {

@@ -2,17 +2,17 @@
 const canvas = document.getElementById('gameCanvas');
 const ctx = canvas.getContext('2d');
 
-// 🦖 Load hình ảnh khủng long
+// 🦫 Load hình
 const dinoImg = new Image();
-dinoImg.src = './dino.png';
+dinoImg.src = '../../assets/images/dino.png';
 
-const dino = { x: 50, y: 220, width: 40, height: 40, velocityY: 0, gravity: 0.6 };
+const dino = { x: 50, y: 220, width: 80, height: 80, velocityY: 0, gravity: 0.6 };
 let isJumping = false;
 let obstacles = [];
 let score = 0;
 let gameOver = false;
 
-// 🚀 Xử lý nhảy
+// 🚀 Nhảy & chơi lại
 document.addEventListener('keydown', (e) => {
     if (e.code === 'Space' && !isJumping && !gameOver) {
         dino.velocityY = -12;
@@ -21,7 +21,7 @@ document.addEventListener('keydown', (e) => {
     if (e.code === 'Enter' && gameOver) restartGame();
 });
 
-// 🔄 Reset game khi thua
+// 🔁 Reset game
 function restartGame() {
     dino.y = 220;
     dino.velocityY = 0;
@@ -31,11 +31,12 @@ function restartGame() {
     updateGame();
 }
 
+// 🎮 Vòng lặp game
 function updateGame() {
     if (gameOver) {
         ctx.fillStyle = 'red';
         ctx.font = '30px Arial';
-        ctx.fillText('GAME OVER! Nhấn Enter để chơi lại', 200, 150);
+        ctx.fillText('GAME OVER! Nhấn Enter để chơi lại', 160, 150);
         return;
     }
 
@@ -47,24 +48,41 @@ function updateGame() {
         isJumping = false;
     }
 
+    // 🧱 Sinh obstacle
     if (Math.random() < 0.015) {
-        obstacles.push({ x: 800, y: 230, width: 30, height: 30 });
+        obstacles.push({ x: 800, y: 230, width: 30, height: 50, counted: false });
     }
 
+    // 🔍 Cập nhật obstacle + kiểm tra va chạm
     obstacles.forEach((obs, index) => {
         obs.x -= 6;
         if (obs.x + obs.width < 0) obstacles.splice(index, 1);
 
+        // ✅ Cộng điểm nếu obstacle đã đi qua capybara
+        if (!obs.counted && obs.x + obs.width < dino.x) {
+            obs.counted = true;
+            score++;
+        }
+
+        // 💥 Va chạm
+        const hitbox = {
+            x: dino.x + 15,
+            y: dino.y + 20,
+            width: dino.width - 30,
+            height: dino.height - 25,
+        };
+
         if (
-            dino.x < obs.x + obs.width &&
-            dino.x + dino.width > obs.x &&
-            dino.y < obs.y + obs.height &&
-            dino.y + dino.height > obs.y
+            hitbox.x < obs.x + obs.width &&
+            hitbox.x + hitbox.width > obs.x &&
+            hitbox.y < obs.y + obs.height &&
+            hitbox.y + hitbox.height > obs.y
         ) {
             gameOver = true;
         }
     });
 
+    // 🎨 Vẽ màn hình
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     ctx.fillStyle = '#f4f4f4';
     ctx.fillRect(0, 0, canvas.width, canvas.height);
@@ -78,24 +96,9 @@ function updateGame() {
 
     ctx.fillStyle = 'blue';
     ctx.font = '20px Arial';
-    ctx.fillText('Score: ' + score++, 10, 20);
+    ctx.fillText('Score: ' + score, 10, 25);
 
     requestAnimationFrame(updateGame);
 }
 
 updateGame();
-
-// ================== OFFLINE RECOVERY ==================
-const savedURL = sessionStorage.getItem('previousURLBeforeOffline');
-
-window.addEventListener('online', () => {
-    if (savedURL && savedURL !== window.location.href) {
-        window.location.href = savedURL;
-    }
-});
-
-if (navigator.onLine && savedURL && savedURL !== window.location.href) {
-    setTimeout(() => {
-        window.location.href = savedURL;
-    }, 1500);
-}
