@@ -12,6 +12,10 @@ import ResultsPageItem2 from './ResultsPageItem/ResultsPageItem2';
 const ResultsPageItem3 = lazy(() => delayLazy(import('./ResultsPageItem/ResultsPageItem3')));
 const ResultsPageItem4 = lazy(() => delayLazy(import('./ResultsPageItem/ResultsPageItem4')));
 
+function delayLazy(promise) {
+    return new Promise((resolve) => setTimeout(resolve, 1000)).then(() => promise);
+}
+
 function ResultsPage() {
     const dispatch = useDispatch();
     const { videos, status } = useSelector((state) => state.search);
@@ -38,25 +42,25 @@ function ResultsPage() {
     if (status === 'succeeded' && videos?.length === 0) return <p>😕 Không tìm thấy kết quả!</p>;
 
     return (
-        <section className={styles.resultspage}>
+        <section className={styles.resultsPage}>
             <PopularTypes />
-            <h2>
-                Ý bạn là: <i>{query}</i>
-            </h2>
+            {query && (
+                <h2>
+                    Ý bạn là: <i>{query}</i>
+                </h2>
+            )}
             <div>
                 {videos[0] && <ResultsPageItem1 video={videos[0]} />}
                 {videos[1] && <ResultsPageItem2 video={videos[1]} />}
-
-                {!show3 && <div ref={trigger3} style={{ height: 1 }} />}
+                {!show3 && <div ref={trigger3} />}
                 {videos[2] && show3 && (
                     <>
                         <Suspense fallback="Loading...">
                             <ResultsPageItem3 video={videos[2]} />
                         </Suspense>
-                        {!show4 && <div ref={trigger4} style={{ height: 1 }} />}
+                        {!show4 && <div ref={trigger4} />}
                     </>
                 )}
-
                 {videos[3] && show4 && (
                     <Suspense fallback="Loading...">
                         <ResultsPageItem4 video={videos[3]} />
@@ -68,7 +72,3 @@ function ResultsPage() {
 }
 
 export default ResultsPage;
-
-function delayLazy(promise) {
-    return new Promise((resolve) => setTimeout(resolve, 1000)).then(() => promise);
-}

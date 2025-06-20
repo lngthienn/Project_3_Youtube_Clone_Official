@@ -3,7 +3,7 @@ import { HomePagePopularTypesTitle, HomePageMusicContent } from './HomePageImpor
 
 function HomePage() {
     return (
-        <section className={styles.home}>
+        <section className={styles.homePage}>
             <HomePagePopularTypesTitle />
             <HomePageMusicContent />
         </section>

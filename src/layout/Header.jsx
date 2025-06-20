@@ -9,11 +9,11 @@ import {
     HeaderSignIn,
 } from '../components/Header/HeaderImports';
 
-function Header({ toggleSidebar }) {
+function Header({ handleOpenSidebar }) {
     return (
         <header className={styles.header}>
             <div>
-                <HeaderSidebarButton toggleSidebar={toggleSidebar} />
+                <HeaderSidebarButton handleOpenSidebar={handleOpenSidebar} />
                 <HeaderLogo />
                 <HeaderDisplayLocation />
             </div>

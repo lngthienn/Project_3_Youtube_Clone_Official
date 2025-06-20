@@ -6,25 +6,36 @@ import { useLocation } from 'react-router-dom';
 
 function Layout({ children }) {
     const location = useLocation();
-    const [isSidebarOpen, setIsSidebarOpen] = useState(true);
-
-    const toggleSidebar = () => {
-        setIsSidebarOpen((prev) => !prev);
-    };
+    const [isSidebarVisible, setIsSidebarVisible] = useState(true);
+    const isVideoPlayerPage = location.pathname.startsWith('/results/video');
 
     useEffect(() => {
-        if (location.pathname.startsWith('/results/video/')) {
-            setIsSidebarOpen(false);
-        } else {
-            setIsSidebarOpen(true);
-        }
+        setIsSidebarVisible(!location.pathname.startsWith('/results/video/'));
     }, [location.pathname]);
+
+    const handleOpenSidebar = () => {
+        setIsSidebarVisible((prev) => !prev);
+    };
 
     return (
         <>
-            <Header toggleSidebar={toggleSidebar} />
-            <Sidebar isSidebarOpen={isSidebarOpen} />
-            <main className={isSidebarOpen ? styles.contentSidebarOpen : styles.contentSidebarClosed}>{children}</main>
+            <Header handleOpenSidebar={handleOpenSidebar} />
+            {isSidebarVisible && <Sidebar isSidebarOpen={true} handleOpenSidebar={handleOpenSidebar} />}
+            {!isVideoPlayerPage ? (
+                <main className={isSidebarVisible ? styles.contentSidebarOpen : styles.contentSidebarClosed}>
+                    {children}
+                </main>
+            ) : (
+                <main
+                    className={
+                        isSidebarVisible
+                            ? styles.contentSidebarOpenVideoPlayerPage
+                            : styles.contentSidebarClosedVideoPlayerPage
+                    }
+                >
+                    {children}
+                </main>
+            )}
         </>
     );
 }
