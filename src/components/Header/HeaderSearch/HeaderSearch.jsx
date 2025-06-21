@@ -1,7 +1,7 @@
 import headerSearchInput from '../../../styles/components/Header/HeaderSearch/HeaderSearchInput.module.scss';
 import { HeaderSearchIcons } from '../../../assets/icons/Header/HeaderSearch/HeaderSearchIcons';
 import { setQuery, clearVideos } from '../../../redux/features/search/searchSlice';
-import fetchVideos from '../../../redux/features/search/fetchVideos';
+import fetchVideos from '../../../redux/features/search/fetchVideosIds';
 import { useTranslation } from 'react-i18next';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';

@@ -18,7 +18,7 @@ function ResultsPageItem1({ video }) {
                 />
             </div>
             <div>
-                <div>
+                <div onClick={() => navigate(`/results/video/${video?.id?.videoId}`)}>
                     <p>{video ? he.decode(video.snippet.title) : 'Loading'}</p>
                     <span>
                         <BsThreeDotsVertical style={{ fontSize: '20px' }} />

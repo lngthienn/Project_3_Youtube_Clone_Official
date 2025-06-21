@@ -4,7 +4,7 @@ import { lazy, Suspense, useEffect, useState } from 'react';
 import { useInView } from 'react-intersection-observer';
 
 import PopularTypes from '../HomePage/HomePagePopularTypesTitle';
-import fetchVideos from '../../redux/features/search/fetchVideos';
+import fetchVideos from '../../redux/features/search/fetchVideosIds';
 import styles from '../../styles/pages/ResultsPage/ResultsPage.module.scss';
 import ResultsPageItem1 from './ResultsPageItem/ResultsPageItem1';
 import ResultsPageItem2 from './ResultsPageItem/ResultsPageItem2';

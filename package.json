@@ -25,6 +25,7 @@
     "react-redux": "^9.2.0",
     "react-router-dom": "^7.6.1",
     "react-switch": "^7.1.0",
+    "react-toastify": "^11.0.5",
     "sass": "^1.89.1"
   },
   "devDependencies": {
