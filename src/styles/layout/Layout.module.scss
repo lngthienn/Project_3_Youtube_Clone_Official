@@ -1,31 +1,30 @@
-@use '../../styles/layout/Sidebar.module.scss';
-
 .contentSidebarOpen {
     display: flex;
-    width: calc(100% - var(--sidebar-open-width));
+    width: 100%;
     height: auto;
-    margin: 56px 0 0 var(--sidebar-open-width);
+    margin: 56px 0 0 0;
     padding-left: 15px;
 }
 
 .contentSidebarClosed {
     display: flex;
-    width: calc(100% - var(--sidebar-closed-width));
+    width: 100%;
     height: auto;
-    margin: 56px 0 0 var(--sidebar-closed-width);
+    margin: 56px 0 0 0;
+
     padding-left: 15px;
 }
 
 .contentSidebarOpenVideoPlayerPage {
     display: flex;
-    width: calc(100% - var(--sidebar-closed-width));
+    width: 100%;
     height: auto;
-    margin: 56px 0 0 var(--sidebar-closed-width);
+    margin: 56px 0 0 0;
 }
 
 .contentSidebarClosedVideoPlayerPage {
     display: flex;
-    width: calc(100% - var(--sidebar-closed-width));
+    width: 100%;
     height: auto;
-    margin: 56px 0 0 var(--sidebar-closed-width);
+    margin: 56px 0 0 0;
 }

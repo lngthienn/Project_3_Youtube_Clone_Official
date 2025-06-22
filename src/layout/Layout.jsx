@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import Header from './Header.jsx';
-import Sidebar from './Sidebar.jsx';
 import styles from '../styles/layout/Layout.module.scss';
 import { useLocation } from 'react-router-dom';
 
@@ -20,7 +19,6 @@ function Layout({ children }) {
     return (
         <>
             <Header handleOpenSidebar={handleOpenSidebar} />
-            {isSidebarVisible && <Sidebar isSidebarOpen={true} handleOpenSidebar={handleOpenSidebar} />}
             {!isVideoPlayerPage ? (
                 <main className={isSidebarVisible ? styles.contentSidebarOpen : styles.contentSidebarClosed}>
                     {children}
